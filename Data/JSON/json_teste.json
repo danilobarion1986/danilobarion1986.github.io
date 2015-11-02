@@ -19,5 +19,10 @@
 		"nome":"Caio", 
 		"idade":27, 
 		"profissao":"físico"
+	},
+	{
+		"nome":"Fernanda", 
+		"idade":31, 
+		"profissao":"psicóloga"
 	}
 ]
