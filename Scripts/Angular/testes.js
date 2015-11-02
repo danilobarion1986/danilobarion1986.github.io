@@ -9,5 +9,5 @@ app.controller('TesteCtrl', function($scope, $http) {
 		.success(function (response) {$scope.usuarios = response;});
 
 		$http.get("http://danilobarion1986.github.io/Data/XML/xml_teste.xml")
-		.success(function (response) {$scope.usuarios_xml = response;});
+		.success(function (response) {$scope.usuarios_xml = response.usuarios;});
 });
