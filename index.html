@@ -29,6 +29,20 @@
 					<td>{{ usuario.profissao }}</td>
 				</tr></tbody>
 			</table>
+			
+			Tabela com XML<br><br>
+			<table class="table table-striped" >
+				<thead><tr>
+					<th>Nome</th>
+					<th>idade</th>
+					<th>Profissão</th>
+				</tr></thead>
+				<tbody><tr ng-repeat="usuario_xml in usuarios_xml | filter:myFilter">
+					<td>{{ usuario_xml.nome }}</td>
+					<td>{{ usuario_xml.idade }}</td>
+					<td>{{ usuario_xml.profissao }}</td>
+				</tr></tbody>
+			</table>
 		</div>
 	</body>
 </html>
