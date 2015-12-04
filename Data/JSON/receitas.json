@@ -2,17 +2,20 @@
 	{
 		"data":"15/11/2015", 
 		"descricao":"CLT", 
-		"valor":845.60
+		"valor":845.60,
+		"recebido":true
 	},
 
 	{
 		"data":"01/12/2015", 
 		"descricao":"13º Salários", 
-		"valor":507.80	
+		"valor":507.80,
+		"recebido":true
 	},
 	{
 		"data":"03/12/2015", 
 		"descricao":"Freelance", 
-		"valor":280.00
+		"valor":280.00,
+		"recebido":false
 	}
 ]
