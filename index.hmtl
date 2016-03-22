@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> My Github.io Page! </title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="Styles/app_style.css">
+		<script src="Scripts/Vanilla/app_javascript.js"></script>
+	</head>
+	
+	<body>
+		<div class="container">
+			<div class="nav navbar">
+        <li>Home</li>
+        <li>Angular</li>
+        <li>React</li>
+			</div>
+			
+			<h3>Welcome to My Page!</h3><br>
+			
+		</div>
+	</body>
+</html>
