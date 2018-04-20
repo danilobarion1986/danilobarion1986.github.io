@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.4.0 -->
+<title>Código Sobre Código Sobre Código… | {{ Developer Notes }}</title>
+<meta name="generator" content="Jekyll v3.7.3" />
+<meta property="og:title" content="Código Sobre Código Sobre Código…" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Devaneios de um desenvolvedor em construção." />
+<meta property="og:description" content="Devaneios de um desenvolvedor em construção." />
+<link rel="canonical" href="http://danilobarion1986.github.io/c%23/csharp/backend/metaprogramming/xml/2017/04/07/codigo-sobre-codigo-sobre-codigo.html" />
+<meta property="og:url" content="http://danilobarion1986.github.io/c%23/csharp/backend/metaprogramming/xml/2017/04/07/codigo-sobre-codigo-sobre-codigo.html" />
+<meta property="og:site_name" content="{{ Developer Notes }}" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-04-07T21:24:12-03:00" />
+<script type="application/ld+json">
+{"description":"Devaneios de um desenvolvedor em construção.","@type":"BlogPosting","url":"http://danilobarion1986.github.io/c%23/csharp/backend/metaprogramming/xml/2017/04/07/codigo-sobre-codigo-sobre-codigo.html","headline":"Código Sobre Código Sobre Código…","dateModified":"2017-04-07T21:24:12-03:00","datePublished":"2017-04-07T21:24:12-03:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://danilobarion1986.github.io/c%23/csharp/backend/metaprogramming/xml/2017/04/07/codigo-sobre-codigo-sobre-codigo.html"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://danilobarion1986.github.io/feed.xml" title="{{ Developer Notes }}" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">{{ Developer Notes }}</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Código Sobre Código Sobre Código...</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2017-04-07T21:24:12-03:00" itemprop="datePublished">Apr 7, 2017
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p><img src="https://i2.wp.com/devdanilo.files.wordpress.com/2017/04/thematrixincode99.jpg" alt="source-code" /></p>
+
+<p>Olá pessoal! Andei um pouco (muito) sumido, mas não esqueci do blog não!</p>
+
+<p>Desde o último post decidi que escreveria o próximo sobre algo mais técnico. Só não conseguia escolher dentre as infinitas possibilidades! Mas afinal pensei: “Esquece o perfeccionismo e escreve logo!”. Então lá vai!</p>
+
+<h2 id="contextualizando">Contextualizando</h2>
+
+<p>Recentemente, precisei desenvolver uma funcionalidade para corrigir um problema tenso de integração entre 2 sistemas. O processo anterior acontecia por meio de tabelas intermediárias e <em>jobs</em> no banco de dados que as populavam, para que o sistema destino pudesse (por meio de outro <em>job</em>) gravar as informações nas tabelas finais! Era um processo que apesar de muito sujeito a erros, até que funcionava bem, já estava há um certo tempo em produção.</p>
+
+<p>Porém, ao começar a existir alguns códigos internos divergentes entre os dois, muitos erros passaram a acontecer, inclusive no processo de vendas, que geralmente sempre geram um grande impacto, afinal “<em>Time is Money</em>”!</p>
+
+<h2 id="solução-e-novo-desafio">Solução e Novo Desafio</h2>
+
+<p>Para resolver o problema, após diversas análises e sugestões, chegamos à única solução possível: alterar toda a lógica da integração e todos os processos relacionados, substituir as tabelas temporárias e <em>jobs</em> por chamadas ao <em>WebService</em> do sistema destino, utilizando também o código deste como “chave-primária” (que antes era gerada na origem).</p>
+
+<p>Não posso descrever os detalhes do processo em si, mas em resumo, para esta solução funcionar, eu teria que montar um XML com todos os dados que seriam gravados, pois era o único parâmetro recebido pelo <em>WebService</em>. Em parte, o trabalho de criação do objeto que seria enviado e suas muuuitas propriedades (inclusive sendo algumas delas outros objetos) já estava codificado. Porém, surgiu um novo probleminha: no parâmetro a ser enviado, os campos que não estivessem preenchidos (por exemplo, o campo Complemento em um endereço) não poderiam nem fazer parte do XML.</p>
+
+<p>Depois de um tempo montando diversos <em>if</em>‘<em>s</em> para verificar se cada uma das propriedades tinha valor e, caso tivesse, montando o elemento XML “na mão” e com <em>strings hard-coded</em>, parei e refleti um pouco mais… “Vou usar <em>Reflection</em>!”.</p>
+
+<h2 id="refletindo-sobre-o-código">Refletindo Sobre o Código</h2>
+
+<p>A meta-programação sempre me chamou muito a atenção. Já havia usado um pouco em outros projetos, mas quando encarei este problema de montar um XML dinâmico, vi uma oportunidade de usar ainda mais.</p>
+
+<p>Então comecei a desenvolver, desde o mais genérico e prático, até alguns detalhes que foram surgindo para lidar com casos específicos ou mesmo opções para tornar a geração ainda mais flexível. O esqueleto da classe e método foi esse:</p>
+
+<script src="https://gist.github.com/9c90830a9668d50eab82a9961fa7cedf.js"> </script>
+
+<p>Portanto, ao receber qualquer objeto, que no caso seriam minhas classes já existentes, eu iria retornar uma <em>string</em>, que seria o XML dinâmico. Basicamente, teria que obter os nomes das propriedades, escrevendo aquelas que tivesse algum valor no formato de um elemento XML, ou seja, <em>Valor da propriedade</em>. Então, como percorrer as propriedades?</p>
+
+<p>Assim:</p>
+
+<script src="https://gist.github.com/514e8cb6af2e70d849dea593f0119034.js"> </script>
+
+<p>Agora sim as coisas estão ficando mais interessantes! :)</p>
+
+<p>Toda a “mágica” começa na linha 5, onde obtemos qual é o tipo do objeto recebido, e com isso todas as informações daquela classe e suas propriedades! Mas para isso precisamos complementar nosso código inserindo o <em>using</em> do <em>namespace</em> <em>System.Reflection</em>, que nos permitirá percorrer estas propriedades e usar outros métodos (linha 7 e seguintes).</p>
+
+<p>Os detalhes de cada propriedade ficam contidas na classe <em>PropertyInfo</em>, que usamos dentro do <em>foreach</em>, e que nos permitirão obter seu nome e valor.</p>
+
+<p>Na linha 9, verificamos se a propriedade pode ser lida (ou seja, se possui um método <em>get</em> acessível). Caso tenha, obtemos seu nome na linha 9, pela propriedade <em>Name</em>. Também já criamos a variável <em>tagValue</em> do tipo <em>dynamic</em>, que armazenará o valor da propriedade atual, independente de seu tipo.</p>
+
+<p>Bem, a solução final tem mais alguns detalhes bem interessantes, que compartilharei no próximo(s) post(s)! Estou também preparando os arquivos com a solução completa para compartilhar no <em>GitHub</em>, vamos ver quando sai do forno!</p>
+
+<p>Enquanto isso, comente o que achou até aqui! Você já usou <em>Reflection</em>? Como? Faria algo diferente do que eu fiz?</p>
+
+<p>Compartilha aí! ;)</p>
+
+  </div>
+
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://danilobarion1986.github.io/c%23/csharp/backend/metaprogramming/xml/2017/04/07/codigo-sobre-codigo-sobre-codigo.html';
+      this.page.identifier = 'http://danilobarion1986.github.io/c%23/csharp/backend/metaprogramming/xml/2017/04/07/codigo-sobre-codigo-sobre-codigo.html';
+    };
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://devdanilo.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+<a class="u-url" href="/c%23/csharp/backend/metaprogramming/xml/2017/04/07/codigo-sobre-codigo-sobre-codigo.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">{{ Developer Notes }}</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">{{ Developer Notes }}</li><li><a class="u-email" href="mailto:danilo.barion1986@live.com">danilo.barion1986@live.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/danilobarion1986"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">danilobarion1986</span></a></li><li><a href="https://www.twitter.com/daniloinfo86"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">daniloinfo86</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Devaneios de um desenvolvedor em construção.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

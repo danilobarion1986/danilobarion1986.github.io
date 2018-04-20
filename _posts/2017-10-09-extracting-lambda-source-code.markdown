@@ -26,5 +26,3 @@ So, I have a solution that is simple and I don’t need to worry with some depen
 
 
 _Did you like this post? Are you careful about add third-party code to your applications too? Have any comments, suggestions or critics?_
-
-[![](https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png)](https://www.buymeacoffee.com/danilobarion)

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-04-20T14:39:50-03:00</updated><id>http://localhost:4000/</id><title type="html">{{ Developer Notes }}</title><subtitle>Devaneios de um desenvolvedor em construção.</subtitle><entry><title type="html">Extracting Lambda Source Code</title><link href="http://localhost:4000/ruby/backend/2017/10/09/extracting-lambda-source-code.html" rel="alternate" type="text/html" title="Extracting Lambda Source Code" /><published>2017-10-09T19:08:58-03:00</published><updated>2017-10-09T19:08:58-03:00</updated><id>http://localhost:4000/ruby/backend/2017/10/09/extracting-lambda-source-code</id><content type="html" xml:base="http://localhost:4000/ruby/backend/2017/10/09/extracting-lambda-source-code.html">&lt;p&gt;&lt;img src=&quot;https://devdanilo.files.wordpress.com/2017/10/source-code.jpeg&quot; alt=&quot;source-code&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://danilobarion1986.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="http://danilobarion1986.github.io/" rel="alternate" type="text/html" /><updated>2018-04-20T15:46:43-03:00</updated><id>http://danilobarion1986.github.io/</id><title type="html">{{ Developer Notes }}</title><subtitle>Devaneios de um desenvolvedor em construção.</subtitle><entry><title type="html">Extracting Lambda Source Code</title><link href="http://danilobarion1986.github.io/ruby/backend/2017/10/09/extracting-lambda-source-code.html" rel="alternate" type="text/html" title="Extracting Lambda Source Code" /><published>2017-10-09T19:08:58-03:00</published><updated>2017-10-09T19:08:58-03:00</updated><id>http://danilobarion1986.github.io/ruby/backend/2017/10/09/extracting-lambda-source-code</id><content type="html" xml:base="http://danilobarion1986.github.io/ruby/backend/2017/10/09/extracting-lambda-source-code.html">&lt;p&gt;&lt;img src=&quot;https://devdanilo.files.wordpress.com/2017/10/source-code.jpeg&quot; alt=&quot;source-code&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;In this post, I’ll show you how to extract the code definition of a Lambda object, using just pure Ruby! But, first things first! What is a lambda in Ruby? A lambda is an special type of Proc, with some little differences in syntax, behavior and functionality, one of them that could be used as an anonymous function. There are many articles with all the details of what a lambda is and its main differences from a Proc and a block, one of them is &lt;a href=&quot;http://culttt.com/2015/05/13/what-are-lambdas-in-ruby.&quot;&gt;this&lt;/a&gt;.&lt;/p&gt;
 
@@ -17,6 +17,50 @@
 &lt;p&gt;With this approach, I could easily retrieve the code that I want, without using any third-party code/gem get this functionality in my project. Even though is a simple solution, we have some limitations like, for example, it’s not possible to extract the source code of lambdas defined at runtime. But, for my needs it’s enough.
 So, I have a solution that is simple and I don’t need to worry with some dependency that might break one of the main features that I want to provide, that is auto-generated documentation!&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Did you like this post? Are you careful about add third-party code to your applications too? Have any comments, suggestions or critics?&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Did you like this post? Are you careful about add third-party code to your applications too? Have any comments, suggestions or critics?&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Código Sobre Código Sobre Código…</title><link href="http://danilobarion1986.github.io/c%23/csharp/backend/metaprogramming/xml/2017/04/07/codigo-sobre-codigo-sobre-codigo.html" rel="alternate" type="text/html" title="Código Sobre Código Sobre Código..." /><published>2017-04-07T21:24:12-03:00</published><updated>2017-04-07T21:24:12-03:00</updated><id>http://danilobarion1986.github.io/c%23/csharp/backend/metaprogramming/xml/2017/04/07/codigo-sobre-codigo-sobre-codigo</id><content type="html" xml:base="http://danilobarion1986.github.io/c%23/csharp/backend/metaprogramming/xml/2017/04/07/codigo-sobre-codigo-sobre-codigo.html">&lt;p&gt;&lt;img src=&quot;https://i2.wp.com/devdanilo.files.wordpress.com/2017/04/thematrixincode99.jpg&quot; alt=&quot;source-code&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://www.buymeacoffee.com/danilobarion&quot;&gt;&lt;img src=&quot;https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html"></summary></entry></feed>
+&lt;p&gt;Olá pessoal! Andei um pouco (muito) sumido, mas não esqueci do blog não!&lt;/p&gt;
+
+&lt;p&gt;Desde o último post decidi que escreveria o próximo sobre algo mais técnico. Só não conseguia escolher dentre as infinitas possibilidades! Mas afinal pensei: “Esquece o perfeccionismo e escreve logo!”. Então lá vai!&lt;/p&gt;
+
+&lt;h2 id=&quot;contextualizando&quot;&gt;Contextualizando&lt;/h2&gt;
+
+&lt;p&gt;Recentemente, precisei desenvolver uma funcionalidade para corrigir um problema tenso de integração entre 2 sistemas. O processo anterior acontecia por meio de tabelas intermediárias e &lt;em&gt;jobs&lt;/em&gt; no banco de dados que as populavam, para que o sistema destino pudesse (por meio de outro &lt;em&gt;job&lt;/em&gt;) gravar as informações nas tabelas finais! Era um processo que apesar de muito sujeito a erros, até que funcionava bem, já estava há um certo tempo em produção.&lt;/p&gt;
+
+&lt;p&gt;Porém, ao começar a existir alguns códigos internos divergentes entre os dois, muitos erros passaram a acontecer, inclusive no processo de vendas, que geralmente sempre geram um grande impacto, afinal “&lt;em&gt;Time is Money&lt;/em&gt;”!&lt;/p&gt;
+
+&lt;h2 id=&quot;solução-e-novo-desafio&quot;&gt;Solução e Novo Desafio&lt;/h2&gt;
+
+&lt;p&gt;Para resolver o problema, após diversas análises e sugestões, chegamos à única solução possível: alterar toda a lógica da integração e todos os processos relacionados, substituir as tabelas temporárias e &lt;em&gt;jobs&lt;/em&gt; por chamadas ao &lt;em&gt;WebService&lt;/em&gt; do sistema destino, utilizando também o código deste como “chave-primária” (que antes era gerada na origem).&lt;/p&gt;
+
+&lt;p&gt;Não posso descrever os detalhes do processo em si, mas em resumo, para esta solução funcionar, eu teria que montar um XML com todos os dados que seriam gravados, pois era o único parâmetro recebido pelo &lt;em&gt;WebService&lt;/em&gt;. Em parte, o trabalho de criação do objeto que seria enviado e suas muuuitas propriedades (inclusive sendo algumas delas outros objetos) já estava codificado. Porém, surgiu um novo probleminha: no parâmetro a ser enviado, os campos que não estivessem preenchidos (por exemplo, o campo Complemento em um endereço) não poderiam nem fazer parte do XML.&lt;/p&gt;
+
+&lt;p&gt;Depois de um tempo montando diversos &lt;em&gt;if&lt;/em&gt;‘&lt;em&gt;s&lt;/em&gt; para verificar se cada uma das propriedades tinha valor e, caso tivesse, montando o elemento XML “na mão” e com &lt;em&gt;strings hard-coded&lt;/em&gt;, parei e refleti um pouco mais… “Vou usar &lt;em&gt;Reflection&lt;/em&gt;!”.&lt;/p&gt;
+
+&lt;h2 id=&quot;refletindo-sobre-o-código&quot;&gt;Refletindo Sobre o Código&lt;/h2&gt;
+
+&lt;p&gt;A meta-programação sempre me chamou muito a atenção. Já havia usado um pouco em outros projetos, mas quando encarei este problema de montar um XML dinâmico, vi uma oportunidade de usar ainda mais.&lt;/p&gt;
+
+&lt;p&gt;Então comecei a desenvolver, desde o mais genérico e prático, até alguns detalhes que foram surgindo para lidar com casos específicos ou mesmo opções para tornar a geração ainda mais flexível. O esqueleto da classe e método foi esse:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/9c90830a9668d50eab82a9961fa7cedf.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;Portanto, ao receber qualquer objeto, que no caso seriam minhas classes já existentes, eu iria retornar uma &lt;em&gt;string&lt;/em&gt;, que seria o XML dinâmico. Basicamente, teria que obter os nomes das propriedades, escrevendo aquelas que tivesse algum valor no formato de um elemento XML, ou seja, &lt;em&gt;Valor da propriedade&lt;/em&gt;. Então, como percorrer as propriedades?&lt;/p&gt;
+
+&lt;p&gt;Assim:&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/514e8cb6af2e70d849dea593f0119034.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;Agora sim as coisas estão ficando mais interessantes! :)&lt;/p&gt;
+
+&lt;p&gt;Toda a “mágica” começa na linha 5, onde obtemos qual é o tipo do objeto recebido, e com isso todas as informações daquela classe e suas propriedades! Mas para isso precisamos complementar nosso código inserindo o &lt;em&gt;using&lt;/em&gt; do &lt;em&gt;namespace&lt;/em&gt; &lt;em&gt;System.Reflection&lt;/em&gt;, que nos permitirá percorrer estas propriedades e usar outros métodos (linha 7 e seguintes).&lt;/p&gt;
+
+&lt;p&gt;Os detalhes de cada propriedade ficam contidas na classe &lt;em&gt;PropertyInfo&lt;/em&gt;, que usamos dentro do &lt;em&gt;foreach&lt;/em&gt;, e que nos permitirão obter seu nome e valor.&lt;/p&gt;
+
+&lt;p&gt;Na linha 9, verificamos se a propriedade pode ser lida (ou seja, se possui um método &lt;em&gt;get&lt;/em&gt; acessível). Caso tenha, obtemos seu nome na linha 9, pela propriedade &lt;em&gt;Name&lt;/em&gt;. Também já criamos a variável &lt;em&gt;tagValue&lt;/em&gt; do tipo &lt;em&gt;dynamic&lt;/em&gt;, que armazenará o valor da propriedade atual, independente de seu tipo.&lt;/p&gt;
+
+&lt;p&gt;Bem, a solução final tem mais alguns detalhes bem interessantes, que compartilharei no próximo(s) post(s)! Estou também preparando os arquivos com a solução completa para compartilhar no &lt;em&gt;GitHub&lt;/em&gt;, vamos ver quando sai do forno!&lt;/p&gt;
+
+&lt;p&gt;Enquanto isso, comente o que achou até aqui! Você já usou &lt;em&gt;Reflection&lt;/em&gt;? Como? Faria algo diferente do que eu fiz?&lt;/p&gt;
+
+&lt;p&gt;Compartilha aí! ;)&lt;/p&gt;</content><author><name></name></author><summary type="html"></summary></entry></feed>
