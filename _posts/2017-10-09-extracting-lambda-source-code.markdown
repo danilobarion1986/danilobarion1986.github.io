@@ -2,6 +2,7 @@
 layout: post
 title:  "Extracting Lambda Source Code"
 date:   2017-10-09 19:08:58 -0300
+comments: true
 categories: ruby backend
 ---
 
