@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://danilobarion1986.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="http://danilobarion1986.github.io/" rel="alternate" type="text/html" /><updated>2018-04-20T18:04:12-03:00</updated><id>http://danilobarion1986.github.io/</id><title type="html">{{ Developer Notes }}</title><subtitle>Devaneios de um desenvolvedor em construção.</subtitle><entry><title type="html">Extracting Lambda Source Code</title><link href="http://danilobarion1986.github.io/ruby/backend/2017/10/09/extracting-lambda-source-code.html" rel="alternate" type="text/html" title="Extracting Lambda Source Code" /><published>2017-10-09T19:08:58-03:00</published><updated>2017-10-09T19:08:58-03:00</updated><id>http://danilobarion1986.github.io/ruby/backend/2017/10/09/extracting-lambda-source-code</id><content type="html" xml:base="http://danilobarion1986.github.io/ruby/backend/2017/10/09/extracting-lambda-source-code.html">&lt;p&gt;&lt;img src=&quot;https://devdanilo.files.wordpress.com/2017/10/source-code.jpeg&quot; alt=&quot;source-code&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://danilobarion1986.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="http://danilobarion1986.github.io/" rel="alternate" type="text/html" /><updated>2018-04-20T23:24:45-03:00</updated><id>http://danilobarion1986.github.io/</id><title type="html">{{ Developer Notes }}</title><subtitle>Devaneios de um desenvolvedor em construção.</subtitle><entry><title type="html">Extracting Lambda Source Code</title><link href="http://danilobarion1986.github.io/ruby/backend/2017/10/09/extracting-lambda-source-code.html" rel="alternate" type="text/html" title="Extracting Lambda Source Code" /><published>2017-10-09T19:08:58-03:00</published><updated>2017-10-09T19:08:58-03:00</updated><id>http://danilobarion1986.github.io/ruby/backend/2017/10/09/extracting-lambda-source-code</id><content type="html" xml:base="http://danilobarion1986.github.io/ruby/backend/2017/10/09/extracting-lambda-source-code.html">&lt;p&gt;&lt;img src=&quot;https://devdanilo.files.wordpress.com/2017/10/source-code.jpeg&quot; alt=&quot;source-code&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;In this post, I’ll show you how to extract the code definition of a Lambda object, using just pure Ruby! But, first things first! What is a lambda in Ruby? A lambda is an special type of Proc, with some little differences in syntax, behavior and functionality, one of them that could be used as an anonymous function. There are many articles with all the details of what a lambda is and its main differences from a Proc and a block, one of them is &lt;a href=&quot;http://culttt.com/2015/05/13/what-are-lambdas-in-ruby.&quot;&gt;this&lt;/a&gt;.&lt;/p&gt;
 
@@ -63,4 +63,134 @@ So, I have a solution that is simple and I don’t need to worry with some depen
 
 &lt;p&gt;Enquanto isso, comente o que achou até aqui! Você já usou &lt;em&gt;Reflection&lt;/em&gt;? Como? Faria algo diferente do que eu fiz?&lt;/p&gt;
 
-&lt;p&gt;Compartilha aí! ;)&lt;/p&gt;</content><author><name></name></author><summary type="html"></summary></entry></feed>
+&lt;p&gt;Compartilha aí! ;)&lt;/p&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Organizando a Bagunça (parte 2)</title><link href="http://danilobarion1986.github.io/produtividade/opini%C3%A3o/2016/02/16/organizando-a-bagunca-parte-2.html" rel="alternate" type="text/html" title="Organizando a Bagunça (parte 2)" /><published>2016-02-16T12:53:35-02:00</published><updated>2016-02-16T12:53:35-02:00</updated><id>http://danilobarion1986.github.io/produtividade/opini%C3%A3o/2016/02/16/organizando-a-bagunca-parte-2</id><content type="html" xml:base="http://danilobarion1986.github.io/produtividade/opini%C3%A3o/2016/02/16/organizando-a-bagunca-parte-2.html">&lt;p&gt;Olá pessoal! Este é o 2º post da “minissérie” que iniciei &lt;a href=&quot;/produtividade/opinião/2015/12/30/organizando-a-bagunca-parte-1.html&quot;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Hoje falarei sobre &lt;strong&gt;Mapas Mentais&lt;/strong&gt;!&lt;/p&gt;
+
+&lt;p&gt;Como o nome já diz, eles têm como objetivo tornar visível as ideias, metas e temas, aparentemente desorganizadas, que ficam circulando em nossas cabeças, nos permitindo ver as &lt;strong&gt;relações entre elas&lt;/strong&gt;. Além disso, outras tarefas e assuntos interligados, que ainda não tínhamos vislumbrado, sem dúvida virão à tona durante a elaboração dos mapas.&lt;/p&gt;
+
+&lt;p&gt;Como disse no post anterior, sou muito fã de listas. Vejo o Mapa Mental como uma espécie de lista, mas com a vantagem de &lt;strong&gt;mostrar rapidamente&lt;/strong&gt; as interligações entre as coisas, algo que nas listas pode ficar um pouco menos aparente, dependendo do seu poder de classificação. Além disso, é uma ferramenta &lt;strong&gt;mais livre e flexível&lt;/strong&gt;, que pode ser mais intuitiva para aqueles com um lado mais artístico, pois permite qualquer tipo de desenho, imagem, fluxograma, e o que mais for necessário para representar suas ideias.&lt;/p&gt;
+
+&lt;p&gt;Inclusive, este recurso não precisa ser usado apenas profissionalmente ou para estudo. Na época que estava correndo com os &lt;strong&gt;preparativos de meu casamento&lt;/strong&gt;, por exemplo, precisei fazer um mapa mental e garanto que, caso contrário, muita coisa teria escapado ou passado do prazo, tornando esta fase muito mais estressante!&lt;/p&gt;
+
+&lt;p&gt;Existem diversos softwares e apps que possibilitam criar mapas mentais, como a &lt;a href=&quot;https://www.mindmeister.com&quot;&gt;MindMeister&lt;/a&gt;, mas para &lt;strong&gt;atividades criativas&lt;/strong&gt; (que o mapa não deixa de ser) confesso que prefiro e recomendo a você que faça na mão mesmo! Por vários motivos:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Facilidade de fazer &lt;strong&gt;pequenos desenhos&lt;/strong&gt;, que sejam representativos;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Liberdade&lt;/strong&gt; no formato dos balões e ligações entre as ideias/tarefas;&lt;/li&gt;
+  &lt;li&gt;Processo de escrita manual é &lt;strong&gt;mais estimulante para o cérebro&lt;/strong&gt;, ajudando a lembrar dos pontos importantes.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;De preferência, utilize uma folha bem grande (para ideias complexas) ou pequenas fichas (para questões pontuais). Além disso, &lt;strong&gt;utilize cores&lt;/strong&gt;, elas com certeza tem um grande impacto na elaboração do mapa e também na memorização (quando necessário!). Você encontra diversos exemplos pela internet, veja alguns que achei interessantes (deste site &lt;a href=&quot;http://www.mind-mapping.co.uk&quot;&gt;aqui&lt;/a&gt;):&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://devdanilo.files.wordpress.com/2016/02/mybigmindmap-2000x0.jpg&quot; alt=&quot;MyBigMindMap-2000x0&quot; /&gt; &lt;img src=&quot;https://devdanilo.files.wordpress.com/2016/02/about-illumine_illumine-2000x0.jpg&quot; alt=&quot;About-Illumine_illumine-2000x0&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;E aí, o que achou sobre a ideia de criar mapas mentais? Está afim de tentar usar em seu dia a dia? Que outras formas você utiliza para auxiliar no controle de suas tarefas? Compartilhe!&lt;/p&gt;
+
+&lt;p&gt;Até o próximo post! :)&lt;/p&gt;</content><author><name></name></author><summary type="html">Olá pessoal! Este é o 2º post da “minissérie” que iniciei aqui.</summary></entry><entry><title type="html">Organizando a Bagunça (parte 1)</title><link href="http://danilobarion1986.github.io/produtividade/opini%C3%A3o/2015/12/30/organizando-a-bagunca-parte-1.html" rel="alternate" type="text/html" title="Organizando a Bagunça (parte 1)" /><published>2015-12-30T12:21:57-02:00</published><updated>2015-12-30T12:21:57-02:00</updated><id>http://danilobarion1986.github.io/produtividade/opini%C3%A3o/2015/12/30/organizando-a-bagunca-parte-1</id><content type="html" xml:base="http://danilobarion1986.github.io/produtividade/opini%C3%A3o/2015/12/30/organizando-a-bagunca-parte-1.html">&lt;p&gt;&lt;img src=&quot;https://devdanilo.files.wordpress.com/2015/12/organized.jpg&quot; alt=&quot;organized&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Estava indeciso quanto ao tema do novo post, mas finalmente decidi!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Organização e Produtividade!&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Não sou nenhum &lt;em&gt;expert&lt;/em&gt; nestes temas, mas gosto muito do assunto, leio sobre ele e sempre busco aumentar a eficiência na realização de meus projetos pessoais e profissionais. Quero focar em duas &lt;strong&gt;questões práticas&lt;/strong&gt; sobre eles, e que possam ser usadas sem demora!&lt;/p&gt;
+
+&lt;p&gt;Dividi o post em duas partes, nas quais irei apresentar aquelas que considero as duas melhores ferramentas para se organizar e fazer as coisas acontecerem: &lt;strong&gt;Listas&lt;/strong&gt; e &lt;strong&gt;Mapas Mentais&lt;/strong&gt;! :)&lt;/p&gt;
+
+&lt;p&gt;Começarei falando sobre &lt;strong&gt;Listas&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Já percebeu como elas atraem nossa atenção? Livros, textos e posts que usam tópicos costumam ser bastante atrativos: “Os 10 Hábitos Mais Importantes”, “Os 5 Aplicativos Mais Baixados do Ano”, “Os 15 Líderes Mais Influentes da História”, etc…&lt;/p&gt;
+
+&lt;p&gt;Todos sabemos o que são listas, mas você talvez não tenha descoberto ainda o poder que elas podem te dar para &lt;strong&gt;resolver problemas&lt;/strong&gt; e &lt;strong&gt;finalizar tarefas&lt;/strong&gt; (ou até mesmo saber o que realmente precisa ser feito!). As listas de tarefas podem te deixar extremamente focado e isso ajuda muito na produtividade.&lt;/p&gt;
+
+&lt;p&gt;Enfim, falei que seria prático, então vamos lá! Não perca mais tempo e comece fazendo uma conta na &lt;a href=&quot;https://www.wunderlist.com/&quot;&gt;melhor lista de todos os tempos! :)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Nela você consegue criar listas, organizá-las em pastas, compartilhar, atribuir responsável de cada item, colocar data limite, lembretes, subtarefas, notas, comentários… ufa! Tudo isso com uma interface bela e intuitiva, sistema de busca e sincronização com Smartphone. Ou seja, tudo que é necessário e mais!&lt;/p&gt;
+
+&lt;p&gt;Conheci a &lt;strong&gt;Wunderlist&lt;/strong&gt; este ano e virei fã assumido. Depois que comecei a usar, fiquei viciado, pois se não está lá, para mim praticamente não existe!&lt;/p&gt;
+
+&lt;p&gt;Pode até parecer loucura, mas este é justamente o principal benefício das listas: saber que suas tarefas estão todas anotadas em algum lugar e que seu cérebro não precisa ficar guardando isso na memória. O que inclusive &lt;strong&gt;reduz o estresse&lt;/strong&gt; , pois se percebe que aquelas “1000 tarefas”, na verdade eram apenas 6 ou 7…&lt;/p&gt;
+
+&lt;p&gt;Outra vantagem de usar a Wunderlist é que eu &lt;strong&gt;unifiquei todos os meus locais de anotações&lt;/strong&gt; , pois favorecem a eficiência nas tarefas, já que não é necessário ficar lembrando exatamente onde você anotou aquele item específico, quando precisar lembrar os detalhes para resolvê-lo. Locais como favoritos do navegador, listas de compras e desejos, afazeres diários, responsabilidades familiares, projetos pessoais e profissionais, links com ferramentas &lt;em&gt;online&lt;/em&gt; e textos para ler depois, entre outros, agora estão em um &lt;strong&gt;único local&lt;/strong&gt;!&lt;/p&gt;
+
+&lt;p&gt;A forma que organizei minhas listas lá foi a seguinte:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Pasta Familiar&lt;/em&gt;: listas com perguntas para o Pediatra, listas de compras, finanças, afazeres gerais e da casa, entre outras listas de assuntos pessoais;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Pasta Profissional&lt;/em&gt;: listas com tarefas dos projetos em andamento, chamados a tratar e outras com assuntos relacionados ao trabalho;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Pasta Pessoal&lt;/em&gt;: listas com sonhos, filmes para assistir, artigos para ler depois, ferramentas online, links para estudo, promessas e desejos para o novo ano, etc.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Este formato que tenho usado é bem minimalista, provavelmente irei refazê-lo no inicio de 2016. Mas considero que a &lt;strong&gt;simplicidade&lt;/strong&gt; na organização das listas é um fator que nos permite reduzir a ansiedade das &lt;strong&gt;“tarefas rodando na cabeça”&lt;/strong&gt; , e mais felizes ao conseguir cumprir as atividades que já estão há um longo tempo para serem iniciadas e/ou concluídas.&lt;/p&gt;
+
+&lt;p&gt;E você, utiliza listas para controlar seus afazeres? Tem outro aplicativo de listas para recomendar? Deixe seu comentário abaixo!&lt;/p&gt;
+
+&lt;p&gt;Um abraço e bom final de ano! :)&lt;/p&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Framework W3.CSS</title><link href="http://danilobarion1986.github.io/web-development/front-end/frameworks/2015/12/04/framework-w3css.html" rel="alternate" type="text/html" title="Framework W3.CSS" /><published>2015-12-04T14:50:49-02:00</published><updated>2015-12-04T14:50:49-02:00</updated><id>http://danilobarion1986.github.io/web-development/front-end/frameworks/2015/12/04/framework-w3css</id><content type="html" xml:base="http://danilobarion1986.github.io/web-development/front-end/frameworks/2015/12/04/framework-w3css.html">&lt;p&gt;&lt;img src=&quot;https://devdanilo.files.wordpress.com/2015/12/responsive_design_screens.png&quot; alt=&quot;responsive_design_screens&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Com a crescente popularização do desenvolvimento &lt;em&gt;Mobile&lt;/em&gt;, muitas empresas tem desenvolvido tecnologias, linguagens e _ &lt;strong&gt;frameworks&lt;/strong&gt; _ para agilizar a criação de aplicativos e facilitar o uso destes em múltiplas plataformas (&lt;em&gt;Android&lt;/em&gt;, &lt;em&gt;iOS&lt;/em&gt; e &lt;em&gt;Windows&lt;/em&gt; &lt;em&gt;Phone&lt;/em&gt;), além do próprio acesso pelo navegador.&lt;/p&gt;
+
+&lt;p&gt;Dentro deste mundo de possibilidades, gostaria de abordar um framework &lt;em&gt;front-end&lt;/em&gt; bastante recente (junho/2015) lançado pela &lt;a href=&quot;http://www.w3schools.com/default.asp&quot;&gt;w3Schools&lt;/a&gt;, importante site de ensino e referência sobre linguagens de desenvolvimento &lt;em&gt;Web&lt;/em&gt; que, apesar do nome, não tem relação com o &lt;a href=&quot;https://pt.wikipedia.org/wiki/W3C&quot;&gt;W3C&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Semelhante ao &lt;em&gt;Bootstrap&lt;/em&gt; em seus objetivos, que é facilitar a criação de &lt;em&gt;layouts&lt;/em&gt; e o desenvolvimento &lt;em&gt;front-end&lt;/em&gt;, ele é todo baseado na customização de elementos &lt;em&gt;HTML&lt;/em&gt; por meio de classes &lt;em&gt;CSS&lt;/em&gt; que, na minha opinião, são muito mais &lt;strong&gt;intuitivas&lt;/strong&gt; e &lt;strong&gt;simples&lt;/strong&gt; de utilizar que as do &lt;em&gt;Bootstrap&lt;/em&gt; (&lt;em&gt;let the&lt;/em&gt; “treta” &lt;em&gt;begins&lt;/em&gt;!). As classes que eles disponibilizam seguem o estilo do _ &lt;strong&gt;Material Design&lt;/strong&gt; _ do &lt;em&gt;Google&lt;/em&gt; e já possuem responsividade nativa! Ou seja, rapidamente você pode criar um layout &lt;strong&gt;bonito&lt;/strong&gt; e &lt;strong&gt;responsivo&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Além disso, todas elas iniciam com “w3”, o que te permite diferenciar rapidamente das suas classes personalizadas e são MUITO legíveis e fáceis de lembrar. Mas vamos a alguns exemplos práticos! :)&lt;/p&gt;
+
+&lt;p&gt;Primeiramente, para usar estas classes &lt;em&gt;CSS&lt;/em&gt; em seu site, basta referenciar a biblioteca disponível neste &lt;em&gt;&lt;a href=&quot;http://www.w3schools.com/lib/w3.css&quot;&gt;link&lt;/a&gt;&lt;/em&gt; da seguinte forma, entre os elementos de seu &lt;em&gt;HTML&lt;/em&gt;, como qualquer outro arquivo de estilo, usando a tag , referenciado o endereço http://www.w3schools.com/lib/w3.css.&lt;/p&gt;
+
+&lt;p&gt;Se você não entendeu essa parte, recomendo fortemente que inicie sua leitura &lt;a href=&quot;http://www.w3schools.com/css/css_howto.asp&quot;&gt;por aqui&lt;/a&gt; e &lt;a href=&quot;http://www.w3schools.com/html/default.asp&quot;&gt;aqui&lt;/a&gt;, antes de continuar a explorar o W3.CSS!&lt;/p&gt;
+
+&lt;p&gt;Para estilizar um checkbox, que classe você usaria? w3-check. Para cores de fundo? w3-red. Para cores de texto? w3-text-blue. Para bordas arredondadas (de qualquer elemento possível)? w3-round. &lt;strong&gt;Simples assim!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;E você o que achou do W3.CSS? Possui experiência com Bootstrap? Compartilhe nos comentários o que achou deste novo framework, se já utilizou e como o avalia em relação ao Bootstrap!&lt;/p&gt;
+
+&lt;p&gt;Ate o próximo post!&lt;/p&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">JSON Everywhere!</title><link href="http://danilobarion1986.github.io/web-development/javascript/json/2015/11/27/json-everywhere.html" rel="alternate" type="text/html" title="JSON Everywhere!" /><published>2015-11-27T19:50:05-02:00</published><updated>2015-11-27T19:50:05-02:00</updated><id>http://danilobarion1986.github.io/web-development/javascript/json/2015/11/27/json-everywhere</id><content type="html" xml:base="http://danilobarion1986.github.io/web-development/javascript/json/2015/11/27/json-everywhere.html">&lt;p&gt;Hoje gostaria de escrever sobre o formato de transmissão de dados JSON (&lt;em&gt;JavaScript Object Notation&lt;/em&gt;).&lt;/p&gt;
+
+&lt;p&gt;Como o nome já diz, este padrão é baseado na mesma especificação sobre a qual a linguagem de programação Javascript é construída. (Se quiser aprofundar nos detalhes de &lt;strong&gt;como uma linguagem de programação é especificada e implementada&lt;/strong&gt; , sugiro os links da própria página do &lt;a href=&quot;http://www.json.org/json-pt.html&quot;&gt;JSON&lt;/a&gt;- não me responsabilizo por sua sanidade mental! :) ).&lt;/p&gt;
+
+&lt;p&gt;A publicação deste formato é relativamente recente (1ª edição de Outubro de 2013), mas devido às suas qualidades e da grande difusão do &lt;em&gt;JavaScript&lt;/em&gt;, principalmente por causa da &lt;em&gt;Web&lt;/em&gt;, já está muito disseminado. Diversas &lt;a href=&quot;https://pt.wikipedia.org/wiki/Interface_de_programa%C3%A7%C3%A3o_de_aplica%C3%A7%C3%B5es&quot;&gt;&lt;em&gt;API&lt;/em&gt;&lt;/a&gt;’s e &lt;a href=&quot;https://pt.wikipedia.org/wiki/Web_service&quot;&gt;WebServices&lt;/a&gt; já servem seus dados exclusivamente em &lt;em&gt;JSON&lt;/em&gt;; outras ainda mantém a diversidade, utilizando também o &lt;em&gt;XML&lt;/em&gt;, já mais consolidado.&lt;/p&gt;
+
+&lt;p&gt;Uma de suas grandes vantagens também é ser &lt;strong&gt;independente de linguagem de programação&lt;/strong&gt; , principalmente por manipular estruturas de dados comuns à todas basicamente todas elas, como vetores , dicionários, hashes, mapas, registros, objetos, etc. Ela permite usar estas estruturas organizando-as em pares chave/valor, podendo misturá-las conforme for necessário.&lt;/p&gt;
+
+&lt;p&gt;Tudo inicia e termina com &lt;strong&gt;chaves&lt;/strong&gt; ({}). Dentro delas são indicados seus pares chave/valor. Cada chave/valor é separado por dois pontos (:) e se encontra entre aspas (“”), não sendo necessárias para números. Cada elemento de um vetor é separado por vírgula (,).&lt;/p&gt;
+
+&lt;p&gt;Cada chave e valor podem “ser” apenas um elemento, como um número ou uma sequência de caracteres. Mas nada impede deste também ser um vetor, com diversos elementos, ou até mesmo um &lt;strong&gt;novo objeto JSON completo!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Por exemplo, digamos que você deseja representar endereços completos no formato JSON. Uma possibilidade seria esta:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;     &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+       &lt;span class=&quot;s2&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+       &lt;span class=&quot;s2&quot;&gt;&quot;endereco_completo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+       &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+         &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+           &lt;span class=&quot;s2&quot;&gt;&quot;tipo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;comercial&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+           &lt;span class=&quot;s2&quot;&gt;&quot;tipo_logradouro&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;rua&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+           &lt;span class=&quot;s2&quot;&gt;&quot;nome&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;da saudade&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+           &lt;span class=&quot;s2&quot;&gt;&quot;numero&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1234&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+           &lt;span class=&quot;s2&quot;&gt;&quot;complemento&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+           &lt;span class=&quot;s2&quot;&gt;&quot;bairro&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Nostalgia&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+           &lt;span class=&quot;s2&quot;&gt;&quot;cidade&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;São Paulo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+           &lt;span class=&quot;s2&quot;&gt;&quot;Estado&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;SP&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+           &lt;span class=&quot;s2&quot;&gt;&quot;pais&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Brasil&quot;&lt;/span&gt;
+         &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+         &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+           &lt;span class=&quot;s2&quot;&gt;&quot;tipo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;residencial&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+           &lt;span class=&quot;s2&quot;&gt;&quot;tipo_logradouro&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;rua&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+           &lt;span class=&quot;s2&quot;&gt;&quot;nome&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;do espeto&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+           &lt;span class=&quot;s2&quot;&gt;&quot;numero&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;789&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+           &lt;span class=&quot;s2&quot;&gt;&quot;complemento&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;apto 1 bloco 2&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+           &lt;span class=&quot;s2&quot;&gt;&quot;bairro&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Singelo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+           &lt;span class=&quot;s2&quot;&gt;&quot;cidade&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;São Paulo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+           &lt;span class=&quot;s2&quot;&gt;&quot;Estado&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;SP&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+           &lt;span class=&quot;s2&quot;&gt;&quot;pais&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Brasil&quot;&lt;/span&gt;
+         &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+       &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;No exemplo acima demonstro isso. O objeto “Endereço”, contém uma chave “id”, com valor 1. Já o endereço, contém um vetor (afinal podemos querer armazenar mais de um endereço, certo?), e &lt;strong&gt;cada elemento deste array é um objeto JSON&lt;/strong&gt; , com as diversas chaves/valores necessários para descrever o endereço completo.&lt;/p&gt;
+
+&lt;p&gt;Note que todo o vetor é apenas o valor da chave “endereco_completo”!&lt;/p&gt;
+
+&lt;p&gt;Gosto muito deste padrão e não tenho dúvidas que devemos &lt;strong&gt;apostar em seu aprendizado&lt;/strong&gt;. Claro que se você constrói sistemas que precisam se comunicar com outros que apenas “entendem” XML como formato de transmissão dos dados, não tem escapatória. Mas tornar sua aplicação &lt;em&gt;JSON-friendly&lt;/em&gt; ainda é o mais indicado, pois lhe trará grande flexibilidade no desenvolvimento, poderá usar tranquilamente o padrão &lt;a href=&quot;https://pt.wikipedia.org/wiki/REST&quot;&gt;&lt;em&gt;REST&lt;/em&gt;&lt;/a&gt;, transitará menos dados na rede (local ou não) e facilitará muito a leitura destes dados também por humanos (clientes, outros desenvolvedores e quem mais precisar).&lt;/p&gt;
+
+&lt;p&gt;E você, já conhecia o padrão JSON? Já utilizou em algum desenvolvimento? Qual sua opinião sobre ele?&lt;/p&gt;
+
+&lt;p&gt;Deixe aqui seus comentários e até o próximo post! :)&lt;/p&gt;</content><author><name></name></author><summary type="html">Hoje gostaria de escrever sobre o formato de transmissão de dados JSON (JavaScript Object Notation).</summary></entry></feed>
