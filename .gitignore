@@ -1,4 +1,3 @@
-./ssl
-./ssl/**/*
-./wordpress_posts
-./wordpress_posts/**/*
+ssl/**/*
+wordpress_posts/**/*
+teste/**/*
