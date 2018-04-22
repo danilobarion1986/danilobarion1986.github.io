@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://danilobarion1986.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="http://danilobarion1986.github.io/" rel="alternate" type="text/html" /><updated>2018-04-21T11:01:41-03:00</updated><id>http://danilobarion1986.github.io/</id><title type="html">{{ Developer Notes }}</title><subtitle>Devaneios de um desenvolvedor em construção.</subtitle><entry><title type="html">Extracting Lambda Source Code</title><link href="http://danilobarion1986.github.io/ruby/backend/2017/10/09/extracting-lambda-source-code.html" rel="alternate" type="text/html" title="Extracting Lambda Source Code" /><published>2017-10-09T19:08:58-03:00</published><updated>2017-10-09T19:08:58-03:00</updated><id>http://danilobarion1986.github.io/ruby/backend/2017/10/09/extracting-lambda-source-code</id><content type="html" xml:base="http://danilobarion1986.github.io/ruby/backend/2017/10/09/extracting-lambda-source-code.html">&lt;p&gt;&lt;img src=&quot;https://devdanilo.files.wordpress.com/2017/10/source-code.jpeg&quot; alt=&quot;source-code&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://danilobarion1986.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="http://danilobarion1986.github.io/" rel="alternate" type="text/html" /><updated>2018-04-22T11:21:34-03:00</updated><id>http://danilobarion1986.github.io/</id><title type="html">{{ Developer Notes }}</title><subtitle>Devaneios de um desenvolvedor em construção.</subtitle><entry><title type="html">Extracting Lambda Source Code</title><link href="http://danilobarion1986.github.io/ruby/backend/2017/10/09/extracting-lambda-source-code.html" rel="alternate" type="text/html" title="Extracting Lambda Source Code" /><published>2017-10-09T19:08:58-03:00</published><updated>2017-10-09T19:08:58-03:00</updated><id>http://danilobarion1986.github.io/ruby/backend/2017/10/09/extracting-lambda-source-code</id><content type="html" xml:base="http://danilobarion1986.github.io/ruby/backend/2017/10/09/extracting-lambda-source-code.html">&lt;p&gt;&lt;img src=&quot;https://devdanilo.files.wordpress.com/2017/10/source-code.jpeg&quot; alt=&quot;source-code&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;In this post, I’ll show you how to extract the code definition of a Lambda object, using just pure Ruby! But, first things first! What is a lambda in Ruby? A lambda is an special type of Proc, with some little differences in syntax, behavior and functionality, one of them that could be used as an anonymous function. There are many articles with all the details of what a lambda is and its main differences from a Proc and a block, one of them is &lt;a href=&quot;http://culttt.com/2015/05/13/what-are-lambdas-in-ruby.&quot;&gt;this&lt;/a&gt;.&lt;/p&gt;
 
@@ -193,4 +193,105 @@ So, I have a solution that is simple and I don’t need to worry with some depen
 
 &lt;p&gt;E você, já conhecia o padrão JSON? Já utilizou em algum desenvolvimento? Qual sua opinião sobre ele?&lt;/p&gt;
 
-&lt;p&gt;Deixe aqui seus comentários e até o próximo post! :)&lt;/p&gt;</content><author><name></name></author><summary type="html">Hoje gostaria de escrever sobre o formato de transmissão de dados JSON (JavaScript Object Notation).</summary></entry></feed>
+&lt;p&gt;Deixe aqui seus comentários e até o próximo post! :)&lt;/p&gt;</content><author><name></name></author><summary type="html">Hoje gostaria de escrever sobre o formato de transmissão de dados JSON (JavaScript Object Notation).</summary></entry><entry><title type="html">Mudar ou Não Mudar? Eis a Questão!</title><link href="http://danilobarion1986.github.io/opiniao/carreira/vida/crescimento-pessoal/2015/11/04/mudar-ou-nao-mudar-eis-a-questao.html" rel="alternate" type="text/html" title="Mudar ou Não Mudar? Eis a Questão!" /><published>2015-11-04T12:51:39-02:00</published><updated>2015-11-04T12:51:39-02:00</updated><id>http://danilobarion1986.github.io/opiniao/carreira/vida/crescimento-pessoal/2015/11/04/mudar-ou-nao-mudar-eis-a-questao</id><content type="html" xml:base="http://danilobarion1986.github.io/opiniao/carreira/vida/crescimento-pessoal/2015/11/04/mudar-ou-nao-mudar-eis-a-questao.html">&lt;p&gt;&lt;img src=&quot;https://devdanilo.files.wordpress.com/2015/11/caminhos.jpg&quot; alt=&quot;caminhos&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;“O caminho se faz caminhando”, “O início é sempre mais complicado”, “Dar o primeiro passo é metade do caminho”…&lt;/p&gt;
+
+&lt;p&gt;Você já ouviu alguma dessas frases, não é mesmo? E quando o primeiro passo já aconteceu há algum tempo e o caminho atual não parece ser o melhor ou o mais estimulante?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Será que estamos fadados a continuar na mesma direção?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Não há somente uma resposta, até porque dependerá de qual aspecto da vida considerarmos, o momento que estamos, idade, expectativas, etc. Mas gostaria de responder parte destas perguntas dando o exemplo de minha trajetória profissional, não para servir como modelo insuperável, mas como &lt;strong&gt;estímulo à sua própria reflexão&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Em 2005 iniciei minha 1ªfaculdade: Nutrição. Isso mesmo, sou nutricionista! :)&lt;/p&gt;
+
+&lt;p&gt;Atuei na área, participei de congressos e premiações e publiquei artigos científicos. Tinha uma atuação de “sucesso”. Entretanto, depois de certo tempo não tinha mais aquele “brilho no olhar”, além de ter me decepcionado com a área por questões pessoais…&lt;/p&gt;
+
+&lt;p&gt;Neste período, fui descobrindo minha &lt;strong&gt;verdadeira paixão profissional&lt;/strong&gt; : a programação e a tecnologia! Usava muito o computador e gostava de usar novas ferramentas/softwares, acompanhar as novidades da área, entender como tudo funcionava. Minha vocação para “exatas” foi aparecendo, com certa facilidade para conceitos de banco de dados, lógica e linguagens de programação, entre outros.&lt;/p&gt;
+
+&lt;p&gt;Resolvi então “revolucionar”: mudei de cidade, arranjei um emprego provisório, comecei outra faculdade e passei a buscar incessantemente crescer na área desejada.Só digo uma coisa: tem sido um &lt;strong&gt;tempo intenso&lt;/strong&gt; desde essas decisões! Três mudanças de emprego, metas alcançadas, boa parte do trabalho sendo também diversão e &lt;strong&gt;muitos desafios&lt;/strong&gt;!&lt;/p&gt;
+
+&lt;p&gt;Mas espera, o que eu quero dizer com tudo isso?! Que é possível sim!&lt;/p&gt;
+
+&lt;p&gt;Mude de área se não está mais satisfeito! Crie um &lt;strong&gt;plano de transição&lt;/strong&gt; com os itens que você precisa garantir durante este processo (&lt;em&gt;pode deixar o emprego atual? Consegue iniciar um curso na nova área desejada? É possível atuar como um hobbie para depois transformar em algo mais rentável? Quais as limitações que podem te impedir e as habilidades e pontos positivos que podem te ajudar?&lt;/em&gt;).&lt;/p&gt;
+
+&lt;p&gt;De uma maneira ou outra pense, sonhe, faça, dê pequenos, médios e grandes passos, busque orientação profissional, converse com as pessoas que você confia, plante a semente da mudança! &lt;strong&gt;Não tenha medo!&lt;/strong&gt; Te garanto que neste processo de busca, o crescimento acontecerá, não apenas na vida profissional, mas também na pessoal!&lt;/p&gt;
+
+&lt;p&gt;Pra finalizar, recomendo o ótimo filme “Sim, Senhor!”. Além de ser com o Jim Carrey, talvez te ajude nesta reflexão sobre escolhas e decisões da vida:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://migre.me/s8PfE&quot;&gt;Filme ‘Sim, Senhor!’&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Quais suas experiências com mudança de rumo na vida? Que decisão mais te fez aprender e crescer na vida? Compartilhe para somar!&lt;/p&gt;
+
+&lt;p&gt;Até a próxima! :)&lt;/p&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Meetup-se!</title><link href="http://danilobarion1986.github.io/opiniao/carreira/vida/crescimento-pessoal/2015/11/01/meetup-se.html" rel="alternate" type="text/html" title="Meetup-se!" /><published>2015-11-01T00:33:59-02:00</published><updated>2015-11-01T00:33:59-02:00</updated><id>http://danilobarion1986.github.io/opiniao/carreira/vida/crescimento-pessoal/2015/11/01/meetup-se</id><content type="html" xml:base="http://danilobarion1986.github.io/opiniao/carreira/vida/crescimento-pessoal/2015/11/01/meetup-se.html">&lt;p&gt;Final de semana prolongado, preguiça, nada pra fazer… Certo?!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Errado!!!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Se você conhece a rede social &lt;em&gt;&lt;a href=&quot;http://www.meetup.com/pt/about/&quot;&gt;Meetup&lt;/a&gt;&lt;/em&gt;&lt;a href=&quot;http://www.meetup.com/pt/about/&quot;&gt;,&lt;/a&gt; e participa ativamente dela, tenho certeza que seus dias estão bem mais movimentados! :)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://devdanilo.files.wordpress.com/2015/11/meetup.jpg&quot;&gt;&lt;img src=&quot;https://devdanilo.files.wordpress.com/2015/11/meetup.jpg&quot; alt=&quot;Logotipo do Meetup&quot; /&gt;&lt;/a&gt;&lt;!--more--&gt;&lt;/p&gt;
+
+&lt;p&gt;Imagina um site que realmente te ajuda a encontrar pessoas com interesses em comum aos seus, para aprender, ensinar, se divertir, divagar?! Esta é justamente a missão do &lt;em&gt;Meetup&lt;/em&gt;, conforme eles descrevem:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“(…) dar vida às comunidades locais e ajudar pessoas nos quatro cantos do planeta a se organizar. O &lt;em&gt;Meetup&lt;/em&gt; acredita que pessoas reunidas em grupo podem fazer a diferença: melhorar a si mesmas e até mudar o mundo inteiro.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Viu só?! Bom, você encontra de tudo lá, pesquisando por interesses e distância de sua localização. Eu mesmo já participei de alguns mini-cursos de programação e tenho aderido a outros grupos para saber os encontros que estão planejando.&lt;/p&gt;
+
+&lt;p&gt;Achei fantástico, pois ele busca favorecer esse “social” da internet, promovendo encontros que, por mais que existam no virtual, são sempre mais plenos no real. Muitos &lt;em&gt;Hangout’s&lt;/em&gt;, palestras, cursos, encontros, experiências podem estar te esperando num grupo por aí!&lt;/p&gt;
+
+&lt;p&gt;Eis alguns dos &lt;em&gt;meetup’s&lt;/em&gt; que sugiro, principalmente para você que gosta de tecnologia/inovação/empreendedorismo e/ou é profissional da área:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.meetup.com/pt/Fullstack-Developers-Sao-Paulo/&quot;&gt;&lt;em&gt;FullStack Developers&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;&lt;a href=&quot;http://www.meetup.com/pt/NetCoders/&quot;&gt;.Net Coders&lt;/a&gt;&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;&lt;a href=&quot;http://www.meetup.com/pt/Cultura-Tech-Sao-Paulo/&quot;&gt;Cultura Tech SP&lt;/a&gt;&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;&lt;a href=&quot;http://www.meetup.com/pt/WSDEVS/&quot;&gt;WSDEVS&lt;/a&gt;&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;&lt;a href=&quot;http://www.meetup.com/pt/GDG-SP/&quot;&gt;GDG-SP&lt;/a&gt;&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.meetup.com/pt/LanguageSP/&quot;&gt;&lt;em&gt;Language Exchange SP&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Aproveitando o clima de interação, participa aqui do blog, lendo, comentando, divulgando, etc!&lt;/p&gt;
+
+&lt;p&gt;Você já conhecia o &lt;em&gt;Meetup&lt;/em&gt;? Já participou de encontros promovidos pela comunidade? O que acha do conceito por trás do site e sua missão?&lt;/p&gt;
+
+&lt;p&gt;Boas experiências! ;)&lt;/p&gt;</content><author><name></name></author><summary type="html">Final de semana prolongado, preguiça, nada pra fazer… Certo?!</summary></entry><entry><title type="html">Resenha ‘Construindo Aplicações Node com MongoDB e Backbone’</title><link href="http://danilobarion1986.github.io/opiniao/carreira/vida/crescimento-pessoal/2015/10/30/resenha-construindo-aplicacoes-node-com-mongodb-e-backbone.html" rel="alternate" type="text/html" title="Resenha 'Construindo Aplicações Node com MongoDB e Backbone'" /><published>2015-10-30T14:34:43-02:00</published><updated>2015-10-30T14:34:43-02:00</updated><id>http://danilobarion1986.github.io/opiniao/carreira/vida/crescimento-pessoal/2015/10/30/resenha-construindo-aplicacoes-node-com-mongodb-e-backbone</id><content type="html" xml:base="http://danilobarion1986.github.io/opiniao/carreira/vida/crescimento-pessoal/2015/10/30/resenha-construindo-aplicacoes-node-com-mongodb-e-backbone.html">&lt;p&gt;Olá pessoal! Estava pensando em um tema para meu primeiro post, ao mesmo tempo em que estudava o material do novo livro que comprei.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://devdanilo.files.wordpress.com/2015/10/seta.png&quot;&gt;&lt;img src=&quot;https://devdanilo.files.wordpress.com/2015/10/seta.png&quot; alt=&quot;seta&quot; /&gt;&lt;/a&gt;&lt;a href=&quot;https://devdanilo.files.wordpress.com/2015/10/capa_livro_node.jpg&quot;&gt;&lt;img src=&quot;https://devdanilo.files.wordpress.com/2015/10/capa_livro_node.jpg&quot; alt=&quot;capa_livro_node&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Apesar do pouco tempo com ele, já tinha algumas críticas e elogios, então por que não fazer uma pequena resenha sobre o livro, não é mesmo?&lt;/p&gt;
+
+&lt;p&gt;Vamos lá, o que me chamou a atenção inicialmente foi o uso do MongoDB (banco de dados &lt;em&gt;&lt;strong&gt;NoSQL&lt;/strong&gt;&lt;/em&gt;, amplamente utilizado &lt;a href=&quot;https://www.mongodb.com/who-uses-mongodb&quot;&gt;por aí&lt;/a&gt;). Por quê? Desde a faculdade eu ouvia falar sobre bancos de dados não relacionais, mas até quase 1 ano após concluir o curso eu não fazia ideia de como eles REALMENTE funcionavam!&lt;/p&gt;
+
+&lt;p&gt;Até que, cerca de 2 meses atrás, resolvi fazer um curso &lt;em&gt;online&lt;/em&gt; na &lt;em&gt;&lt;a href=&quot;https://university.mongodb.com/&quot;&gt;MongoDB University,&lt;/a&gt;&lt;/em&gt; onde finalmente entendi, não somente os principais conceitos do &lt;em&gt;NoSQL&lt;/em&gt;, mas também sobre a estrutura do &lt;em&gt;MongoDB&lt;/em&gt;, focado no uso de &lt;strong&gt;arquivos no formato &lt;em&gt;JSON&lt;/em&gt;&lt;/strong&gt; e &lt;em&gt;Javascript&lt;/em&gt; para manipulação destes em um ambiente &lt;em&gt;shell&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Mas enfim, deixemos este tópico para um post completo no futuro! :)&lt;/p&gt;
+
+&lt;p&gt;Estou estudando bastante &lt;em&gt;&lt;strong&gt;Javascript&lt;/strong&gt;&lt;/em&gt; e seus &lt;em&gt;frameworks&lt;/em&gt;, portanto imaginei que um livro relativamente recente (2014), ensinando &lt;em&gt;Node&lt;/em&gt;, &lt;em&gt;Backbone&lt;/em&gt; e diversos &lt;em&gt;plugins&lt;/em&gt; e bibliotecas complementares seria ideal!&lt;/p&gt;
+
+&lt;p&gt;A proposta central do livro é a construção de um tipo de rede social, com chat, atualizações em tempo real e publicações de artigos (já vi isso em algum lugar…). Além disso, a arquitetura da aplicação é pensada de forma a ter um protótipo rápido (&lt;a href=&quot;https://en.wikipedia.org/wiki/Minimum_viable_product&quot;&gt;MVP&lt;/a&gt;, sabe?) e &lt;strong&gt;escalável&lt;/strong&gt; , que é um requisito essencial, no modelo MVC.&lt;/p&gt;
+
+&lt;p&gt;Bem, após estas apresentações, serei sucinto na descrição dos pontos que considero bons e ruins, dentro do que já li:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Bom&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Uso de tecnologias &lt;em&gt;open source&lt;/em&gt;, modernas e “parrudas”, aderentes aos atuais paradigmas da programação Web.&lt;/li&gt;
+  &lt;li&gt;Código completo da aplicação, inclusive no &lt;em&gt;GitHub&lt;/em&gt; (como é padrão para os livros da &lt;em&gt;O’Reilly&lt;/em&gt;).&lt;/li&gt;
+  &lt;li&gt;Estou gostando da ordem usada nos capítulos/conteúdos para o desenvolvimento do &lt;em&gt;app&lt;/em&gt;, com explicações dos códigos logo após a sua apresentação.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Ruim&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Tradução! Costumo ler conteúdo técnico em inglês mesmo, principalmente no formato digital. Mas quando compro algum livro me “dou ao luxo” de escolher o português (queira ou não, ainda leio mais rápido na minha língua nativa…rs). Porém, a tradução claramente não foi revisada tecnicamente, ou se foi, não teve a preocupação de tornar as frases mais fluídas, realmente adaptadas ao português. Algumas frases ficam “truncadas”, tendo que ler 2 ou 3 vezes pra ter certeza que o autor está dizendo aquilo mesmo. Este ponto realmente me chateou um pouco, mas agora vou ter que lidar com isso.&lt;/li&gt;
+  &lt;li&gt;Pelo que folheei dos capítulos à frente, todo o código é bem explicado. Porém, as primeiras partes, que expõem os conceitos básicos das ferramentas usadas deixam um pouco a desejar. Além de serem sucintas DEMAIS, a questão da tradução também prejudica o entendimento. Sabe aqueles textos que você lê e não tem certeza se foi você que não entendeu ou se ele não está dizendo nada mesmo?! Não é de todo ruim, mas tinha expectativas maiores sobre estes pontos iniciais.&lt;/li&gt;
+  &lt;li&gt;O livro diz que não precisa ter grandes noções de Javascript para entender o conteúdo, porém eu recomendaria que você tivesse sim um &lt;em&gt;background&lt;/em&gt; de &lt;em&gt;Javascript&lt;/em&gt;, &lt;em&gt;JSON&lt;/em&gt;, lógica, etc. (creio que para comprar um livro desses, no geral já tenha, mas vale a pena reforçar!)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Em resumo…&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;O livro é &lt;strong&gt;BOM&lt;/strong&gt;. Eu recomendo para você que tem interesse em desenvolvimento Web moderno. Se for comprar o livro, se possível, compre em inglês! Acho importante também ter um conhecimento anterior ao menos razoável de &lt;em&gt;Javascript&lt;/em&gt; e programação, para não desistir de ler por não entender muito bem os conceitos apresentados, pois as vezes eles são sucintos demais.&lt;/p&gt;
+
+&lt;p&gt;Bom, é isso! Você já leu este livro? Recomenda também? Tem outros pontos positivos ou negativos para citar? Coloca aqui nos comentários!&lt;/p&gt;
+
+&lt;p&gt;Um abraço!&lt;/p&gt;</content><author><name></name></author><summary type="html">Olá pessoal! Estava pensando em um tema para meu primeiro post, ao mesmo tempo em que estudava o material do novo livro que comprei.</summary></entry></feed>

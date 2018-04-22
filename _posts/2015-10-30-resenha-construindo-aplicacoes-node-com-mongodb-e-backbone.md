@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  Resenha: Construindo Aplicações Node com MongoDB e Backbone
+title:  Resenha 'Construindo Aplicações Node com MongoDB e Backbone'
 date:   2015-10-30 13:34:43 -0300
 categories: opiniao carreira vida crescimento-pessoal
 ---
 
 Olá pessoal! Estava pensando em um tema para meu primeiro post, ao mesmo tempo em que estudava o material do novo livro que comprei.
 
-[![capa_livro_node](https://devdanilo.files.wordpress.com/2015/10/capa_livro_node.jpg)](https://devdanilo.files.wordpress.com/2015/10/capa_livro_node.jpg)[![seta](https://devdanilo.files.wordpress.com/2015/10/seta.png)](https://devdanilo.files.wordpress.com/2015/10/seta.png)
+[![seta](https://devdanilo.files.wordpress.com/2015/10/seta.png)](https://devdanilo.files.wordpress.com/2015/10/seta.png)[![capa_livro_node](https://devdanilo.files.wordpress.com/2015/10/capa_livro_node.jpg)](https://devdanilo.files.wordpress.com/2015/10/capa_livro_node.jpg)
 
 Apesar do pouco tempo com ele, já tinha algumas críticas e elogios, então por que não fazer uma pequena resenha sobre o livro, não é mesmo?
 
