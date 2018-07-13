@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Dia (Quase Mundial) do Rock! ♪♫\o/♪♫
+title:  Dia (Quase Mundial) do Rock!
 date:   2018-07-13 00:25:00 -0300
 categories: off-topic music rock
 ---
@@ -47,5 +47,5 @@ Ufa, se eu fosse comentar cada uma destas pérolas, teria que fazer um _post_ pr
 E aí o que achou desta seleção? Demais né!?haha
 Comenta aí com aqueles que você colocaria ou tiraria desta lista!
 
-__Long live Rock And Roll!__
+__Long live Rock And Roll! ♪♫\o/♪♫__
 
