@@ -1,4 +1,111 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://danilobarion1986.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="http://danilobarion1986.github.io/" rel="alternate" type="text/html" /><updated>2018-07-11T23:16:50-03:00</updated><id>http://danilobarion1986.github.io/</id><title type="html">{{ Developer Notes }}</title><subtitle>Devaneios de um desenvolvedor em construção.</subtitle><entry><title type="html">Desenvolvendo em C# no Linux com .NET Core (Parte 1)</title><link href="http://danilobarion1986.github.io/c%23/csharp/backend/dotnetcore/2018/07/11/desenvolvendo-em-csharp-no-linux-com-dotnet-core.html" rel="alternate" type="text/html" title="Desenvolvendo em C# no Linux com .NET Core (Parte 1)" /><published>2018-07-11T22:45:43-03:00</published><updated>2018-07-11T22:45:43-03:00</updated><id>http://danilobarion1986.github.io/c%23/csharp/backend/dotnetcore/2018/07/11/desenvolvendo-em-csharp-no-linux-com-dotnet-core</id><content type="html" xml:base="http://danilobarion1986.github.io/c%23/csharp/backend/dotnetcore/2018/07/11/desenvolvendo-em-csharp-no-linux-com-dotnet-core.html">&lt;p&gt;A Microsoft tem cada vez mais declarado seu amor pelo Linux e abraçado o Open Source! Porque não juntar então estes 2 mundos utilizando o (relativamente) recente framework .NET Core lançado pela MS para construir e rodar aplicações C# no Linux?!&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.3">Jekyll</generator><link href="http://danilobarion1986.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="http://danilobarion1986.github.io/" rel="alternate" type="text/html" /><updated>2018-07-13T00:26:04-03:00</updated><id>http://danilobarion1986.github.io/</id><title type="html">{{ Developer Notes }}</title><subtitle>Devaneios de um desenvolvedor em construção.</subtitle><entry><title type="html">Dia (Quase Mundial) do Rock! ♪♫\o/♪♫</title><link href="http://danilobarion1986.github.io/off-topic/music/rock/2018/07/13/rock-and-roll-day.html" rel="alternate" type="text/html" title="Dia (Quase Mundial) do Rock! ♪♫\o/♪♫" /><published>2018-07-13T00:25:00-03:00</published><updated>2018-07-13T00:25:00-03:00</updated><id>http://danilobarion1986.github.io/off-topic/music/rock/2018/07/13/rock-and-roll-day</id><content type="html" xml:base="http://danilobarion1986.github.io/off-topic/music/rock/2018/07/13/rock-and-roll-day.html">&lt;p&gt;♪♫ &lt;em&gt;Flyyyyy! On your waaaaay! Like an  eagle! Fly as hiiiiigh, aaaaaas the suuuun!&lt;/em&gt; ♪♫&lt;/p&gt;
+
+&lt;p&gt;Hoje é dia do Rock! Estive pensando como desde pequeno meu gosto foi sendo definido por este estilo! Mesmo atualmente, apesar de ser muito eclético, a influência do Rock é gigante em minha vida musical :)&lt;/p&gt;
+
+&lt;p&gt;Neste dia, 13 de Julho, no ano de 1985 (um antes de eu nascer!), aconteceu o festival &lt;em&gt;Live Aid&lt;/em&gt;, em Londres e na Filadélfia. Na época, Phil Collins declarou aquele como o “Dia do Rock”. Mas parece que essa data não é tão mundial assim.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Nem os americanos nem os ingleses levaram a sério. Só brasileiros e as rádios rock do Brasil, desde aquela época, passaram a considerar esse o Dia do Rock - Kid Vinil&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Sem mais delongas, decidi fazer uma lista com 13 de alguns dos álbuns de Rock/Heavy Metal/Hard Rock que mais me marcaram! Foi difícil e com certeza muita coisa ficou de fora, mas vamos lá!&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Machine Head (Deep Purple, 1972)&lt;/th&gt;
+      &lt;th&gt;Mob Rules (Black Sabbath, 1981)&lt;/th&gt;
+      &lt;th&gt;Holy Diver (Dio, 1983)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://open.spotify.com/album/32NQ56VZDTXSH3SMv4XSGN?si=kgo57BqyRIq_maMr5jPHgQ&quot;&gt;&lt;img src=&quot;https://i.pinimg.com/originals/6b/07/7b/6b077b363839ed009df78404afed9589.jpg&quot; alt=&quot;Machine Head&quot; /&gt;&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://open.spotify.com/album/2iaECLD2YLSEOkSfi7BRaC?si=BD_ptJfITGGQmLgZyP77iA&quot;&gt;&lt;img src=&quot;https://cps-static.rovicorp.com/3/JPG_250/MI0004/176/MI0004176831.jpg?partner=allrovi.com&quot; alt=&quot;Mob Rules&quot; /&gt;&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://open.spotify.com/album/1QJmLRcuIMMjZ49elafR3K?si=gG686WPURUyZmSNYUF5zmA&quot;&gt;&lt;img src=&quot;https://cps-static.rovicorp.com/3/JPG_250/MI0003/515/MI0003515838.jpg?partner=allrovi.com&quot; alt=&quot;Holy Diver&quot; /&gt;&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;The Chemical Wedding (Bruce Dickinson, 1998)&lt;/th&gt;
+      &lt;th&gt;Greatest Hits (Queen, 1981)&lt;/th&gt;
+      &lt;th&gt;Sonoridades (Mauro Hector, 2002)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://open.spotify.com/album/5T8Pm2DRJVYFVGY0by8ucQ?si=UaPxLjD7Q4CR9fTnWjLeHA&quot;&gt;&lt;img src=&quot;https://studiosol-a.akamaihd.net/letras/250x250/albuns/d/1/4/1/25031433156525.jpg&quot; alt=&quot;Chemical Wedding&quot; /&gt;&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://open.spotify.com/album/3VWrUk4vBznMYXGMPc7dRB?si=FHaZ5GulSF-Hz2bnG_RA4A&quot;&gt;&lt;img src=&quot;https://s2.vagalume.com/queen/images/93454w250.jpg&quot; alt=&quot;Greatest Hits&quot; /&gt;&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=vIFKOdjaD98&quot;&gt;&lt;img src=&quot;https://www.freenote.com.br/cd/MHCD001.jpg&quot; alt=&quot;Sonoridades&quot; /&gt;&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Kill’em All (Metallica, 1982)&lt;/th&gt;
+      &lt;th&gt;Subhuman Race (Skid Row, 1995)&lt;/th&gt;
+      &lt;th&gt;Eat’em And Smile (David Lee Roth, 1986)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://open.spotify.com/album/3m69LQokz6DaKB3yw4BH6n?si=Fn_351unTPetP6XFbF7LbA&quot;&gt;&lt;img src=&quot;http://images1.folha.com.br/livraria/images/1/d/1352554-350x360.png&quot; alt=&quot;Kill'em All&quot; /&gt;&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://open.spotify.com/album/0E6teVyhy2HlUds8vLpjRG?si=3psUEoaFQ0Sg-VjctCeIVg&quot;&gt;&lt;img src=&quot;https://www.chordie.com/photos/album_3e6d90ec-db2f-3dc5-9e14-2d55f0ea8e40.jpg&quot; alt=&quot;Subhuman Race&quot; /&gt;&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://open.spotify.com/album/0Ali88C44gQdI065upsgKU?si=jKX-PpEDSAmwnWnu9HM-hw&quot;&gt;&lt;img src=&quot;https://cps-static.rovicorp.com/3/JPG_250/MI0003/515/MI0003515872.jpg?partner=allrovi.com&quot; alt=&quot;Eat'em And Smile&quot; /&gt;&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Outrider (Jimmy Page, 1988)&lt;/th&gt;
+      &lt;th&gt;Made In Heaven (Queen, 1995)&lt;/th&gt;
+      &lt;th&gt;Alien Love Secrets (Steve Vai, 1995)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://open.spotify.com/album/1rnsDYMbmgByfGNq49VWRy?si=MtpZRSiwRbyxoSG75zfPXg&quot;&gt;&lt;img src=&quot;https://d19cna3yr6weg2.cloudfront.net/alb/09ec21454d1d4892c1dd7e13660854ac.jpg&quot; alt=&quot;Outrider&quot; /&gt;&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://open.spotify.com/album/391ScNR3xKywWSpfDwP3n0?si=PLhJGj_mReSqLbx_xbjLxQ&quot;&gt;&lt;img src=&quot;https://target.scene7.com/is/image/Target/50102562?wid=250&amp;amp;hei=250&amp;amp;qlt=80&amp;amp;fmt=pjpeg&quot; alt=&quot;Made In Heaven&quot; /&gt;&lt;/a&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://open.spotify.com/album/1cBOYvZOaWzfNH2kfykjIe?si=-I_l_rEATou_SB_Sr5iESQ&quot;&gt;&lt;img src=&quot;https://http2.mlstatic.com/cd-steve-vai-alien-love-secret-importado-D_NQ_NP_14160-MLB4322034803_052013-F.jpg&quot; alt=&quot;Alien Love Secrets&quot; /&gt;&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;The Yngwie Malmsteen Collection (Yngwie Malmsteen, 1992)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;a href=&quot;https://open.spotify.com/album/4S2kyFPZheSFR1m1IJ0Hzc?si=NI2dxLXyTvyXO8y8Fc62Rg&quot;&gt;&lt;img src=&quot;https://cps-static.rovicorp.com/3/JPG_250/MI0000/027/MI0000027752.jpg?partner=allrovi.com&quot; alt=&quot;The Yngwie Malmsteen Collection&quot; /&gt;&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;O Mauro Hector é um guitarrista de Santos, muuuuito gente boa, e na minha humilde opinião, só um dos &lt;strong&gt;maiores guitarristas do mundo! :)&lt;/strong&gt; Vale a pena conhecer seu trabalho, ele tem muitos vídeos no YouTube. Melhor ainda se puder ver sua agenda e ir em algum show!&lt;/li&gt;
+  &lt;li&gt;O Jimmy Page deste álbum é mais “raiz” no blues do que no Led Zepellin, e mostra muitas outras faces, que a capa do álbum inclusive sugere ;) Além disso, tem 2 músicas com o vocal maravilhoso do Chris Farlowe (ex-Atomic Rooster, outra banda que vale conhecer, principalmente se você gosta de Rock Progressivo).&lt;/li&gt;
+  &lt;li&gt;O &lt;em&gt;The Chemical Wedding&lt;/em&gt; também mostra um Brce Dickinson bem diferente do Iron Maiden (e pra mim muito melhor…rs). As músicas são bem pesadas e os solos primorosos! É um álbum conceitual, com grande parte das letras inspiradas pelos escritos do poeta inglês William Blake, com uma temática bem sombria e mágica.&lt;/li&gt;
+  &lt;li&gt;O Dio, a Voz do Heavy Metal, aparece tanto no seu incrível &lt;em&gt;Holy Diver&lt;/em&gt;, quanto no Sabbath, que pra mim tem sua melhor fase com ele. Sem mais comentários, &lt;strong&gt;apenas ouça!&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;O David Lee Roth (também do Van Halen), mostra toda sua loucura, digo, seu talento nestas músicas, que tem cada uma seu mundo próprio tanto na letra quanto no estilo. Inclusive conta com o Steve Vai (beeem novinho) na guitarra, já quebrando tudo!&lt;/li&gt;
+  &lt;li&gt;Não sei se reparou, mas o Queen é o único que aparece 2 vezes! Isso porque estas músicas todas me influenciaram demais e pra mim o Queen é a &lt;strong&gt;melhor banda de Rock do mundo&lt;/strong&gt;!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ufa, se eu fosse comentar cada uma destas pérolas, teria que fazer um &lt;em&gt;post&lt;/em&gt; pra cada, então estes foram só alguns comentários mais essenciais!&lt;/p&gt;
+
+&lt;p&gt;E aí o que achou desta seleção? Demais né!?haha
+Comenta aí com aqueles que você colocaria ou tiraria desta lista!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Long live Rock And Roll!&lt;/strong&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">♪♫ Flyyyyy! On your waaaaay! Like an eagle! Fly as hiiiiigh, aaaaaas the suuuun! ♪♫</summary></entry><entry><title type="html">Desenvolvendo em C# no Linux com .NET Core (Parte 1)</title><link href="http://danilobarion1986.github.io/c%23/csharp/backend/dotnetcore/2018/07/11/desenvolvendo-em-csharp-no-linux-com-dotnet-core.html" rel="alternate" type="text/html" title="Desenvolvendo em C# no Linux com .NET Core (Parte 1)" /><published>2018-07-11T22:45:43-03:00</published><updated>2018-07-11T22:45:43-03:00</updated><id>http://danilobarion1986.github.io/c%23/csharp/backend/dotnetcore/2018/07/11/desenvolvendo-em-csharp-no-linux-com-dotnet-core</id><content type="html" xml:base="http://danilobarion1986.github.io/c%23/csharp/backend/dotnetcore/2018/07/11/desenvolvendo-em-csharp-no-linux-com-dotnet-core.html">&lt;p&gt;A Microsoft tem cada vez mais declarado seu amor pelo Linux e abraçado o Open Source! Porque não juntar então estes 2 mundos utilizando o (relativamente) recente framework .NET Core lançado pela MS para construir e rodar aplicações C# no Linux?!&lt;/p&gt;
 
 &lt;p&gt;Nesta sequência de posts vou explorar um pouco este universo, começando do básico mesmo! Portanto, como primeira ação você precisa instalar o .NET Core SDK em seu ambiente local:&lt;/p&gt;
 
@@ -282,42 +389,4 @@ So, I have a solution that is simple and I don’t need to worry with some depen
 
 &lt;p&gt;Você já conhecia o &lt;em&gt;Meetup&lt;/em&gt;? Já participou de encontros promovidos pela comunidade? O que acha do conceito por trás do site e sua missão?&lt;/p&gt;
 
-&lt;p&gt;Boas experiências! ;)&lt;/p&gt;</content><author><name></name></author><summary type="html">Final de semana prolongado, preguiça, nada pra fazer… Certo?!</summary></entry><entry><title type="html">Resenha ‘Construindo Aplicações Node com MongoDB e Backbone’</title><link href="http://danilobarion1986.github.io/opiniao/carreira/vida/crescimento-pessoal/2015/10/30/resenha-construindo-aplicacoes-node-com-mongodb-e-backbone.html" rel="alternate" type="text/html" title="Resenha 'Construindo Aplicações Node com MongoDB e Backbone'" /><published>2015-10-30T13:34:43-03:00</published><updated>2015-10-30T13:34:43-03:00</updated><id>http://danilobarion1986.github.io/opiniao/carreira/vida/crescimento-pessoal/2015/10/30/resenha-construindo-aplicacoes-node-com-mongodb-e-backbone</id><content type="html" xml:base="http://danilobarion1986.github.io/opiniao/carreira/vida/crescimento-pessoal/2015/10/30/resenha-construindo-aplicacoes-node-com-mongodb-e-backbone.html">&lt;p&gt;Olá pessoal! Estava pensando em um tema para meu primeiro post, ao mesmo tempo em que estudava o material do novo livro que comprei.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://devdanilo.files.wordpress.com/2015/10/seta.png&quot;&gt;&lt;img src=&quot;https://devdanilo.files.wordpress.com/2015/10/seta.png&quot; alt=&quot;seta&quot; /&gt;&lt;/a&gt;&lt;a href=&quot;https://devdanilo.files.wordpress.com/2015/10/capa_livro_node.jpg&quot;&gt;&lt;img src=&quot;https://devdanilo.files.wordpress.com/2015/10/capa_livro_node.jpg&quot; alt=&quot;capa_livro_node&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Apesar do pouco tempo com ele, já tinha algumas críticas e elogios, então por que não fazer uma pequena resenha sobre o livro, não é mesmo?&lt;/p&gt;
-
-&lt;p&gt;Vamos lá, o que me chamou a atenção inicialmente foi o uso do MongoDB (banco de dados &lt;em&gt;&lt;strong&gt;NoSQL&lt;/strong&gt;&lt;/em&gt;, amplamente utilizado &lt;a href=&quot;https://www.mongodb.com/who-uses-mongodb&quot;&gt;por aí&lt;/a&gt;). Por quê? Desde a faculdade eu ouvia falar sobre bancos de dados não relacionais, mas até quase 1 ano após concluir o curso eu não fazia ideia de como eles REALMENTE funcionavam!&lt;/p&gt;
-
-&lt;p&gt;Até que, cerca de 2 meses atrás, resolvi fazer um curso &lt;em&gt;online&lt;/em&gt; na &lt;em&gt;&lt;a href=&quot;https://university.mongodb.com/&quot;&gt;MongoDB University,&lt;/a&gt;&lt;/em&gt; onde finalmente entendi, não somente os principais conceitos do &lt;em&gt;NoSQL&lt;/em&gt;, mas também sobre a estrutura do &lt;em&gt;MongoDB&lt;/em&gt;, focado no uso de &lt;strong&gt;arquivos no formato &lt;em&gt;JSON&lt;/em&gt;&lt;/strong&gt; e &lt;em&gt;Javascript&lt;/em&gt; para manipulação destes em um ambiente &lt;em&gt;shell&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Mas enfim, deixemos este tópico para um post completo no futuro! :)&lt;/p&gt;
-
-&lt;p&gt;Estou estudando bastante &lt;em&gt;&lt;strong&gt;Javascript&lt;/strong&gt;&lt;/em&gt; e seus &lt;em&gt;frameworks&lt;/em&gt;, portanto imaginei que um livro relativamente recente (2014), ensinando &lt;em&gt;Node&lt;/em&gt;, &lt;em&gt;Backbone&lt;/em&gt; e diversos &lt;em&gt;plugins&lt;/em&gt; e bibliotecas complementares seria ideal!&lt;/p&gt;
-
-&lt;p&gt;A proposta central do livro é a construção de um tipo de rede social, com chat, atualizações em tempo real e publicações de artigos (já vi isso em algum lugar…). Além disso, a arquitetura da aplicação é pensada de forma a ter um protótipo rápido (&lt;a href=&quot;https://en.wikipedia.org/wiki/Minimum_viable_product&quot;&gt;MVP&lt;/a&gt;, sabe?) e &lt;strong&gt;escalável&lt;/strong&gt; , que é um requisito essencial, no modelo MVC.&lt;/p&gt;
-
-&lt;p&gt;Bem, após estas apresentações, serei sucinto na descrição dos pontos que considero bons e ruins, dentro do que já li:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Bom&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Uso de tecnologias &lt;em&gt;open source&lt;/em&gt;, modernas e “parrudas”, aderentes aos atuais paradigmas da programação Web.&lt;/li&gt;
-  &lt;li&gt;Código completo da aplicação, inclusive no &lt;em&gt;GitHub&lt;/em&gt; (como é padrão para os livros da &lt;em&gt;O’Reilly&lt;/em&gt;).&lt;/li&gt;
-  &lt;li&gt;Estou gostando da ordem usada nos capítulos/conteúdos para o desenvolvimento do &lt;em&gt;app&lt;/em&gt;, com explicações dos códigos logo após a sua apresentação.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;strong&gt;Ruim&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Tradução! Costumo ler conteúdo técnico em inglês mesmo, principalmente no formato digital. Mas quando compro algum livro me “dou ao luxo” de escolher o português (queira ou não, ainda leio mais rápido na minha língua nativa…rs). Porém, a tradução claramente não foi revisada tecnicamente, ou se foi, não teve a preocupação de tornar as frases mais fluídas, realmente adaptadas ao português. Algumas frases ficam “truncadas”, tendo que ler 2 ou 3 vezes pra ter certeza que o autor está dizendo aquilo mesmo. Este ponto realmente me chateou um pouco, mas agora vou ter que lidar com isso.&lt;/li&gt;
-  &lt;li&gt;Pelo que folheei dos capítulos à frente, todo o código é bem explicado. Porém, as primeiras partes, que expõem os conceitos básicos das ferramentas usadas deixam um pouco a desejar. Além de serem sucintas DEMAIS, a questão da tradução também prejudica o entendimento. Sabe aqueles textos que você lê e não tem certeza se foi você que não entendeu ou se ele não está dizendo nada mesmo?! Não é de todo ruim, mas tinha expectativas maiores sobre estes pontos iniciais.&lt;/li&gt;
-  &lt;li&gt;O livro diz que não precisa ter grandes noções de Javascript para entender o conteúdo, porém eu recomendaria que você tivesse sim um &lt;em&gt;background&lt;/em&gt; de &lt;em&gt;Javascript&lt;/em&gt;, &lt;em&gt;JSON&lt;/em&gt;, lógica, etc. (creio que para comprar um livro desses, no geral já tenha, mas vale a pena reforçar!)&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;&lt;strong&gt;Em resumo…&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;O livro é &lt;strong&gt;BOM&lt;/strong&gt;. Eu recomendo para você que tem interesse em desenvolvimento Web moderno. Se for comprar o livro, se possível, compre em inglês! Acho importante também ter um conhecimento anterior ao menos razoável de &lt;em&gt;Javascript&lt;/em&gt; e programação, para não desistir de ler por não entender muito bem os conceitos apresentados, pois as vezes eles são sucintos demais.&lt;/p&gt;
-
-&lt;p&gt;Bom, é isso! Você já leu este livro? Recomenda também? Tem outros pontos positivos ou negativos para citar? Coloca aqui nos comentários!&lt;/p&gt;
-
-&lt;p&gt;Um abraço!&lt;/p&gt;</content><author><name></name></author><summary type="html">Olá pessoal! Estava pensando em um tema para meu primeiro post, ao mesmo tempo em que estudava o material do novo livro que comprei.</summary></entry></feed>
+&lt;p&gt;Boas experiências! ;)&lt;/p&gt;</content><author><name></name></author><summary type="html">Final de semana prolongado, preguiça, nada pra fazer… Certo?!</summary></entry></feed>
