@@ -1,3 +1,4 @@
 ssl/**/*
 wordpress_posts/**/*
 teste/**/*
+.rbenv-gemsets
