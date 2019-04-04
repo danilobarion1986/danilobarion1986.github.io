@@ -14,6 +14,6 @@ Desenvolvendo sua própria extensão do Sequel - Da Teoria à Prática
 
 ### Papo Técnico VAGAS.com (2017-11-10)
 Hands-on Ruby Gem: criando sua primeira gem com Ruby!
-- [Vídeo](https://youtu.be/D5T386mHQkY)
+- [Vídeo](https://www.youtube.com/watch?v=D5T386mHQkY)
 - [Code](https://github.com/danilobarion1986/robohash_client)
 - [API usando gem](https://github.com/danilobarion1986/robohash_test_page)
