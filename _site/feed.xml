@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://danilobarion1986.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="http://danilobarion1986.github.io/" rel="alternate" type="text/html" /><updated>2019-04-15T15:00:50-03:00</updated><id>http://danilobarion1986.github.io/feed.xml</id><title type="html">{{ Developer Notes }}</title><subtitle>Devaneios de um desenvolvedor em construção.</subtitle><entry><title type="html">Ruby Pills: Hash Fetch and Performance</title><link href="http://danilobarion1986.github.io/ruby/backend/pills/tips/2019/04/15/ruby-pills-architecture-and-tools-decision-rails-react-bff.html" rel="alternate" type="text/html" title="Ruby Pills: Hash Fetch and Performance" /><published>2019-04-15T13:24:08-03:00</published><updated>2019-04-15T13:24:08-03:00</updated><id>http://danilobarion1986.github.io/ruby/backend/pills/tips/2019/04/15/ruby-pills-architecture-and-tools-decision-rails-react-bff</id><content type="html" xml:base="http://danilobarion1986.github.io/ruby/backend/pills/tips/2019/04/15/ruby-pills-architecture-and-tools-decision-rails-react-bff.html">&lt;p&gt;&lt;img src=&quot;/assets/img/ruby_pills.png&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://danilobarion1986.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="http://danilobarion1986.github.io/" rel="alternate" type="text/html" /><updated>2019-04-15T15:31:09-03:00</updated><id>http://danilobarion1986.github.io/feed.xml</id><title type="html">{{ Developer Notes }}</title><subtitle>Devaneios de um desenvolvedor em construção.</subtitle><entry><title type="html">Ruby Pills: Hash Fetch and Performance</title><link href="http://danilobarion1986.github.io/ruby/backend/pills/tips/2019/04/15/ruby-pills-architecture-and-tools-decision-rails-react-bff.html" rel="alternate" type="text/html" title="Ruby Pills: Hash Fetch and Performance" /><published>2019-04-15T13:24:08-03:00</published><updated>2019-04-15T13:24:08-03:00</updated><id>http://danilobarion1986.github.io/ruby/backend/pills/tips/2019/04/15/ruby-pills-architecture-and-tools-decision-rails-react-bff</id><content type="html" xml:base="http://danilobarion1986.github.io/ruby/backend/pills/tips/2019/04/15/ruby-pills-architecture-and-tools-decision-rails-react-bff.html">&lt;p&gt;&lt;img src=&quot;/assets/img/ruby_pills.png&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;ruby-hash&quot;&gt;Ruby Hash&lt;/h2&gt;
 
@@ -20,7 +20,7 @@
 
 &lt;h2 id=&quot;trickier-fetch-behaviour&quot;&gt;Trickier &lt;code class=&quot;highlighter-rouge&quot;&gt;#fetch&lt;/code&gt; Behaviour&lt;/h2&gt;
 
-&lt;p&gt;As you saw both forms of calling &lt;code class=&quot;highlighter-rouge&quot;&gt;#fetch&lt;/code&gt; have the same result, but the difference is only of style and preference of each developer? No! It’s a subtle difference, that most times won’t make any difference in your application performance. But, let’s see an example to understand the impact of a wrong choice:&lt;/p&gt;
+&lt;p&gt;As you saw both forms of calling &lt;code class=&quot;highlighter-rouge&quot;&gt;#fetch&lt;/code&gt; have the same result, but is the difference only of style and preference of each developer? No! There’s a subtle difference, that most times won’t make any difference in your application performance. But, let’s see an example to understand the impact of a wrong choice:&lt;/p&gt;
 
 &lt;p&gt;Imagine that you have an intensive operation to do, if you don’t find a key in your Hash:&lt;/p&gt;
 
@@ -35,7 +35,7 @@
 &lt;span class=&quot;c1&quot;&gt;# after 5 seconds you'll get... =&amp;gt; :ok&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Oh, did you see what just happen?! Even with the key present in your hash, Ruby evaluated the default value, that is your intensive computation method!&lt;/p&gt;
+&lt;p&gt;Oh, did you see what just happened?! Even with the key present in your hash, Ruby evaluated the default value, that is your intensive computation method!&lt;/p&gt;
 
 &lt;p&gt;Now if you use the block way:&lt;/p&gt;
 

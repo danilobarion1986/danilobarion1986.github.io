@@ -26,7 +26,7 @@ hash.fetch(:c) { 3 } # => 3
 
 ## Trickier `#fetch` Behaviour
 
-As you saw both forms of calling `#fetch` have the same result, but the difference is only of style and preference of each developer? No! It's a subtle difference, that most times won't make any difference in your application performance. But, let's see an example to understand the impact of a wrong choice:
+As you saw both forms of calling `#fetch` have the same result, but is the difference only of style and preference of each developer? No! There's a subtle difference, that most times won't make any difference in your application performance. But, let's see an example to understand the impact of a wrong choice:
 
 Imagine that you have an intensive operation to do, if you don't find a key in your Hash:
 
@@ -42,7 +42,7 @@ hash.fetch(:my_key, MyClass.my_intensive_computation)
 # after 5 seconds you'll get... => :ok
 ```
 
-Oh, did you see what just happen?! Even with the key present in your hash, Ruby evaluated the default value, that is your intensive computation method!
+Oh, did you see what just happened?! Even with the key present in your hash, Ruby evaluated the default value, that is your intensive computation method!
 
 Now if you use the block way:
 

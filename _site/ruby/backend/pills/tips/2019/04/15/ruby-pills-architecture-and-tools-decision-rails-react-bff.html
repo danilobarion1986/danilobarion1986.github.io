@@ -79,7 +79,7 @@ if(!(window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNo
 
 <h2 id="trickier-fetch-behaviour">Trickier <code class="highlighter-rouge">#fetch</code> Behaviour</h2>
 
-<p>As you saw both forms of calling <code class="highlighter-rouge">#fetch</code> have the same result, but the difference is only of style and preference of each developer? No! It’s a subtle difference, that most times won’t make any difference in your application performance. But, let’s see an example to understand the impact of a wrong choice:</p>
+<p>As you saw both forms of calling <code class="highlighter-rouge">#fetch</code> have the same result, but is the difference only of style and preference of each developer? No! There’s a subtle difference, that most times won’t make any difference in your application performance. But, let’s see an example to understand the impact of a wrong choice:</p>
 
 <p>Imagine that you have an intensive operation to do, if you don’t find a key in your Hash:</p>
 
@@ -94,7 +94,7 @@ if(!(window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNo
 <span class="c1"># after 5 seconds you'll get... =&gt; :ok</span>
 </code></pre></div></div>
 
-<p>Oh, did you see what just happen?! Even with the key present in your hash, Ruby evaluated the default value, that is your intensive computation method!</p>
+<p>Oh, did you see what just happened?! Even with the key present in your hash, Ruby evaluated the default value, that is your intensive computation method!</p>
 
 <p>Now if you use the block way:</p>
 
