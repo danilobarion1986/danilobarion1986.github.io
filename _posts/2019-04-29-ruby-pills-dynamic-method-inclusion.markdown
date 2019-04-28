@@ -13,7 +13,7 @@ Ruby is an amazing programming language in many aspects, specially regarding met
 
 In this Ruby Pill I'll cover 3 module callbacks (`included`, `extended` and `method_added`), to dynamically add methods to a class. 
 
-## Module included
+## Some Module Callbacks
 
 Let's take a module with the 3 callbacks that we'll are using:
 
@@ -28,8 +28,9 @@ end
 ```
 
 Despite the descriptive names, follows a summary of each method:
-- _included(base)_ : executed after you _include_ the module. If you add some method here, it will be an __instance__ method of your class.  
-- _extended(base)_ : executed after you _extend_ the module. If you add some method here, it will be a __class__ method of your class.
+- _included(base)_: executed after you _include_ the module. If you add some method here, it will be an __instance__ method of your class.  
+- _extended(base)_: executed after you _extend_ the module. If you add some method here, it will be a __class__ method of your class.
+
     > In both cases, _base_ refers to the class where you include/extend the module.
 
 - _method_added(method_name)_: Here you can put the code to be executed after you've been added a method in your class.

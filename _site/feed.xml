@@ -1,4 +1,95 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://danilobarion1986.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="http://danilobarion1986.github.io/" rel="alternate" type="text/html" /><updated>2019-04-28T12:52:46-03:00</updated><id>http://danilobarion1986.github.io/feed.xml</id><title type="html">{{ Developer Notes }}</title><subtitle>Devaneios de um desenvolvedor em construção.</subtitle><entry><title type="html">Ruby Pills: Hash Fetch and Performance</title><link href="http://danilobarion1986.github.io/ruby/backend/pills/tips/2019/04/15/ruby-pills-hash-fetch.html" rel="alternate" type="text/html" title="Ruby Pills: Hash Fetch and Performance" /><published>2019-04-15T13:24:08-03:00</published><updated>2019-04-15T13:24:08-03:00</updated><id>http://danilobarion1986.github.io/ruby/backend/pills/tips/2019/04/15/ruby-pills-hash-fetch</id><content type="html" xml:base="http://danilobarion1986.github.io/ruby/backend/pills/tips/2019/04/15/ruby-pills-hash-fetch.html">&lt;p&gt;&lt;img src=&quot;/assets/img/ruby_pills.png&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://danilobarion1986.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="http://danilobarion1986.github.io/" rel="alternate" type="text/html" /><updated>2019-04-28T20:44:26-03:00</updated><id>http://danilobarion1986.github.io/feed.xml</id><title type="html">{{ Developer Notes }}</title><subtitle>Devaneios de um desenvolvedor em construção.</subtitle><entry><title type="html">Ruby Pills: Dynamic Method Inclusion</title><link href="http://danilobarion1986.github.io/ruby/backend/pills/tips/2019/04/29/ruby-pills-dynamic-method-inclusion.html" rel="alternate" type="text/html" title="Ruby Pills: Dynamic Method Inclusion" /><published>2019-04-29T11:01:42-03:00</published><updated>2019-04-29T11:01:42-03:00</updated><id>http://danilobarion1986.github.io/ruby/backend/pills/tips/2019/04/29/ruby-pills-dynamic-method-inclusion</id><content type="html" xml:base="http://danilobarion1986.github.io/ruby/backend/pills/tips/2019/04/29/ruby-pills-dynamic-method-inclusion.html">&lt;p&gt;&lt;img src=&quot;/assets/img/ruby_pills.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;ruby-metaprogramming&quot;&gt;Ruby Metaprogramming&lt;/h2&gt;
+
+&lt;p&gt;Ruby is an amazing programming language in many aspects, specially regarding metaprogramming! The fact that everything is an object, give to programmer the ability to manipulate methods and closures, the inheritance chain classes, callbacks, have modules with common code, and a lot of other nice things!&lt;/p&gt;
+
+&lt;p&gt;In this Ruby Pill I’ll cover 3 module callbacks (&lt;code class=&quot;highlighter-rouge&quot;&gt;included&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;extended&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;method_added&lt;/code&gt;), to dynamically add methods to a class.&lt;/p&gt;
+
+&lt;h2 id=&quot;some-module-callbacks&quot;&gt;Some Module Callbacks&lt;/h2&gt;
+
+&lt;p&gt;Let’s take a module with the 3 callbacks that we’ll are using:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Example&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;included&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;extended&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;method_added&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;method_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Despite the descriptive names, follows a summary of each method:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;included(base)&lt;/em&gt;: executed after you &lt;em&gt;include&lt;/em&gt; the module. If you add some method here, it will be an &lt;strong&gt;instance&lt;/strong&gt; method of your class.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;em&gt;extended(base)&lt;/em&gt;: executed after you &lt;em&gt;extend&lt;/em&gt; the module. If you add some method here, it will be a &lt;strong&gt;class&lt;/strong&gt; method of your class.&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;In both cases, &lt;em&gt;base&lt;/em&gt; refers to the class where you include/extend the module.&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;method_added(method_name)&lt;/em&gt;: Here you can put the code to be executed after you’ve been added a method in your class.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;adding-methods-dinamically&quot;&gt;Adding Methods Dinamically&lt;/h2&gt;
+
+&lt;p&gt;Here is our module with its callbacks and implementations:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Example&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;included&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;add_new_method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;extended&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;add_new_method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;method_added&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;method_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Adding &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;method_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;inspect&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+  &lt;span class=&quot;kp&quot;&gt;private&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;add_new_method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;base_name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;name&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;define_method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;base_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;downcase&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;_new_method&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+      &lt;span class=&quot;s2&quot;&gt;&quot;Method added in &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;base_name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; class =&amp;gt; Value passed: &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The magic is inside our &lt;code class=&quot;highlighter-rouge&quot;&gt;add_new_method&lt;/code&gt; private method. It’s called inside &lt;code class=&quot;highlighter-rouge&quot;&gt;included&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;extended&lt;/code&gt; callbacks, passing the &lt;code class=&quot;highlighter-rouge&quot;&gt;base&lt;/code&gt; variable, that is our class. Using &lt;code class=&quot;highlighter-rouge&quot;&gt;define_method&lt;/code&gt; method, we add a new method called &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;CLASS_NAME&amp;gt;_new_method&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;To see them in action, we could use it like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Wow&lt;/span&gt;
+  &lt;span class=&quot;kp&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Example&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Wow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;wow_new_method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:wow&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+&lt;span class=&quot;c1&quot;&gt;# =&amp;gt; Adding :wow_new_method&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# =&amp;gt; Method added in Wow class =&amp;gt; Value passed: :wow&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Cool&lt;/span&gt;
+  &lt;span class=&quot;kp&quot;&gt;extend&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Example&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Cool&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;cool_new_method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:cool&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# =&amp;gt; Adding :cool_new_method&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# =&amp;gt; Method added in Cool class =&amp;gt; Value passed: :cool&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Cool! Besides add new instance/class methods to our classes, we can see the message of the &lt;code class=&quot;highlighter-rouge&quot;&gt;method_added&lt;/code&gt; callback after each one is added!&lt;/p&gt;
+
+&lt;h2 id=&quot;final-thougths&quot;&gt;Final Thougths&lt;/h2&gt;
+
+&lt;p&gt;This only scratchs some of Ruby capabilities! There’s a world of possibilities, methods and callbacks to use if you want to take a deep dive on Ruby metaprogramming!&lt;/p&gt;
+
+&lt;p&gt;One thing that you should be aware of is that how much more you use this kind of Ruby features, your code can become too slow, so be careful!&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Did you like this post? Did you already know about these module callbacks?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;If you have any comments, suggestions or critics, post a comment below!&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Ruby Pills: Hash Fetch and Performance</title><link href="http://danilobarion1986.github.io/ruby/backend/pills/tips/2019/04/15/ruby-pills-hash-fetch.html" rel="alternate" type="text/html" title="Ruby Pills: Hash Fetch and Performance" /><published>2019-04-15T13:24:08-03:00</published><updated>2019-04-15T13:24:08-03:00</updated><id>http://danilobarion1986.github.io/ruby/backend/pills/tips/2019/04/15/ruby-pills-hash-fetch</id><content type="html" xml:base="http://danilobarion1986.github.io/ruby/backend/pills/tips/2019/04/15/ruby-pills-hash-fetch.html">&lt;p&gt;&lt;img src=&quot;/assets/img/ruby_pills.png&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;ruby-hash&quot;&gt;Ruby Hash&lt;/h2&gt;
 
@@ -367,55 +458,4 @@ So, I have a solution that is simple and I don’t need to worry with some depen
 
 &lt;p&gt;E você o que achou do W3.CSS? Possui experiência com Bootstrap? Compartilhe nos comentários o que achou deste novo framework, se já utilizou e como o avalia em relação ao Bootstrap!&lt;/p&gt;
 
-&lt;p&gt;Ate o próximo post!&lt;/p&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">JSON Everywhere!</title><link href="http://danilobarion1986.github.io/web-development/javascript/json/2015/11/27/json-everywhere.html" rel="alternate" type="text/html" title="JSON Everywhere!" /><published>2015-11-27T19:50:05-02:00</published><updated>2015-11-27T19:50:05-02:00</updated><id>http://danilobarion1986.github.io/web-development/javascript/json/2015/11/27/json-everywhere</id><content type="html" xml:base="http://danilobarion1986.github.io/web-development/javascript/json/2015/11/27/json-everywhere.html">&lt;p&gt;Hoje gostaria de escrever sobre o formato de transmissão de dados JSON (&lt;em&gt;JavaScript Object Notation&lt;/em&gt;).&lt;/p&gt;
-
-&lt;p&gt;Como o nome já diz, este padrão é baseado na mesma especificação sobre a qual a linguagem de programação Javascript é construída. (Se quiser aprofundar nos detalhes de &lt;strong&gt;como uma linguagem de programação é especificada e implementada&lt;/strong&gt; , sugiro os links da própria página do &lt;a href=&quot;http://www.json.org/json-pt.html&quot;&gt;JSON&lt;/a&gt;- não me responsabilizo por sua sanidade mental! :) ).&lt;/p&gt;
-
-&lt;p&gt;A publicação deste formato é relativamente recente (1ª edição de Outubro de 2013), mas devido às suas qualidades e da grande difusão do &lt;em&gt;JavaScript&lt;/em&gt;, principalmente por causa da &lt;em&gt;Web&lt;/em&gt;, já está muito disseminado. Diversas &lt;a href=&quot;https://pt.wikipedia.org/wiki/Interface_de_programa%C3%A7%C3%A3o_de_aplica%C3%A7%C3%B5es&quot;&gt;&lt;em&gt;API&lt;/em&gt;&lt;/a&gt;’s e &lt;a href=&quot;https://pt.wikipedia.org/wiki/Web_service&quot;&gt;WebServices&lt;/a&gt; já servem seus dados exclusivamente em &lt;em&gt;JSON&lt;/em&gt;; outras ainda mantém a diversidade, utilizando também o &lt;em&gt;XML&lt;/em&gt;, já mais consolidado.&lt;/p&gt;
-
-&lt;p&gt;Uma de suas grandes vantagens também é ser &lt;strong&gt;independente de linguagem de programação&lt;/strong&gt; , principalmente por manipular estruturas de dados comuns à todas basicamente todas elas, como vetores , dicionários, hashes, mapas, registros, objetos, etc. Ela permite usar estas estruturas organizando-as em pares chave/valor, podendo misturá-las conforme for necessário.&lt;/p&gt;
-
-&lt;p&gt;Tudo inicia e termina com &lt;strong&gt;chaves&lt;/strong&gt; ({}). Dentro delas são indicados seus pares chave/valor. Cada chave/valor é separado por dois pontos (:) e se encontra entre aspas (“”), não sendo necessárias para números. Cada elemento de um vetor é separado por vírgula (,).&lt;/p&gt;
-
-&lt;p&gt;Cada chave e valor podem “ser” apenas um elemento, como um número ou uma sequência de caracteres. Mas nada impede deste também ser um vetor, com diversos elementos, ou até mesmo um &lt;strong&gt;novo objeto JSON completo!&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Por exemplo, digamos que você deseja representar endereços completos no formato JSON. Uma possibilidade seria esta:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;     &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-       &lt;span class=&quot;s2&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-       &lt;span class=&quot;s2&quot;&gt;&quot;endereco_completo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-       &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
-         &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-           &lt;span class=&quot;s2&quot;&gt;&quot;tipo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;comercial&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-           &lt;span class=&quot;s2&quot;&gt;&quot;tipo_logradouro&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;rua&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-           &lt;span class=&quot;s2&quot;&gt;&quot;nome&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;da saudade&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-           &lt;span class=&quot;s2&quot;&gt;&quot;numero&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1234&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-           &lt;span class=&quot;s2&quot;&gt;&quot;complemento&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-           &lt;span class=&quot;s2&quot;&gt;&quot;bairro&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Nostalgia&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-           &lt;span class=&quot;s2&quot;&gt;&quot;cidade&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;São Paulo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-           &lt;span class=&quot;s2&quot;&gt;&quot;Estado&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;SP&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-           &lt;span class=&quot;s2&quot;&gt;&quot;pais&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Brasil&quot;&lt;/span&gt;
-         &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-         &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-           &lt;span class=&quot;s2&quot;&gt;&quot;tipo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;residencial&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-           &lt;span class=&quot;s2&quot;&gt;&quot;tipo_logradouro&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;rua&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-           &lt;span class=&quot;s2&quot;&gt;&quot;nome&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;do espeto&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-           &lt;span class=&quot;s2&quot;&gt;&quot;numero&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;789&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-           &lt;span class=&quot;s2&quot;&gt;&quot;complemento&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;apto 1 bloco 2&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-           &lt;span class=&quot;s2&quot;&gt;&quot;bairro&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Singelo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-           &lt;span class=&quot;s2&quot;&gt;&quot;cidade&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;São Paulo&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-           &lt;span class=&quot;s2&quot;&gt;&quot;Estado&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;SP&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-           &lt;span class=&quot;s2&quot;&gt;&quot;pais&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Brasil&quot;&lt;/span&gt;
-         &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-       &lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;No exemplo acima demonstro isso. O objeto “Endereço”, contém uma chave “id”, com valor 1. Já o endereço, contém um vetor (afinal podemos querer armazenar mais de um endereço, certo?), e &lt;strong&gt;cada elemento deste array é um objeto JSON&lt;/strong&gt; , com as diversas chaves/valores necessários para descrever o endereço completo.&lt;/p&gt;
-
-&lt;p&gt;Note que todo o vetor é apenas o valor da chave “endereco_completo”!&lt;/p&gt;
-
-&lt;p&gt;Gosto muito deste padrão e não tenho dúvidas que devemos &lt;strong&gt;apostar em seu aprendizado&lt;/strong&gt;. Claro que se você constrói sistemas que precisam se comunicar com outros que apenas “entendem” XML como formato de transmissão dos dados, não tem escapatória. Mas tornar sua aplicação &lt;em&gt;JSON-friendly&lt;/em&gt; ainda é o mais indicado, pois lhe trará grande flexibilidade no desenvolvimento, poderá usar tranquilamente o padrão &lt;a href=&quot;https://pt.wikipedia.org/wiki/REST&quot;&gt;&lt;em&gt;REST&lt;/em&gt;&lt;/a&gt;, transitará menos dados na rede (local ou não) e facilitará muito a leitura destes dados também por humanos (clientes, outros desenvolvedores e quem mais precisar).&lt;/p&gt;
-
-&lt;p&gt;E você, já conhecia o padrão JSON? Já utilizou em algum desenvolvimento? Qual sua opinião sobre ele?&lt;/p&gt;
-
-&lt;p&gt;Deixe aqui seus comentários e até o próximo post! :)&lt;/p&gt;</content><author><name></name></author><summary type="html">Hoje gostaria de escrever sobre o formato de transmissão de dados JSON (JavaScript Object Notation).</summary></entry></feed>
+&lt;p&gt;Ate o próximo post!&lt;/p&gt;</content><author><name></name></author><summary type="html"></summary></entry></feed>

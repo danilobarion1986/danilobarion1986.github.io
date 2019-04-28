@@ -39,6 +39,7 @@ disqus:
   shortname: devdanilo
 
 google_analytics: true
+future: true
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
