@@ -38,7 +38,9 @@ disqus:
   # Disable comments for any post by adding `comments: false` to that post's YAML Front Matter.
   shortname: devdanilo
 
-google_analytics: true
+# Google Analytics
+google_analytics: UA-90030130-1
+
 future: true
 
 # Exclude from processing.
