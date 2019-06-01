@@ -58,6 +58,6 @@ Some methods in Ruby may receive a block as last argument, and even return the s
 
 Be aware of different behaviour of each form and write the code accordingly with your needs!
 
-_Did you like this post? Did you already know about this behaviour of Hash#fetch?_ 
+_Did you already know about this behaviour of Hash#fetch?_ 
 
-_If you have any comments, suggestions or critics, post a comment below!_
+_Let me know if you liked this post! If you have any suggestions or critics, post a comment below!_
