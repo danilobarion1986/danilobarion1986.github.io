@@ -44,4 +44,6 @@ Besides that, maybe you can apply some rules authorization/authentication/busine
 As the possibilities are so numerous, I strongly recommend that you read both of the articles cited above, to understand even more of this pattern and judge if its adapt to the needs of your company.
 
 
-_Did you like this post? Did you already used this architectural pattern in some of your companies app? What are the challenges that you faced? What's the best/worst part of this pattern? Do you have any comments, suggestions or critics?_
+_Did you already used this architectural pattern in some of your companies app? What are the challenges that you faced? What's the best/worst part of this pattern?_ 
+
+_Let me know if you liked this post! If you have any suggestions or critics, post a comment below!_

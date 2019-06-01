@@ -92,6 +92,6 @@ This only scratchs some of Ruby capabilities! There's a world of possibilities, 
 
 One thing that you should be aware of is that how much more you use this kind of Ruby features, your code can become too slow, so be careful!
 
-_Did you like this post? Did you already know about these module callbacks?_ 
+_Did you already know about these module callbacks?_ 
 
-_If you have any comments, suggestions or critics, post a comment below!_
+_Let me know if you liked this post! If you have any suggestions or critics, post a comment below!_

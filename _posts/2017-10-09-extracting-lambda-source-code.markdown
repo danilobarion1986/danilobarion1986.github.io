@@ -25,4 +25,6 @@ With this approach, I could easily retrieve the code that I want, without using 
 So, I have a solution that is simple and I don’t need to worry with some dependency that might break one of the main features that I want to provide, that is auto-generated documentation!
 
 
-_Did you like this post? Are you careful about add third-party code to your applications too? Have any comments, suggestions or critics?_
+_Are you careful about add third-party code to your applications too?_ 
+
+_Let me know if you liked this post! If you have any suggestions or critics, post a comment below!_
