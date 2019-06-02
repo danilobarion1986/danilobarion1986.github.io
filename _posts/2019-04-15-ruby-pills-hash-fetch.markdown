@@ -9,11 +9,11 @@ categories: ruby backend pills tips
 
 ## Ruby Hash 
 
-The Hash class is widely used in Ruby code, due to its key/value structure. It have many interesting methods, aside from most basic ones, like `#default` and `#key?`, used to return a default value if the desired key was not found and verify if some key exists, respectively. There are accessor methods like `#[]`, that return `nil` if the key don't exists, and `#fetch` that you raise an error instead.  
+The Hash class is widely used in Ruby code, due to its key/value structure. It has many interesting methods, aside from most basic ones, like `#default` and `#key?`, used to return a default value if the desired key was not found and verify if some key exists, respectively. There are accessor methods like `#[]`, that return `nil` if the key doesn't exist, and `#fetch` that you raise an error instead.  
 
-However some methods like `#fetch` have different arities: 
+However, some methods like `#fetch` have different arity: 
 - with 1 argument and a block, being the code evaluated inside the block the default value.
-- with 2 arguments, being the first one the key that you want to find the value, and the second a default value when that key don't exists.
+- with 2 arguments, being the first one the key that you want to find the value, and the second a default value when that key doesn't exist.
 
 Example:
 ```ruby
@@ -26,9 +26,9 @@ hash.fetch(:c) { 3 } # => 3
 
 ## Trickier `#fetch` Behaviour
 
-As you saw both forms of calling `#fetch` have the same result, but is the difference only of style and preference of each developer? No! There's a subtle difference, that most times won't make any difference in your application performance. But, let's see an example to understand the impact of a wrong choice:
+As you saw both forms of calling `#fetch` have the same result but is the difference only of style and preference of each developer? No! There's a subtle difference, that most times won't make any difference in your application performance. But, let's see an example to understand the impact of a wrong choice:
 
-Imagine that you have an intensive operation to do, if you don't find a key in your Hash:
+Imagine that you have an intensive operation to do if you don't find a key in your Hash:
 
 ```ruby
 class MyClass
@@ -54,9 +54,9 @@ hash.fetch(:my_key) { MyClass.my_intensive_computation }
 
 ## Final Thoughts
 
-Some methods in Ruby may receive a block as last argument, and even return the same result when you pass a block to it. But some methods like `Hash#fetch` can have trickier behaviour when used with or without passing a block, that could have an important impact on your application. 
+Some methods in Ruby may receive a block as the last argument, and even return the same result when you pass a block to it. But some methods like `Hash#fetch` can have trickier behaviour when used with or without passing a block, that could have an important impact on your application. 
 
-Be aware of different behaviour of each form and write the code accordingly with your needs!
+Be aware of the different behavior of each form and write the code accordingly with your needs!
 
 _Did you already know about this behaviour of Hash#fetch?_ 
 

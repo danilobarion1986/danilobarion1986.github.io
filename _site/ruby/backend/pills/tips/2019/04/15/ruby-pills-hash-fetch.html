@@ -59,12 +59,12 @@ ga('send', 'pageview');
 
 <h2 id="ruby-hash">Ruby Hash</h2>
 
-<p>The Hash class is widely used in Ruby code, due to its key/value structure. It have many interesting methods, aside from most basic ones, like <code class="highlighter-rouge">#default</code> and <code class="highlighter-rouge">#key?</code>, used to return a default value if the desired key was not found and verify if some key exists, respectively. There are accessor methods like <code class="highlighter-rouge">#[]</code>, that return <code class="highlighter-rouge">nil</code> if the key don’t exists, and <code class="highlighter-rouge">#fetch</code> that you raise an error instead.</p>
+<p>The Hash class is widely used in Ruby code, due to its key/value structure. It has many interesting methods, aside from most basic ones, like <code class="highlighter-rouge">#default</code> and <code class="highlighter-rouge">#key?</code>, used to return a default value if the desired key was not found and verify if some key exists, respectively. There are accessor methods like <code class="highlighter-rouge">#[]</code>, that return <code class="highlighter-rouge">nil</code> if the key doesn’t exist, and <code class="highlighter-rouge">#fetch</code> that you raise an error instead.</p>
 
-<p>However some methods like <code class="highlighter-rouge">#fetch</code> have different arities:</p>
+<p>However, some methods like <code class="highlighter-rouge">#fetch</code> have different arity:</p>
 <ul>
   <li>with 1 argument and a block, being the code evaluated inside the block the default value.</li>
-  <li>with 2 arguments, being the first one the key that you want to find the value, and the second a default value when that key don’t exists.</li>
+  <li>with 2 arguments, being the first one the key that you want to find the value, and the second a default value when that key doesn’t exist.</li>
 </ul>
 
 <p>Example:</p>
@@ -77,9 +77,9 @@ ga('send', 'pageview');
 
 <h2 id="trickier-fetch-behaviour">Trickier <code class="highlighter-rouge">#fetch</code> Behaviour</h2>
 
-<p>As you saw both forms of calling <code class="highlighter-rouge">#fetch</code> have the same result, but is the difference only of style and preference of each developer? No! There’s a subtle difference, that most times won’t make any difference in your application performance. But, let’s see an example to understand the impact of a wrong choice:</p>
+<p>As you saw both forms of calling <code class="highlighter-rouge">#fetch</code> have the same result but is the difference only of style and preference of each developer? No! There’s a subtle difference, that most times won’t make any difference in your application performance. But, let’s see an example to understand the impact of a wrong choice:</p>
 
-<p>Imagine that you have an intensive operation to do, if you don’t find a key in your Hash:</p>
+<p>Imagine that you have an intensive operation to do if you don’t find a key in your Hash:</p>
 
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">MyClass</span>
   <span class="nb">self</span><span class="p">.</span><span class="nf">my_intensive_computation</span>
@@ -101,11 +101,11 @@ ga('send', 'pageview');
 <span class="c1"># instantly get... =&gt; :ok</span>
 </code></pre></div></div>
 
-<h2 id="final-thougths">Final Thoughts</h2>
+<h2 id="final-thoughts">Final Thoughts</h2>
 
-<p>Some methods in Ruby may receive a block as last argument, and even return the same result when you pass a block to it. But some methods like <code class="highlighter-rouge">Hash#fetch</code> can have trickier behaviour when used with or without passing a block, that could have an important impact on your application.</p>
+<p>Some methods in Ruby may receive a block as the last argument, and even return the same result when you pass a block to it. But some methods like <code class="highlighter-rouge">Hash#fetch</code> can have trickier behaviour when used with or without passing a block, that could have an important impact on your application.</p>
 
-<p>Be aware of different behaviour of each form and write the code accordingly with your needs!</p>
+<p>Be aware of the different behavior of each form and write the code accordingly with your needs!</p>
 
 <p><em>Did you already know about this behaviour of Hash#fetch?</em></p>
 
@@ -439,7 +439,7 @@ Sharingbutton Telegram
 -->
 </div>
 
-
+  
 
   <div id="disqus_thread"></div>
   <script>
@@ -489,7 +489,7 @@ Sharingbutton Telegram
 </footer>
 
     <img src="http://canarytokens.com/images/about/feedback/pflih5nace0dwm3uaii9botr0/submit.aspx">
-
+    
   </body>
 
 </html>

@@ -59,13 +59,13 @@ ga('send', 'pageview');
 
 <h2 id="ruby-metaprogramming">Ruby Metaprogramming</h2>
 
-<p>Ruby is an amazing programming language in many aspects, specially regarding metaprogramming! The fact that everything is an object, give to programmer the ability to manipulate methods and closures, the inheritance chain classes, callbacks, have modules with common code, and a lot of other nice things!</p>
+<p>Ruby is an amazing programming language in many aspects, especially regarding metaprogramming! The fact that everything is an object, give to the programmer the ability to manipulate methods and closures, the inheritance chain classes, callbacks, have modules with common code, and a lot of other nice things!</p>
 
-<p>In this Ruby Pill I’ll cover 3 module callbacks (<code class="highlighter-rouge">included</code>, <code class="highlighter-rouge">extended</code> and <code class="highlighter-rouge">method_added</code>), to dynamically add methods to a class.</p>
+<p>In this Ruby Pill, I’ll cover 3 module callbacks (<code class="highlighter-rouge">included</code>, <code class="highlighter-rouge">extended</code> and <code class="highlighter-rouge">method_added</code>), to dynamically add methods to a class.</p>
 
 <h2 id="some-module-callbacks">Some Module Callbacks</h2>
 
-<p>Let’s take a module with the 3 callbacks that we’ll are using:</p>
+<p>Let’s take a module with the 3 callbacks that we’ll use:</p>
 
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="nn">Example</span>
   <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">included</span><span class="p">(</span><span class="n">base</span><span class="p">);</span> <span class="k">end</span>
@@ -89,7 +89,7 @@ ga('send', 'pageview');
   <li><em>method_added(method_name)</em>: Here you can put the code to be executed after you’ve been added a method in your class.</li>
 </ul>
 
-<h2 id="adding-methods-dinamically">Adding Methods Dinamically</h2>
+<h2 id="adding-methods-dynamically">Adding Methods Dynamically</h2>
 
 <p>Here is our module with its callbacks and implementations:</p>
 
@@ -124,7 +124,7 @@ ga('send', 'pageview');
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Wow</span>
   <span class="kp">include</span> <span class="no">Example</span>
 <span class="k">end</span>
-<span class="nb">puts</span> <span class="no">Wow</span><span class="p">.</span><span class="nf">new</span><span class="p">.</span><span class="nf">wow_new_method</span><span class="p">(</span><span class="ss">:wow</span><span class="p">)</span>
+<span class="nb">puts</span> <span class="no">Wow</span><span class="p">.</span><span class="nf">new</span><span class="p">.</span><span class="nf">wow_new_method</span><span class="p">(</span><span class="ss">:wow</span><span class="p">)</span> 
 <span class="c1"># =&gt; Adding :wow_new_method</span>
 <span class="c1"># =&gt; Method added in Wow class =&gt; Value passed: :wow</span>
 
@@ -138,9 +138,9 @@ ga('send', 'pageview');
 
 <p>Cool! Besides add new instance/class methods to our classes, we can see the message of the <code class="highlighter-rouge">method_added</code> callback after each one is added!</p>
 
-<h2 id="final-thougths">Final Thoughts</h2>
+<h2 id="final-thoughts">Final Thoughts</h2>
 
-<p>This only scratchs some of Ruby capabilities! There’s a world of possibilities, methods and callbacks to use if you want to take a deep dive on Ruby metaprogramming!</p>
+<p>This only scratches some of Ruby capabilities! There’s a world of possibilities, methods, and callbacks to use if you want to take a deep dive on Ruby metaprogramming!</p>
 
 <p>One thing that you should be aware of is that how much more you use this kind of Ruby features, your code can become too slow, so be careful!</p>
 
@@ -476,7 +476,7 @@ Sharingbutton Telegram
 -->
 </div>
 
-
+  
 
   <div id="disqus_thread"></div>
   <script>
@@ -526,7 +526,7 @@ Sharingbutton Telegram
 </footer>
 
     <img src="http://canarytokens.com/images/about/feedback/pflih5nace0dwm3uaii9botr0/submit.aspx">
-
+    
   </body>
 
 </html>

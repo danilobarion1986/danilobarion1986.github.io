@@ -61,9 +61,9 @@ ga('send', 'pageview');
 
 <p>Ruby does not have native support to <code class="highlighter-rouge">enum</code> (as a core module/class or keyword). Many coming from other programming languages may miss this feature (myself included, as I came from C#).</p>
 
-<p>It doesn’t want to say that you cannot represent an enum with Ruby, and by many ways (like we all like!)</p>
+<p>It doesn’t want to say that you cannot represent an enum with Ruby in many ways (like we all like!)</p>
 
-<p>In this Ruby Pill I’ll cover 3 ways to define enum’s in your Ruby code!</p>
+<p>In this Ruby Pill, I’ll cover 3 ways to define enum’s in your Ruby code!</p>
 
 <h2 id="1º---a-simple-module">1º - A Simple Module</h2>
 
@@ -84,11 +84,11 @@ ga('send', 'pageview');
 <span class="nb">p</span> <span class="no">Notification</span><span class="o">::</span><span class="no">Push</span> <span class="c1"># =&gt; 2</span>
 </code></pre></div></div>
 
-<p>If your main goal is to improve the legibility and organization of your code, but aren’t worried about the value of each option (maybe it’s just codes in a domain table of your database), this is the simpliest and most straightforward enum that you’ll have!</p>
+<p>If your main goal is to improve the legibility and organization of your code but aren’t worried about the value of each option (maybe it’s just ids in a domain table of your database), this is the simplest and most straightforward enum that you’ll have!</p>
 
 <h2 id="2º---using-constants">2º - Using Constants</h2>
 
-<p>If you want to have access of all enum values, like a constant of your class, you can use a trick with class constants:</p>
+<p>If you want to have access to all enum values, as a constant of your class, you can use a trick with class constants:</p>
 
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Notification</span>
   <span class="kp">include</span> <span class="no">AlertType</span>
@@ -147,9 +147,9 @@ ga('send', 'pageview');
 <span class="nb">puts</span> <span class="no">Article</span><span class="p">.</span><span class="nf">available_statuses</span> <span class="c1"># =&gt; Status {Banished, Draft, Published, Trashed}</span>
 </code></pre></div></div>
 
-<h2 id="final-thougths">Final Thoughts</h2>
+<h2 id="final-thoughts">Final Thoughts</h2>
 
-<p>Although Ruby doesn’t implement enums natively, there is at least 3 ways to fill in this gap, if you like to organize your code this way!</p>
+<p>Although Ruby doesn’t implement enums natively, there are at least 3 ways to fill in this gap, if you like to organize your code this way!</p>
 
 <p><em>Are you using enums? Do you define them some other way or maybe using a gem?</em></p>
 
@@ -483,7 +483,7 @@ Sharingbutton Telegram
 -->
 </div>
 
-
+  
 
   <div id="disqus_thread"></div>
   <script>
@@ -533,7 +533,7 @@ Sharingbutton Telegram
 </footer>
 
     <img src="http://canarytokens.com/images/about/feedback/pflih5nace0dwm3uaii9botr0/submit.aspx">
-
+    
   </body>
 
 </html>
