@@ -9,13 +9,13 @@ categories: ruby backend pills tips
 
 ## Ruby Enums
 
-Ruby does not have native support to `enum` (as a core module/class or keyword). Many coming from other programming languages may miss this feature (myself included, as I came from C#).
+Ruby does not have native support for `enum` (as a core module/class or keyword). Many coming from other programming languages may miss this feature (myself included, as I came from C#).
 
-It doesn't want to say that you cannot represent an enum with Ruby in many ways (like we all like!)
+Maybe: This does not mean that you cannot represent the enum type in Ruby. There are many ways (like we all like!).
 
 In this Ruby Pill, I'll cover 3 ways to define enum's in your Ruby code!
 
-## 1º - A Simple Module
+## 1st - A Simple Module
 
 Take a look at this module and an example of its use:
 
@@ -37,7 +37,7 @@ p Notification::Push # => 2
 
 If your main goal is to improve the legibility and organization of your code but aren't worried about the value of each option (maybe it's just ids in a domain table of your database), this is the simplest and most straightforward enum that you'll have!
 
-## 2º - Using Constants
+## 2nd - Using Constants
 
 If you want to have access to all enum values, as a constant of your class, you can use a trick with class constants:
 
@@ -55,7 +55,7 @@ Even the constants defined inside the `ENUM_VALUES` array can be used as class c
 
 > If the main constant `ENUM_VALUES` is inside the module that your class includes (like the first example), this works too!
 
-## 3º - With Some Metaprogramming
+## 3rd - With Some Metaprogramming
 
 I'll guide you through the code itself in this example:
 
