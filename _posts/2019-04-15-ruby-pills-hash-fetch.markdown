@@ -52,7 +52,7 @@ hash.fetch(:my_key) { MyClass.my_intensive_computation }
 # instantly get... => :ok
 ```
 
-## Final Thougths
+## Final Thoughts
 
 Some methods in Ruby may receive a block as last argument, and even return the same result when you pass a block to it. But some methods like `Hash#fetch` can have trickier behaviour when used with or without passing a block, that could have an important impact on your application. 
 

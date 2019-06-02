@@ -86,7 +86,7 @@ puts Cool.cool_new_method(:cool)
 
 Cool! Besides add new instance/class methods to our classes, we can see the message of the `method_added` callback after each one is added!
 
-## Final Thougths
+## Final Thoughts
 
 This only scratchs some of Ruby capabilities! There's a world of possibilities, methods and callbacks to use if you want to take a deep dive on Ruby metaprogramming!
 

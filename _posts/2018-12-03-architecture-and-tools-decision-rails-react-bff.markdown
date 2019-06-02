@@ -35,7 +35,7 @@ These backends should (ideally) be developed by teams aligned with each frontend
 
 If we request the information for the same API route for both, the mobile app will receive all the data, as the web-app, but will discard most of it, consuming mobile bandwidth with useless information. To solve this problem, we can develop two BFF's, reading the same API route, one returning everything and other returning only the few information that will be used by the mobile client.
 
-## Final Thougths
+## Final Thoughts
 
 Sure that it's a contrived example, but when you need to call three, four, five or even more routes to render one page and all its options, each call that brings only the strict necessary will save you and your customers bandwidth, less work to frontend to join all that info, since the BFF already did it.
 
