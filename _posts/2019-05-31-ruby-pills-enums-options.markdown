@@ -11,7 +11,7 @@ categories: ruby backend pills tips
 
 Ruby does not have native support to `enum` (as a core module/class or keyword). Many coming from other programming languages may miss this feature (myself included, as I came from C#).
 
-This don't want to say that you cannot represent an enum with Ruby, and by many ways (like we all like!)
+It doesn't want to say that you cannot represent an enum with Ruby, and by many ways (like we all like!)
 
 In this Ruby Pill I'll cover 3 ways to define enum's in your Ruby code!
 
@@ -35,7 +35,7 @@ end
 p Notification::Push # => 2
 ```
 
-If your main goal is to improve the legibility and organization of your code, but isn't worried about the value of each option (maybe is just codes in a domain table of your database), this is the simpliest and most straightforward enum that you'll have!
+If your main goal is to improve the legibility and organization of your code, but aren't worried about the value of each option (maybe it's just codes in a domain table of your database), this is the simpliest and most straightforward enum that you'll have!
 
 ## 2º - Using Constants
 
@@ -101,7 +101,7 @@ puts Article.available_statuses # => Status {Banished, Draft, Published, Trashed
 
 ## Final Thougths
 
-Although Ruby don't implement enums natively, there is at least 3 ways to fill in this gap, if you like to organize your code this way! 
+Although Ruby doesn't implement enums natively, there is at least 3 ways to fill in this gap, if you like to organize your code this way! 
 
 _Are you using enums? Do you define them some other way or maybe using a gem?_ 
 
