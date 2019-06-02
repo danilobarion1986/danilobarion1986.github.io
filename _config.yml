@@ -14,6 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: '{{ Developer Notes }}'
+author: daniloinfo86
 email: danilo.barion1986@live.com
 description: >- # this means to ignore newlines until "baseurl:"
   Devaneios de um desenvolvedor em construção.
@@ -28,6 +29,7 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-gist
+  - jekyll-seo-tag
 
 gist:
   noscript: false

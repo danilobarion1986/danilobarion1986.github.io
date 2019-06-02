@@ -6,6 +6,7 @@
 <title>Ruby Pills: Dynamic Method Inclusion | {{ Developer Notes }}</title>
 <meta name="generator" content="Jekyll v3.7.4" />
 <meta property="og:title" content="Ruby Pills: Dynamic Method Inclusion" />
+<meta name="author" content="daniloinfo86" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Devaneios de um desenvolvedor em construção." />
 <meta property="og:description" content="Devaneios de um desenvolvedor em construção." />
@@ -15,17 +16,15 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-04-29T11:01:42-03:00" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","headline":"Ruby Pills: Dynamic Method Inclusion","dateModified":"2019-04-29T11:01:42-03:00","datePublished":"2019-04-29T11:01:42-03:00","url":"http://danilobarion1986.github.io/ruby/backend/pills/tips/2019/04/29/ruby-pills-dynamic-method-inclusion.html","mainEntityOfPage":{"@type":"WebPage","@id":"http://danilobarion1986.github.io/ruby/backend/pills/tips/2019/04/29/ruby-pills-dynamic-method-inclusion.html"},"description":"Devaneios de um desenvolvedor em construção.","@context":"http://schema.org"}</script>
+{"@type":"BlogPosting","headline":"Ruby Pills: Dynamic Method Inclusion","dateModified":"2019-04-29T11:01:42-03:00","datePublished":"2019-04-29T11:01:42-03:00","url":"http://danilobarion1986.github.io/ruby/backend/pills/tips/2019/04/29/ruby-pills-dynamic-method-inclusion.html","mainEntityOfPage":{"@type":"WebPage","@id":"http://danilobarion1986.github.io/ruby/backend/pills/tips/2019/04/29/ruby-pills-dynamic-method-inclusion.html"},"author":{"@type":"Person","name":"daniloinfo86"},"description":"Devaneios de um desenvolvedor em construção.","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-
-  <script>
+<script>
 window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 ga('create', 'UA-90030130-1', 'auto');
 ga('send', 'pageview');
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
-  
 
   <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://danilobarion1986.github.io/feed.xml" title="{{ Developer Notes }}" /></head>
 <body><header class="site-header" role="banner">
@@ -51,7 +50,8 @@ ga('send', 'pageview');
     <h1 class="post-title p-name" itemprop="name headline">Ruby Pills: Dynamic Method Inclusion</h1>
     <p class="post-meta">
       <time class="dt-published" datetime="2019-04-29T11:01:42-03:00" itemprop="datePublished">Apr 29, 2019
-      </time></p>
+      </time>
+      </p>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
@@ -124,7 +124,7 @@ ga('send', 'pageview');
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Wow</span>
   <span class="kp">include</span> <span class="no">Example</span>
 <span class="k">end</span>
-<span class="nb">puts</span> <span class="no">Wow</span><span class="p">.</span><span class="nf">new</span><span class="p">.</span><span class="nf">wow_new_method</span><span class="p">(</span><span class="ss">:wow</span><span class="p">)</span> 
+<span class="nb">puts</span> <span class="no">Wow</span><span class="p">.</span><span class="nf">new</span><span class="p">.</span><span class="nf">wow_new_method</span><span class="p">(</span><span class="ss">:wow</span><span class="p">)</span>
 <span class="c1"># =&gt; Adding :wow_new_method</span>
 <span class="c1"># =&gt; Method added in Wow class =&gt; Value passed: :wow</span>
 
@@ -138,7 +138,7 @@ ga('send', 'pageview');
 
 <p>Cool! Besides add new instance/class methods to our classes, we can see the message of the <code class="highlighter-rouge">method_added</code> callback after each one is added!</p>
 
-<h2 id="final-thougths">Final Thougths</h2>
+<h2 id="final-thougths">Final Thoughts</h2>
 
 <p>This only scratchs some of Ruby capabilities! There’s a world of possibilities, methods and callbacks to use if you want to take a deep dive on Ruby metaprogramming!</p>
 
@@ -476,6 +476,8 @@ Sharingbutton Telegram
 -->
 </div>
 
+
+
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
@@ -491,7 +493,9 @@ Sharingbutton Telegram
   </script>
   <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 
-<a class="u-url" href="/ruby/backend/pills/tips/2019/04/29/ruby-pills-dynamic-method-inclusion.html" hidden></a>
+
+
+  <a class="u-url" href="/ruby/backend/pills/tips/2019/04/29/ruby-pills-dynamic-method-inclusion.html" hidden></a>
 </article>
 
 
@@ -506,7 +510,7 @@ Sharingbutton Telegram
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
-          <li class="p-name">{{ Developer Notes }}</li><li><a class="u-email" href="mailto:danilo.barion1986@live.com">danilo.barion1986@live.com</a></li></ul>
+          <li class="p-name">daniloinfo86</li><li><a class="u-email" href="mailto:danilo.barion1986@live.com">danilo.barion1986@live.com</a></li></ul>
       </div>
 
       <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/danilobarion1986"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">danilobarion1986</span></a></li><li><a href="https://www.twitter.com/daniloinfo86"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">daniloinfo86</span></a></li></ul>
@@ -522,7 +526,7 @@ Sharingbutton Telegram
 </footer>
 
     <img src="http://canarytokens.com/images/about/feedback/pflih5nace0dwm3uaii9botr0/submit.aspx">
-    
+
   </body>
 
 </html>
