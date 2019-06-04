@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://danilobarion1986.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="http://danilobarion1986.github.io/" rel="alternate" type="text/html" /><updated>2019-06-02T13:18:52-03:00</updated><id>http://danilobarion1986.github.io/feed.xml</id><title type="html">{{ Developer Notes }}</title><subtitle>Devaneios de um desenvolvedor em construção.</subtitle><author><name>daniloinfo86</name></author><entry><title type="html">Ruby Pills: Enums Options</title><link href="http://danilobarion1986.github.io/ruby/backend/pills/tips/2019/05/31/ruby-pills-enums-options.html" rel="alternate" type="text/html" title="Ruby Pills: Enums Options" /><published>2019-05-31T19:07:12-03:00</published><updated>2019-05-31T19:07:12-03:00</updated><id>http://danilobarion1986.github.io/ruby/backend/pills/tips/2019/05/31/ruby-pills-enums-options</id><content type="html" xml:base="http://danilobarion1986.github.io/ruby/backend/pills/tips/2019/05/31/ruby-pills-enums-options.html">&lt;p&gt;&lt;img src=&quot;/assets/img/ruby_pills.png&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://danilobarion1986.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="http://danilobarion1986.github.io/" rel="alternate" type="text/html" /><updated>2019-06-04T19:54:38-03:00</updated><id>http://danilobarion1986.github.io/feed.xml</id><title type="html">{{ Developer Notes }}</title><subtitle>Devaneios de um desenvolvedor em construção.</subtitle><author><name>daniloinfo86</name></author><entry><title type="html">Ruby Pills: Enums Options</title><link href="http://danilobarion1986.github.io/ruby/backend/pills/tips/2019/05/31/ruby-pills-enums-options.html" rel="alternate" type="text/html" title="Ruby Pills: Enums Options" /><published>2019-05-31T19:07:12-03:00</published><updated>2019-05-31T19:07:12-03:00</updated><id>http://danilobarion1986.github.io/ruby/backend/pills/tips/2019/05/31/ruby-pills-enums-options</id><content type="html" xml:base="http://danilobarion1986.github.io/ruby/backend/pills/tips/2019/05/31/ruby-pills-enums-options.html">&lt;p&gt;&lt;img src=&quot;/assets/img/ruby_pills.png&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;ruby-enums&quot;&gt;Ruby Enums&lt;/h2&gt;
 
-&lt;p&gt;Ruby does not have native support to &lt;code class=&quot;highlighter-rouge&quot;&gt;enum&lt;/code&gt; (as a core module/class or keyword). Many coming from other programming languages may miss this feature (myself included, as I came from C#).&lt;/p&gt;
+&lt;p&gt;Ruby does not have native support for &lt;code class=&quot;highlighter-rouge&quot;&gt;enum&lt;/code&gt; (as a core module/class or keyword). Many coming from other programming languages may miss this feature (myself included, as I came from C#).&lt;/p&gt;
 
-&lt;p&gt;It doesn’t want to say that you cannot represent an enum with Ruby in many ways (like we all like!)&lt;/p&gt;
+&lt;p&gt;Maybe: This does not mean that you cannot represent the enum type in Ruby. There are many ways (like we all like!).&lt;/p&gt;
 
 &lt;p&gt;In this Ruby Pill, I’ll cover 3 ways to define enum’s in your Ruby code!&lt;/p&gt;
 
-&lt;h2 id=&quot;1º---a-simple-module&quot;&gt;1º - A Simple Module&lt;/h2&gt;
+&lt;h2 id=&quot;1st---a-simple-module&quot;&gt;1st - A Simple Module&lt;/h2&gt;
 
 &lt;p&gt;Take a look at this module and an example of its use:&lt;/p&gt;
 
@@ -29,7 +29,7 @@
 
 &lt;p&gt;If your main goal is to improve the legibility and organization of your code but aren’t worried about the value of each option (maybe it’s just ids in a domain table of your database), this is the simplest and most straightforward enum that you’ll have!&lt;/p&gt;
 
-&lt;h2 id=&quot;2º---using-constants&quot;&gt;2º - Using Constants&lt;/h2&gt;
+&lt;h2 id=&quot;2nd---using-constants&quot;&gt;2nd - Using Constants&lt;/h2&gt;
 
 &lt;p&gt;If you want to have access to all enum values, as a constant of your class, you can use a trick with class constants:&lt;/p&gt;
 
@@ -48,7 +48,7 @@
   &lt;p&gt;If the main constant &lt;code class=&quot;highlighter-rouge&quot;&gt;ENUM_VALUES&lt;/code&gt; is inside the module that your class includes (like the first example), this works too!&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h2 id=&quot;3º---with-some-metaprogramming&quot;&gt;3º - With Some Metaprogramming&lt;/h2&gt;
+&lt;h2 id=&quot;3rd---with-some-metaprogramming&quot;&gt;3rd - With Some Metaprogramming&lt;/h2&gt;
 
 &lt;p&gt;I’ll guide you through the code itself in this example:&lt;/p&gt;
 
