@@ -4,7 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {%- seo -%}
   {% if site.google_analytics and jekyll.environment == 'production' %}
-  {% include analytics.html %}
+  {%- include analytics.html -%}
   {% endif %}
 
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">

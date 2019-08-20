@@ -9,13 +9,13 @@ categories: ruby backend pills tips
 
 ## Ruby Metaprogramming 
 
-Ruby is an amazing programming language in many aspects, specially regarding metaprogramming! The fact that everything is an object, give to programmer the ability to manipulate methods and closures, the inheritance chain classes, callbacks, have modules with common code, and a lot of other nice things!
+Ruby is an amazing programming language in many aspects, especially regarding metaprogramming! The fact that everything is an object, give to the programmer the ability to manipulate methods and closures, the inheritance chain classes, callbacks, have modules with common code, and a lot of other nice things!
 
-In this Ruby Pill I'll cover 3 module callbacks (`included`, `extended` and `method_added`), to dynamically add methods to a class. 
+In this Ruby Pill, I'll cover 3 module callbacks (`included`, `extended` and `method_added`), to dynamically add methods to a class. 
 
 ## Some Module Callbacks
 
-Let's take a module with the 3 callbacks that we'll are using:
+Let's take a module with the 3 callbacks that we'll use:
 
 ```ruby
 module Example
@@ -35,7 +35,7 @@ Despite the descriptive names, follows a summary of each method:
 
 - _method_added(method_name)_: Here you can put the code to be executed after you've been added a method in your class.
 
-## Adding Methods Dinamically
+## Adding Methods Dynamically
 
 Here is our module with its callbacks and implementations:
 
@@ -86,12 +86,12 @@ puts Cool.cool_new_method(:cool)
 
 Cool! Besides add new instance/class methods to our classes, we can see the message of the `method_added` callback after each one is added!
 
-## Final Thougths
+## Final Thoughts
 
-This only scratchs some of Ruby capabilities! There's a world of possibilities, methods and callbacks to use if you want to take a deep dive on Ruby metaprogramming!
+This only scratches some of Ruby capabilities! There's a world of possibilities, methods, and callbacks to use if you want to take a deep dive on Ruby metaprogramming!
 
 One thing that you should be aware of is that how much more you use this kind of Ruby features, your code can become too slow, so be careful!
 
-_Did you like this post? Did you already know about these module callbacks?_ 
+_Did you already know about these module callbacks?_ 
 
-_If you have any comments, suggestions or critics, post a comment below!_
+_Let me know if you liked this post! If you have any suggestions or critics, post a comment below!_

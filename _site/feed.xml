@@ -1,14 +1,112 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://danilobarion1986.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="http://danilobarion1986.github.io/" rel="alternate" type="text/html" /><updated>2019-05-14T10:50:15-03:00</updated><id>http://danilobarion1986.github.io/feed.xml</id><title type="html">{{ Developer Notes }}</title><subtitle>Devaneios de um desenvolvedor em construção.</subtitle><entry><title type="html">Ruby Pills: Dynamic Method Inclusion</title><link href="http://danilobarion1986.github.io/ruby/backend/pills/tips/2019/04/29/ruby-pills-dynamic-method-inclusion.html" rel="alternate" type="text/html" title="Ruby Pills: Dynamic Method Inclusion" /><published>2019-04-29T11:01:42-03:00</published><updated>2019-04-29T11:01:42-03:00</updated><id>http://danilobarion1986.github.io/ruby/backend/pills/tips/2019/04/29/ruby-pills-dynamic-method-inclusion</id><content type="html" xml:base="http://danilobarion1986.github.io/ruby/backend/pills/tips/2019/04/29/ruby-pills-dynamic-method-inclusion.html">&lt;p&gt;&lt;img src=&quot;/assets/img/ruby_pills.png&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://danilobarion1986.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="http://danilobarion1986.github.io/" rel="alternate" type="text/html" /><updated>2019-06-04T19:54:38-03:00</updated><id>http://danilobarion1986.github.io/feed.xml</id><title type="html">{{ Developer Notes }}</title><subtitle>Devaneios de um desenvolvedor em construção.</subtitle><author><name>daniloinfo86</name></author><entry><title type="html">Ruby Pills: Enums Options</title><link href="http://danilobarion1986.github.io/ruby/backend/pills/tips/2019/05/31/ruby-pills-enums-options.html" rel="alternate" type="text/html" title="Ruby Pills: Enums Options" /><published>2019-05-31T19:07:12-03:00</published><updated>2019-05-31T19:07:12-03:00</updated><id>http://danilobarion1986.github.io/ruby/backend/pills/tips/2019/05/31/ruby-pills-enums-options</id><content type="html" xml:base="http://danilobarion1986.github.io/ruby/backend/pills/tips/2019/05/31/ruby-pills-enums-options.html">&lt;p&gt;&lt;img src=&quot;/assets/img/ruby_pills.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;ruby-enums&quot;&gt;Ruby Enums&lt;/h2&gt;
+
+&lt;p&gt;Ruby does not have native support for &lt;code class=&quot;highlighter-rouge&quot;&gt;enum&lt;/code&gt; (as a core module/class or keyword). Many coming from other programming languages may miss this feature (myself included, as I came from C#).&lt;/p&gt;
+
+&lt;p&gt;Maybe: This does not mean that you cannot represent the enum type in Ruby. There are many ways (like we all like!).&lt;/p&gt;
+
+&lt;p&gt;In this Ruby Pill, I’ll cover 3 ways to define enum’s in your Ruby code!&lt;/p&gt;
+
+&lt;h2 id=&quot;1st---a-simple-module&quot;&gt;1st - A Simple Module&lt;/h2&gt;
+
+&lt;p&gt;Take a look at this module and an example of its use:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;AlertType&lt;/span&gt;
+  &lt;span class=&quot;no&quot;&gt;Email&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+  &lt;span class=&quot;no&quot;&gt;Sms&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+  &lt;span class=&quot;no&quot;&gt;Push&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+  &lt;span class=&quot;no&quot;&gt;Letter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Notification&lt;/span&gt;
+  &lt;span class=&quot;kp&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;AlertType&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;# AlertType::Push =&amp;gt; Using inside the class (You can even omit the module name here)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Notification&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Push&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; 2&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If your main goal is to improve the legibility and organization of your code but aren’t worried about the value of each option (maybe it’s just ids in a domain table of your database), this is the simplest and most straightforward enum that you’ll have!&lt;/p&gt;
+
+&lt;h2 id=&quot;2nd---using-constants&quot;&gt;2nd - Using Constants&lt;/h2&gt;
+
+&lt;p&gt;If you want to have access to all enum values, as a constant of your class, you can use a trick with class constants:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Notification&lt;/span&gt;
+  &lt;span class=&quot;kp&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;AlertType&lt;/span&gt;
+  &lt;span class=&quot;no&quot;&gt;ENUM_VALUES&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;STRING_VALUE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;value1&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;SYMBOL_VALUE&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:value2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Notification&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;STRING_VALUE&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; &quot;value1&quot; &lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Notification&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;SYMBOL_VALUE&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; :value2&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Even the constants defined inside the &lt;code class=&quot;highlighter-rouge&quot;&gt;ENUM_VALUES&lt;/code&gt; array can be used as class constants normally. And, this way you can access all values of the enum at the same time with &lt;code class=&quot;highlighter-rouge&quot;&gt;Notification::ENUM_VALUES&lt;/code&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;If the main constant &lt;code class=&quot;highlighter-rouge&quot;&gt;ENUM_VALUES&lt;/code&gt; is inside the module that your class includes (like the first example), this works too!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;3rd---with-some-metaprogramming&quot;&gt;3rd - With Some Metaprogramming&lt;/h2&gt;
+
+&lt;p&gt;I’ll guide you through the code itself in this example:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Kernel&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;# Defining a method on the Ruby's Kernel module &lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;enum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# Each time we call it, a new module is created with a block&lt;/span&gt;
+    &lt;span class=&quot;no&quot;&gt;Module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+      &lt;span class=&quot;c1&quot;&gt;# first, we iterates on the list of values passed to this method&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;values&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;each_with_index&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;# then a constant is defined (using `const_set`), whose name is the capitalized value&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;# this assumes that all values that you passed responds to #to_s (be careful!)&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;const_set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to_s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;capitalize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+      &lt;span class=&quot;c1&quot;&gt;# Overriding `inspect` for convenience only&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;mod&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;inspect&lt;/span&gt;
+        &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; {&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;constants&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;', '&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;}&quot;&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You then could use it like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;no&quot;&gt;Status&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;sx&quot;&gt;%w[draft published trashed banished]&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Article&lt;/span&gt;
+  &lt;span class=&quot;kp&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Status&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;available_statuses&lt;/span&gt;
+    &lt;span class=&quot;no&quot;&gt;Status&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;inspect&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Status&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;class&lt;/span&gt;               &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; Module&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Article&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Trashed&lt;/span&gt;           &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; 4&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Article&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;available_statuses&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; Status {Banished, Draft, Published, Trashed}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;/h2&gt;
+
+&lt;p&gt;Although Ruby doesn’t implement enums natively, there are at least 3 ways to fill in this gap, if you like to organize your code this way!&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Are you using enums? Do you define them some other way or maybe using a gem?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Let me know if you liked this post! If you have any suggestions or critics, post a comment below!&lt;/em&gt;&lt;/p&gt;</content><author><name>daniloinfo86</name></author><summary type="html"></summary></entry><entry><title type="html">Ruby Pills: Dynamic Method Inclusion</title><link href="http://danilobarion1986.github.io/ruby/backend/pills/tips/2019/04/29/ruby-pills-dynamic-method-inclusion.html" rel="alternate" type="text/html" title="Ruby Pills: Dynamic Method Inclusion" /><published>2019-04-29T11:01:42-03:00</published><updated>2019-04-29T11:01:42-03:00</updated><id>http://danilobarion1986.github.io/ruby/backend/pills/tips/2019/04/29/ruby-pills-dynamic-method-inclusion</id><content type="html" xml:base="http://danilobarion1986.github.io/ruby/backend/pills/tips/2019/04/29/ruby-pills-dynamic-method-inclusion.html">&lt;p&gt;&lt;img src=&quot;/assets/img/ruby_pills.png&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;ruby-metaprogramming&quot;&gt;Ruby Metaprogramming&lt;/h2&gt;
 
-&lt;p&gt;Ruby is an amazing programming language in many aspects, specially regarding metaprogramming! The fact that everything is an object, give to programmer the ability to manipulate methods and closures, the inheritance chain classes, callbacks, have modules with common code, and a lot of other nice things!&lt;/p&gt;
+&lt;p&gt;Ruby is an amazing programming language in many aspects, especially regarding metaprogramming! The fact that everything is an object, give to the programmer the ability to manipulate methods and closures, the inheritance chain classes, callbacks, have modules with common code, and a lot of other nice things!&lt;/p&gt;
 
-&lt;p&gt;In this Ruby Pill I’ll cover 3 module callbacks (&lt;code class=&quot;highlighter-rouge&quot;&gt;included&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;extended&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;method_added&lt;/code&gt;), to dynamically add methods to a class.&lt;/p&gt;
+&lt;p&gt;In this Ruby Pill, I’ll cover 3 module callbacks (&lt;code class=&quot;highlighter-rouge&quot;&gt;included&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;extended&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;method_added&lt;/code&gt;), to dynamically add methods to a class.&lt;/p&gt;
 
 &lt;h2 id=&quot;some-module-callbacks&quot;&gt;Some Module Callbacks&lt;/h2&gt;
 
-&lt;p&gt;Let’s take a module with the 3 callbacks that we’ll are using:&lt;/p&gt;
+&lt;p&gt;Let’s take a module with the 3 callbacks that we’ll use:&lt;/p&gt;
 
 &lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Example&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;included&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
@@ -32,7 +130,7 @@
   &lt;li&gt;&lt;em&gt;method_added(method_name)&lt;/em&gt;: Here you can put the code to be executed after you’ve been added a method in your class.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;adding-methods-dinamically&quot;&gt;Adding Methods Dinamically&lt;/h2&gt;
+&lt;h2 id=&quot;adding-methods-dynamically&quot;&gt;Adding Methods Dynamically&lt;/h2&gt;
 
 &lt;p&gt;Here is our module with its callbacks and implementations:&lt;/p&gt;
 
@@ -81,24 +179,24 @@
 
 &lt;p&gt;Cool! Besides add new instance/class methods to our classes, we can see the message of the &lt;code class=&quot;highlighter-rouge&quot;&gt;method_added&lt;/code&gt; callback after each one is added!&lt;/p&gt;
 
-&lt;h2 id=&quot;final-thougths&quot;&gt;Final Thougths&lt;/h2&gt;
+&lt;h2 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;/h2&gt;
 
-&lt;p&gt;This only scratchs some of Ruby capabilities! There’s a world of possibilities, methods and callbacks to use if you want to take a deep dive on Ruby metaprogramming!&lt;/p&gt;
+&lt;p&gt;This only scratches some of Ruby capabilities! There’s a world of possibilities, methods, and callbacks to use if you want to take a deep dive on Ruby metaprogramming!&lt;/p&gt;
 
 &lt;p&gt;One thing that you should be aware of is that how much more you use this kind of Ruby features, your code can become too slow, so be careful!&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Did you like this post? Did you already know about these module callbacks?&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Did you already know about these module callbacks?&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;If you have any comments, suggestions or critics, post a comment below!&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Ruby Pills: Hash Fetch and Performance</title><link href="http://danilobarion1986.github.io/ruby/backend/pills/tips/2019/04/15/ruby-pills-hash-fetch.html" rel="alternate" type="text/html" title="Ruby Pills: Hash Fetch and Performance" /><published>2019-04-15T13:24:08-03:00</published><updated>2019-04-15T13:24:08-03:00</updated><id>http://danilobarion1986.github.io/ruby/backend/pills/tips/2019/04/15/ruby-pills-hash-fetch</id><content type="html" xml:base="http://danilobarion1986.github.io/ruby/backend/pills/tips/2019/04/15/ruby-pills-hash-fetch.html">&lt;p&gt;&lt;img src=&quot;/assets/img/ruby_pills.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Let me know if you liked this post! If you have any suggestions or critics, post a comment below!&lt;/em&gt;&lt;/p&gt;</content><author><name>daniloinfo86</name></author><summary type="html"></summary></entry><entry><title type="html">Ruby Pills: Hash Fetch and Performance</title><link href="http://danilobarion1986.github.io/ruby/backend/pills/tips/2019/04/15/ruby-pills-hash-fetch.html" rel="alternate" type="text/html" title="Ruby Pills: Hash Fetch and Performance" /><published>2019-04-15T13:24:08-03:00</published><updated>2019-04-15T13:24:08-03:00</updated><id>http://danilobarion1986.github.io/ruby/backend/pills/tips/2019/04/15/ruby-pills-hash-fetch</id><content type="html" xml:base="http://danilobarion1986.github.io/ruby/backend/pills/tips/2019/04/15/ruby-pills-hash-fetch.html">&lt;p&gt;&lt;img src=&quot;/assets/img/ruby_pills.png&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;ruby-hash&quot;&gt;Ruby Hash&lt;/h2&gt;
 
-&lt;p&gt;The Hash class is widely used in Ruby code, due to its key/value structure. It have many interesting methods, aside from most basic ones, like &lt;code class=&quot;highlighter-rouge&quot;&gt;#default&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;#key?&lt;/code&gt;, used to return a default value if the desired key was not found and verify if some key exists, respectively. There are accessor methods like &lt;code class=&quot;highlighter-rouge&quot;&gt;#[]&lt;/code&gt;, that return &lt;code class=&quot;highlighter-rouge&quot;&gt;nil&lt;/code&gt; if the key don’t exists, and &lt;code class=&quot;highlighter-rouge&quot;&gt;#fetch&lt;/code&gt; that you raise an error instead.&lt;/p&gt;
+&lt;p&gt;The Hash class is widely used in Ruby code, due to its key/value structure. It has many interesting methods, aside from most basic ones, like &lt;code class=&quot;highlighter-rouge&quot;&gt;#default&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;#key?&lt;/code&gt;, used to return a default value if the desired key was not found and verify if some key exists, respectively. There are accessor methods like &lt;code class=&quot;highlighter-rouge&quot;&gt;#[]&lt;/code&gt;, that return &lt;code class=&quot;highlighter-rouge&quot;&gt;nil&lt;/code&gt; if the key doesn’t exist, and &lt;code class=&quot;highlighter-rouge&quot;&gt;#fetch&lt;/code&gt; that you raise an error instead.&lt;/p&gt;
 
-&lt;p&gt;However some methods like &lt;code class=&quot;highlighter-rouge&quot;&gt;#fetch&lt;/code&gt; have different arities:&lt;/p&gt;
+&lt;p&gt;However, some methods like &lt;code class=&quot;highlighter-rouge&quot;&gt;#fetch&lt;/code&gt; have different arity:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;with 1 argument and a block, being the code evaluated inside the block the default value.&lt;/li&gt;
-  &lt;li&gt;with 2 arguments, being the first one the key that you want to find the value, and the second a default value when that key don’t exists.&lt;/li&gt;
+  &lt;li&gt;with 2 arguments, being the first one the key that you want to find the value, and the second a default value when that key doesn’t exist.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Example:&lt;/p&gt;
@@ -111,9 +209,9 @@
 
 &lt;h2 id=&quot;trickier-fetch-behaviour&quot;&gt;Trickier &lt;code class=&quot;highlighter-rouge&quot;&gt;#fetch&lt;/code&gt; Behaviour&lt;/h2&gt;
 
-&lt;p&gt;As you saw both forms of calling &lt;code class=&quot;highlighter-rouge&quot;&gt;#fetch&lt;/code&gt; have the same result, but is the difference only of style and preference of each developer? No! There’s a subtle difference, that most times won’t make any difference in your application performance. But, let’s see an example to understand the impact of a wrong choice:&lt;/p&gt;
+&lt;p&gt;As you saw both forms of calling &lt;code class=&quot;highlighter-rouge&quot;&gt;#fetch&lt;/code&gt; have the same result but is the difference only of style and preference of each developer? No! There’s a subtle difference, that most times won’t make any difference in your application performance. But, let’s see an example to understand the impact of a wrong choice:&lt;/p&gt;
 
-&lt;p&gt;Imagine that you have an intensive operation to do, if you don’t find a key in your Hash:&lt;/p&gt;
+&lt;p&gt;Imagine that you have an intensive operation to do if you don’t find a key in your Hash:&lt;/p&gt;
 
 &lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MyClass&lt;/span&gt;
   &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;my_intensive_computation&lt;/span&gt;
@@ -135,53 +233,55 @@
 &lt;span class=&quot;c1&quot;&gt;# instantly get... =&amp;gt; :ok&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;final-thougths&quot;&gt;Final Thougths&lt;/h2&gt;
+&lt;h2 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;/h2&gt;
 
-&lt;p&gt;Some methods in Ruby may receive a block as last argument, and even return the same result when you pass a block to it. But some methods like &lt;code class=&quot;highlighter-rouge&quot;&gt;Hash#fetch&lt;/code&gt; can have trickier behaviour when used with or without passing a block, that could have an important impact on your application.&lt;/p&gt;
+&lt;p&gt;Some methods in Ruby may receive a block as the last argument, and even return the same result when you pass a block to it. But some methods like &lt;code class=&quot;highlighter-rouge&quot;&gt;Hash#fetch&lt;/code&gt; can have trickier behaviour when used with or without passing a block, that could have an important impact on your application.&lt;/p&gt;
 
-&lt;p&gt;Be aware of different behaviour of each form and write the code accordingly with your needs!&lt;/p&gt;
+&lt;p&gt;Be aware of the different behavior of each form and write the code accordingly with your needs!&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Did you like this post? Did you already know about this behaviour of Hash#fetch?&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Did you already know about this behaviour of Hash#fetch?&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;If you have any comments, suggestions or critics, post a comment below!&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Architecture and Tools Decision: Rails + React = BFF</title><link href="http://danilobarion1986.github.io/ruby/backend/architecture/rails/react/bff/tools/2018/12/03/architecture-and-tools-decision-rails-react-bff.html" rel="alternate" type="text/html" title="Architecture and Tools Decision: Rails + React = BFF" /><published>2018-12-03T15:38:31-02:00</published><updated>2018-12-03T15:38:31-02:00</updated><id>http://danilobarion1986.github.io/ruby/backend/architecture/rails/react/bff/tools/2018/12/03/architecture-and-tools-decision-rails-react-bff</id><content type="html" xml:base="http://danilobarion1986.github.io/ruby/backend/architecture/rails/react/bff/tools/2018/12/03/architecture-and-tools-decision-rails-react-bff.html">&lt;p&gt;&lt;img src=&quot;https://pbs.twimg.com/media/CV1R95wU4AA4lBs.png&quot; alt=&quot;bff-diagram&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Let me know if you liked this post! If you have any suggestions or critics, post a comment below!&lt;/em&gt;&lt;/p&gt;</content><author><name>daniloinfo86</name></author><summary type="html"></summary></entry><entry><title type="html">Architecture and Tools Decision: Rails + React = BFF</title><link href="http://danilobarion1986.github.io/ruby/backend/architecture/rails/react/bff/tools/2018/12/03/architecture-and-tools-decision-rails-react-bff.html" rel="alternate" type="text/html" title="Architecture and Tools Decision: Rails + React = BFF" /><published>2018-12-03T15:38:31-02:00</published><updated>2018-12-03T15:38:31-02:00</updated><id>http://danilobarion1986.github.io/ruby/backend/architecture/rails/react/bff/tools/2018/12/03/architecture-and-tools-decision-rails-react-bff</id><content type="html" xml:base="http://danilobarion1986.github.io/ruby/backend/architecture/rails/react/bff/tools/2018/12/03/architecture-and-tools-decision-rails-react-bff.html">&lt;p&gt;&lt;img src=&quot;https://pbs.twimg.com/media/CV1R95wU4AA4lBs.png&quot; alt=&quot;bff-diagram&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;When we began to modernize our &lt;a href=&quot;https://epartner.vagas.com.br/_AcessoEmpr.asp?tc=471&quot;&gt;company’s main software&lt;/a&gt;, we need to choose an architecture that could be as stable as it was for the last 20 years and at the same time, allow us to use one of the best alternatives to build an highly interactive and complex front-end.&lt;/p&gt;
+&lt;p&gt;When we began to modernize our &lt;a href=&quot;https://epartner.vagas.com.br/_AcessoEmpr.asp?tc=471&quot;&gt;company’s main software&lt;/a&gt;, we need to choose an architecture that could be as stable as it was for the last 20 years and at the same time, allow us to use one of the best alternatives to build a highly interactive and complex front-end.&lt;/p&gt;
 
-&lt;p&gt;So, to embrace the innovation while keeping an solid foundation, we decided to work with our main web framework Rails, with the React  front-end, an amazing feature of one of Rails more recent versions.&lt;/p&gt;
+&lt;p&gt;So, to embrace the innovation while keeping a solid foundation, we decided to work with our main web framework Rails, with the React front-end, an amazing feature of one of Rails more recent versions.&lt;/p&gt;
 
 &lt;p&gt;The Ruby (and Rails) are our main programming language + framework for about 6 years to modernize our almost 20 years old legacy system. We already have a lot of interesting tools working together, like MongoDB, Redis, RabbitMQ, PostgreSQL, etc. All of them with fantastic libraries/support for Ruby.&lt;/p&gt;
 
-&lt;p&gt;Besides that, our front-end team is growing fast, and wants to apply what they’ve been learning (in theory and practice) everyday with React.&lt;/p&gt;
+&lt;p&gt;Besides that, our front-end team is growing fast and wants to apply what they’ve been learning (in theory and practice) every day with React.&lt;/p&gt;
 
 &lt;h2 id=&quot;mixing-everything&quot;&gt;Mixing everything!&lt;/h2&gt;
 
-&lt;p&gt;With all of this in mind, our decision was not so difficulty, because Rails recently brings a pretty decent support to use some of the modern Javascript frameworks (react, angular, vuejs) as a front to an web-app.&lt;/p&gt;
+&lt;p&gt;With all of this in mind, our decision was not so difficult, because Rails recently brings pretty decent support to use some of the modern Javascript frameworks (react, angular, vuejs) as a front to a web-app.&lt;/p&gt;
 
-&lt;p&gt;But we don’t want it to become a new monster after some months, when we passed the mainly features of our app to this new project, so we think: How we could use this new features? Which are the architecture that most adapt to our needs?&lt;/p&gt;
+&lt;p&gt;But we don’t want it to become a new monster after some months when we passed the main features of our app to this new project, so we think: How we could use these new features? Which is the architecture that mostly adapts to our needs?&lt;/p&gt;
 
-&lt;p&gt;We thought about GraphQL, but we don’t want to rewrite all our main API’s at the beginning of the process of rewrite our already big legacy system (Maybe GraphQL could be another “decision post” in the future…)&lt;/p&gt;
+&lt;p&gt;We thought about GraphQL, but we don’t want to rewrite all our main API’s at the beginning of the process of rewriting our already big legacy system (Maybe GraphQL could be another “decision post” in the future…)&lt;/p&gt;
 
-&lt;p&gt;After some research, we listen about a pattern that is emerging, mainly in microservices world, that is called “Backend For Frontends” (or BFF for short).&lt;/p&gt;
+&lt;p&gt;After some research, we listen about a pattern that is emerging, mainly in the microservices world, that is called “Backend For Frontends” (or BFF for short).&lt;/p&gt;
 
 &lt;h2 id=&quot;final-decision-bff-to-the-rescue&quot;&gt;Final decision: BFF to the rescue!&lt;/h2&gt;
 
-&lt;p&gt;This option shows up in one of the ThoughtWorks’ technology radar, and you could read deeper articles &lt;a href=&quot;https://samnewman.io/patterns/architectural/bff/&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://nordicapis.com/building-a-backend-for-frontend-shim-for-your-microservices/&quot;&gt;here&lt;/a&gt;. The BFF is an attempt to bring a backend support for each kind of client that is consuming our services. Its main goal is to decoupling the APIs/microservices from their consumers.&lt;/p&gt;
+&lt;p&gt;This option shows up in one of the ThoughtWorks’ technology radar, and you could read deeper articles &lt;a href=&quot;https://samnewman.io/patterns/architectural/bff/&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://nordicapis.com/building-a-backend-for-frontend-shim-for-your-microservices/&quot;&gt;here&lt;/a&gt;. The BFF is an attempt to bring backend support for each kind of client that is consuming our services. Its main goal is to decouple the APIs/microservices from their consumers.&lt;/p&gt;
 
-&lt;p&gt;Basically, what we do is include one more layer (the BFF) between our APIs and an frontend client, attending the its individual needs. For example, let’s say that our mobile app be simpler than our web-app, and in the list of customer’s items don’t show all details about each one of them.&lt;/p&gt;
+&lt;p&gt;Basically, what we do is include one more layer (the BFF) between our APIs and a frontend client, attending its individual needs. For example, let’s say that our mobile app is simpler than our web-app, and in the list of customer’s items don’t show all the details about each one of them.&lt;/p&gt;
 
 &lt;p&gt;These backends should (ideally) be developed by teams aligned with each frontend to ensure that each backend properly meets the needs of its client.&lt;/p&gt;
 
-&lt;p&gt;If we request the information for the same API route for both, the mobile app will receive all the data, as the web-app, but will discard most of it, consuming mobile bandwidth with useless information. To solve this problem, we can develop two BFF’s, reading the same API route, one returning everything and other returning only the few information that will be used by the mobile client.&lt;/p&gt;
+&lt;p&gt;If we request the information for the same API route for both, the mobile app will receive all the data, as the web-app, but will discard most of it, consuming mobile bandwidth with useless information. To solve this problem, we can develop two BFF’s, reading the same API route, one returning everything and another returning only a subset of the information that will be used by the mobile client.&lt;/p&gt;
 
-&lt;h2 id=&quot;final-thougths&quot;&gt;Final Thougths&lt;/h2&gt;
+&lt;h2 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;/h2&gt;
 
 &lt;p&gt;Sure that it’s a contrived example, but when you need to call three, four, five or even more routes to render one page and all its options, each call that brings only the strict necessary will save you and your customers bandwidth, less work to frontend to join all that info, since the BFF already did it.&lt;/p&gt;
 
 &lt;p&gt;Besides that, maybe you can apply some rules authorization/authentication/business rules, giving to frontend just the information about possible errors, unauthorized requests or links to more features accessed by that page/customer.&lt;/p&gt;
 
-&lt;p&gt;As the possibilities are so numerous, I strongly recommend that you read both of the articles cited above, to understand even more of this pattern and judge if its adapt to the needs of your company.&lt;/p&gt;
+&lt;p&gt;As the possibilities are so numerous, I strongly recommend that you read both of the articles cited above, to understand even more of this pattern and judge if it adapts to the needs of your company.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Did you like this post? Did you already used this architectural pattern in some of your companies app? What are the challenges that you faced? What’s the best/worst part of this pattern? Do you have any comments, suggestions or critics?&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Dia (Quase Mundial) do Rock!</title><link href="http://danilobarion1986.github.io/off-topic/music/rock/2018/07/13/rock-and-roll-day.html" rel="alternate" type="text/html" title="Dia (Quase Mundial) do Rock!" /><published>2018-07-13T00:25:00-03:00</published><updated>2018-07-13T00:25:00-03:00</updated><id>http://danilobarion1986.github.io/off-topic/music/rock/2018/07/13/rock-and-roll-day</id><content type="html" xml:base="http://danilobarion1986.github.io/off-topic/music/rock/2018/07/13/rock-and-roll-day.html">&lt;p&gt;♪♫ &lt;em&gt;Flyyyyy! On your waaaaay! Like an  eagle! Fly as hiiiiigh, aaaaaas the suuuun!&lt;/em&gt; ♪♫&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Did you already used this architectural pattern in some of your companies app? What are the challenges that you faced? What’s the best/worst part of this pattern?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Let me know if you liked this post! If you have any suggestions or critics, post a comment below!&lt;/em&gt;&lt;/p&gt;</content><author><name>daniloinfo86</name></author><summary type="html"></summary></entry><entry><title type="html">Dia (Quase Mundial) do Rock!</title><link href="http://danilobarion1986.github.io/off-topic/music/rock/2018/07/13/rock-and-roll-day.html" rel="alternate" type="text/html" title="Dia (Quase Mundial) do Rock!" /><published>2018-07-13T00:25:00-03:00</published><updated>2018-07-13T00:25:00-03:00</updated><id>http://danilobarion1986.github.io/off-topic/music/rock/2018/07/13/rock-and-roll-day</id><content type="html" xml:base="http://danilobarion1986.github.io/off-topic/music/rock/2018/07/13/rock-and-roll-day.html">&lt;p&gt;♪♫ &lt;em&gt;Flyyyyy! On your waaaaay! Like an  eagle! Fly as hiiiiigh, aaaaaas the suuuun!&lt;/em&gt; ♪♫&lt;/p&gt;
 
 &lt;p&gt;Hoje é dia do Rock! Estive pensando como desde pequeno meu gosto foi sendo definido por este estilo! Mesmo atualmente, apesar de ser muito eclético, a influência do Rock é gigante em minha vida musical :)&lt;/p&gt;
 
@@ -288,7 +388,7 @@
 &lt;p&gt;E aí o que achou desta seleção? Demais né!?haha
 Comenta aí com aqueles que você colocaria ou tiraria desta lista!&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Long live Rock And Roll! ♪♫\o/♪♫&lt;/strong&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">♪♫ Flyyyyy! On your waaaaay! Like an eagle! Fly as hiiiiigh, aaaaaas the suuuun! ♪♫</summary></entry><entry><title type="html">Desenvolvendo em C# no Linux com .NET Core (Parte 1)</title><link href="http://danilobarion1986.github.io/c%23/csharp/backend/dotnetcore/2018/07/11/desenvolvendo-em-csharp-no-linux-com-dotnet-core.html" rel="alternate" type="text/html" title="Desenvolvendo em C# no Linux com .NET Core (Parte 1)" /><published>2018-07-11T22:45:43-03:00</published><updated>2018-07-11T22:45:43-03:00</updated><id>http://danilobarion1986.github.io/c%23/csharp/backend/dotnetcore/2018/07/11/desenvolvendo-em-csharp-no-linux-com-dotnet-core</id><content type="html" xml:base="http://danilobarion1986.github.io/c%23/csharp/backend/dotnetcore/2018/07/11/desenvolvendo-em-csharp-no-linux-com-dotnet-core.html">&lt;p&gt;A Microsoft tem cada vez mais declarado seu amor pelo Linux e abraçado o Open Source! Porque não juntar então estes 2 mundos utilizando o (relativamente) recente framework .NET Core lançado pela MS para construir e rodar aplicações C# no Linux?!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Long live Rock And Roll! ♪♫\o/♪♫&lt;/strong&gt;&lt;/p&gt;</content><author><name>daniloinfo86</name></author><summary type="html">♪♫ Flyyyyy! On your waaaaay! Like an eagle! Fly as hiiiiigh, aaaaaas the suuuun! ♪♫</summary></entry><entry><title type="html">Desenvolvendo em C# no Linux com .NET Core (Parte 1)</title><link href="http://danilobarion1986.github.io/c%23/csharp/backend/dotnetcore/2018/07/11/desenvolvendo-em-csharp-no-linux-com-dotnet-core.html" rel="alternate" type="text/html" title="Desenvolvendo em C# no Linux com .NET Core (Parte 1)" /><published>2018-07-11T22:45:43-03:00</published><updated>2018-07-11T22:45:43-03:00</updated><id>http://danilobarion1986.github.io/c%23/csharp/backend/dotnetcore/2018/07/11/desenvolvendo-em-csharp-no-linux-com-dotnet-core</id><content type="html" xml:base="http://danilobarion1986.github.io/c%23/csharp/backend/dotnetcore/2018/07/11/desenvolvendo-em-csharp-no-linux-com-dotnet-core.html">&lt;p&gt;A Microsoft tem cada vez mais declarado seu amor pelo Linux e abraçado o Open Source! Porque não juntar então estes 2 mundos utilizando o (relativamente) recente framework .NET Core lançado pela MS para construir e rodar aplicações C# no Linux?!&lt;/p&gt;
 
 &lt;p&gt;Nesta sequência de posts vou explorar um pouco este universo, começando do básico mesmo! Portanto, como primeira ação você precisa instalar o .NET Core SDK em seu ambiente local:&lt;/p&gt;
 
@@ -314,26 +414,28 @@ Comenta aí com aqueles que você colocaria ou tiraria desta lista!&lt;/p&gt;
 
 &lt;p&gt;Fique de olho na parte 2, onde vamos criar algo mais interessante e personalizado! ;)&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;E você, já conhecia o .NET Core? Estava frustrado por não poder unir a programação C# com o Linux? Ou não acha que haja tanto amor envolvido assim por parte da Microsoft?!&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">A Microsoft tem cada vez mais declarado seu amor pelo Linux e abraçado o Open Source! Porque não juntar então estes 2 mundos utilizando o (relativamente) recente framework .NET Core lançado pela MS para construir e rodar aplicações C# no Linux?!</summary></entry><entry><title type="html">Extracting Lambda Source Code</title><link href="http://danilobarion1986.github.io/ruby/backend/2017/10/09/extracting-lambda-source-code.html" rel="alternate" type="text/html" title="Extracting Lambda Source Code" /><published>2017-10-09T19:08:58-03:00</published><updated>2017-10-09T19:08:58-03:00</updated><id>http://danilobarion1986.github.io/ruby/backend/2017/10/09/extracting-lambda-source-code</id><content type="html" xml:base="http://danilobarion1986.github.io/ruby/backend/2017/10/09/extracting-lambda-source-code.html">&lt;p&gt;&lt;img src=&quot;https://devdanilo.files.wordpress.com/2017/10/source-code.jpeg&quot; alt=&quot;source-code&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;E você, já conhecia o .NET Core? Estava frustrado por não poder unir a programação C# com o Linux? Ou não acha que haja tanto amor envolvido assim por parte da Microsoft?!&lt;/em&gt;&lt;/p&gt;</content><author><name>daniloinfo86</name></author><summary type="html">A Microsoft tem cada vez mais declarado seu amor pelo Linux e abraçado o Open Source! Porque não juntar então estes 2 mundos utilizando o (relativamente) recente framework .NET Core lançado pela MS para construir e rodar aplicações C# no Linux?!</summary></entry><entry><title type="html">Extracting Lambda Source Code</title><link href="http://danilobarion1986.github.io/ruby/backend/2017/10/09/extracting-lambda-source-code.html" rel="alternate" type="text/html" title="Extracting Lambda Source Code" /><published>2017-10-09T19:08:58-03:00</published><updated>2017-10-09T19:08:58-03:00</updated><id>http://danilobarion1986.github.io/ruby/backend/2017/10/09/extracting-lambda-source-code</id><content type="html" xml:base="http://danilobarion1986.github.io/ruby/backend/2017/10/09/extracting-lambda-source-code.html">&lt;p&gt;&lt;img src=&quot;https://devdanilo.files.wordpress.com/2017/10/source-code.jpeg&quot; alt=&quot;source-code&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;In this post, I’ll show you how to extract the code definition of a Lambda object, using just pure Ruby! But, first things first! What is a lambda in Ruby? A lambda is an special type of Proc, with some little differences in syntax, behavior and functionality, one of them that could be used as an anonymous function. There are many articles with all the details of what a lambda is and its main differences from a Proc and a block, one of them is &lt;a href=&quot;http://culttt.com/2015/05/13/what-are-lambdas-in-ruby.&quot;&gt;this&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In this post, I’ll show you how to extract the code definition of a Lambda object, using just pure Ruby! But, first things first! What is a lambda in Ruby? A lambda is a special type of Proc, with some little differences in syntax, behavior and functionality, one of them that could be used as an anonymous function. There are many articles with all the details of what a lambda is and its main differences from a Proc and a block, one of them is &lt;a href=&quot;http://culttt.com/2015/05/13/what-are-lambdas-in-ruby.&quot;&gt;this&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;At one of my side-projects, I wanted to extract the definition of one property of my class, that is a lambda defined by the user, and make a little markdown documentation page with this code on it. Then I thought: “Well, Ruby must have some special method call to do this… Or maybe the object itself (lambda) has an to_s like method that returns its own definition…”. But, well, for my surprise it was not so simple…&lt;/p&gt;
+&lt;p&gt;At one of my side-projects, I wanted to extract the definition of one property of my class, which is a lambda defined by the user and make a little markdown documentation page with this code on it. Then I thought: “Well, Ruby must have some special method call to do this… Or maybe the object itself (lambda) has a &lt;code class=&quot;highlighter-rouge&quot;&gt;to_s&lt;/code&gt;-like method that returns its own definition…”. But, well, for my surprise it was not so simple…&lt;/p&gt;
 
 &lt;h2 id=&quot;trying-some-code&quot;&gt;Trying some code…&lt;/h2&gt;
 
-&lt;p&gt;Then, I googled a little bit, and found some gems that works, but honestly, it’s a so tiny part of my project that I don’t wanted to add an entire extra-project just to extract source code from an lambda object… Besides this, my goal is to make a gem that don’t have third-party dependencies at all… Then, after some reading, coding, testing, refactoring, this was my result:&lt;/p&gt;
+&lt;p&gt;Then, I googled a little bit and found some gems that work, but honestly, it’s a so tiny part of my project that I don’t want to add an entire extra-project just to extract source code from a lambda object… Besides this, my goal is to make a gem that doesn’t have third-party dependencies at all… Then, after some reading, coding, testing, refactoring, this was my result:&lt;/p&gt;
 
 &lt;script src=&quot;https://gist.github.com/f413a13ccd090f802600ee8bbc0e23ca.js&quot;&gt; &lt;/script&gt;
 
-&lt;p&gt;It’s a simple class, with one public method (lambda2source), that receives the lambda object and returns its source code as string. If the passed parameter it’s not an lambda, it raises an ArgumentError exception, with an informative message. Else, it checks what syntax was used to define the lambda (matching one of the two possibilities). This return is already the source code that I want to use.&lt;/p&gt;
+&lt;p&gt;It’s a simple class, with one public method (lambda2source), that receives the lambda object and returns its source code as a string. If the passed parameter it’s not a lambda, it raises an ArgumentError exception, with an informative message. Else, it checks what syntax was used to define the lambda (matching one of the two possibilities). This return is already the source code that I want to use.&lt;/p&gt;
 
 &lt;h2 id=&quot;cons&quot;&gt;Cons&lt;/h2&gt;
 
-&lt;p&gt;With this approach, I could easily retrieve the code that I want, without using any third-party code/gem get this functionality in my project. Even though is a simple solution, we have some limitations like, for example, it’s not possible to extract the source code of lambdas defined at runtime. But, for my needs it’s enough.
+&lt;p&gt;With this approach, I could easily retrieve the code that I want, without using any third-party code/gem get this functionality in my project. Even though is a simple solution, we have some limitations like, for example, it’s not possible to extract the source code of lambdas defined at runtime. But, for my needs, it’s enough.
 So, I have a solution that is simple and I don’t need to worry with some dependency that might break one of the main features that I want to provide, that is auto-generated documentation!&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Did you like this post? Are you careful about add third-party code to your applications too? Have any comments, suggestions or critics?&lt;/em&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Código Sobre Código Sobre Código…</title><link href="http://danilobarion1986.github.io/c%23/csharp/backend/metaprogramming/xml/2017/04/07/codigo-sobre-codigo-sobre-codigo.html" rel="alternate" type="text/html" title="Código Sobre Código Sobre Código..." /><published>2017-04-07T21:24:12-03:00</published><updated>2017-04-07T21:24:12-03:00</updated><id>http://danilobarion1986.github.io/c%23/csharp/backend/metaprogramming/xml/2017/04/07/codigo-sobre-codigo-sobre-codigo</id><content type="html" xml:base="http://danilobarion1986.github.io/c%23/csharp/backend/metaprogramming/xml/2017/04/07/codigo-sobre-codigo-sobre-codigo.html">&lt;p&gt;&lt;img src=&quot;https://i2.wp.com/devdanilo.files.wordpress.com/2017/04/thematrixincode99.jpg&quot; alt=&quot;source-code&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Are you careful about add third-party code to your applications too?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Let me know if you liked this post! If you have any suggestions or critics, post a comment below!&lt;/em&gt;&lt;/p&gt;</content><author><name>daniloinfo86</name></author><summary type="html"></summary></entry><entry><title type="html">Código Sobre Código Sobre Código…</title><link href="http://danilobarion1986.github.io/c%23/csharp/backend/metaprogramming/xml/2017/04/07/codigo-sobre-codigo-sobre-codigo.html" rel="alternate" type="text/html" title="Código Sobre Código Sobre Código..." /><published>2017-04-07T21:24:12-03:00</published><updated>2017-04-07T21:24:12-03:00</updated><id>http://danilobarion1986.github.io/c%23/csharp/backend/metaprogramming/xml/2017/04/07/codigo-sobre-codigo-sobre-codigo</id><content type="html" xml:base="http://danilobarion1986.github.io/c%23/csharp/backend/metaprogramming/xml/2017/04/07/codigo-sobre-codigo-sobre-codigo.html">&lt;p&gt;&lt;img src=&quot;https://i2.wp.com/devdanilo.files.wordpress.com/2017/04/thematrixincode99.jpg&quot; alt=&quot;source-code&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Olá pessoal! Andei um pouco (muito) sumido, mas não esqueci do blog não!&lt;/p&gt;
 
@@ -379,7 +481,7 @@ So, I have a solution that is simple and I don’t need to worry with some depen
 
 &lt;p&gt;Enquanto isso, comente o que achou até aqui! Você já usou &lt;em&gt;Reflection&lt;/em&gt;? Como? Faria algo diferente do que eu fiz?&lt;/p&gt;
 
-&lt;p&gt;Compartilha aí! ;)&lt;/p&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Organizando a Bagunça (parte 2)</title><link href="http://danilobarion1986.github.io/produtividade/opini%C3%A3o/2016/02/16/organizando-a-bagunca-parte-2.html" rel="alternate" type="text/html" title="Organizando a Bagunça (parte 2)" /><published>2016-02-16T12:53:35-02:00</published><updated>2016-02-16T12:53:35-02:00</updated><id>http://danilobarion1986.github.io/produtividade/opini%C3%A3o/2016/02/16/organizando-a-bagunca-parte-2</id><content type="html" xml:base="http://danilobarion1986.github.io/produtividade/opini%C3%A3o/2016/02/16/organizando-a-bagunca-parte-2.html">&lt;p&gt;Olá pessoal! Este é o 2º post da “minissérie” que iniciei &lt;a href=&quot;/produtividade/opinião/2015/12/30/organizando-a-bagunca-parte-1.html&quot;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Compartilha aí! ;)&lt;/p&gt;</content><author><name>daniloinfo86</name></author><summary type="html"></summary></entry><entry><title type="html">Organizando a Bagunça (parte 2)</title><link href="http://danilobarion1986.github.io/produtividade/opini%C3%A3o/2016/02/16/organizando-a-bagunca-parte-2.html" rel="alternate" type="text/html" title="Organizando a Bagunça (parte 2)" /><published>2016-02-16T12:53:35-02:00</published><updated>2016-02-16T12:53:35-02:00</updated><id>http://danilobarion1986.github.io/produtividade/opini%C3%A3o/2016/02/16/organizando-a-bagunca-parte-2</id><content type="html" xml:base="http://danilobarion1986.github.io/produtividade/opini%C3%A3o/2016/02/16/organizando-a-bagunca-parte-2.html">&lt;p&gt;Olá pessoal! Este é o 2º post da “minissérie” que iniciei &lt;a href=&quot;/produtividade/opinião/2015/12/30/organizando-a-bagunca-parte-1.html&quot;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Hoje falarei sobre &lt;strong&gt;Mapas Mentais&lt;/strong&gt;!&lt;/p&gt;
 
@@ -403,7 +505,7 @@ So, I have a solution that is simple and I don’t need to worry with some depen
 
 &lt;p&gt;E aí, o que achou sobre a ideia de criar mapas mentais? Está afim de tentar usar em seu dia a dia? Que outras formas você utiliza para auxiliar no controle de suas tarefas? Compartilhe!&lt;/p&gt;
 
-&lt;p&gt;Até o próximo post! :)&lt;/p&gt;</content><author><name></name></author><summary type="html">Olá pessoal! Este é o 2º post da “minissérie” que iniciei aqui.</summary></entry><entry><title type="html">Organizando a Bagunça (parte 1)</title><link href="http://danilobarion1986.github.io/produtividade/opini%C3%A3o/2015/12/30/organizando-a-bagunca-parte-1.html" rel="alternate" type="text/html" title="Organizando a Bagunça (parte 1)" /><published>2015-12-30T12:21:57-02:00</published><updated>2015-12-30T12:21:57-02:00</updated><id>http://danilobarion1986.github.io/produtividade/opini%C3%A3o/2015/12/30/organizando-a-bagunca-parte-1</id><content type="html" xml:base="http://danilobarion1986.github.io/produtividade/opini%C3%A3o/2015/12/30/organizando-a-bagunca-parte-1.html">&lt;p&gt;&lt;img src=&quot;https://devdanilo.files.wordpress.com/2015/12/organized.jpg&quot; alt=&quot;organized&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Até o próximo post! :)&lt;/p&gt;</content><author><name>daniloinfo86</name></author><summary type="html">Olá pessoal! Este é o 2º post da “minissérie” que iniciei aqui.</summary></entry><entry><title type="html">Organizando a Bagunça (parte 1)</title><link href="http://danilobarion1986.github.io/produtividade/opini%C3%A3o/2015/12/30/organizando-a-bagunca-parte-1.html" rel="alternate" type="text/html" title="Organizando a Bagunça (parte 1)" /><published>2015-12-30T12:21:57-02:00</published><updated>2015-12-30T12:21:57-02:00</updated><id>http://danilobarion1986.github.io/produtividade/opini%C3%A3o/2015/12/30/organizando-a-bagunca-parte-1</id><content type="html" xml:base="http://danilobarion1986.github.io/produtividade/opini%C3%A3o/2015/12/30/organizando-a-bagunca-parte-1.html">&lt;p&gt;&lt;img src=&quot;https://devdanilo.files.wordpress.com/2015/12/organized.jpg&quot; alt=&quot;organized&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Estava indeciso quanto ao tema do novo post, mas finalmente decidi!&lt;/p&gt;
 
@@ -440,22 +542,4 @@ So, I have a solution that is simple and I don’t need to worry with some depen
 
 &lt;p&gt;E você, utiliza listas para controlar seus afazeres? Tem outro aplicativo de listas para recomendar? Deixe seu comentário abaixo!&lt;/p&gt;
 
-&lt;p&gt;Um abraço e bom final de ano! :)&lt;/p&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">Framework W3.CSS</title><link href="http://danilobarion1986.github.io/web-development/front-end/frameworks/2015/12/04/framework-w3css.html" rel="alternate" type="text/html" title="Framework W3.CSS" /><published>2015-12-04T14:50:49-02:00</published><updated>2015-12-04T14:50:49-02:00</updated><id>http://danilobarion1986.github.io/web-development/front-end/frameworks/2015/12/04/framework-w3css</id><content type="html" xml:base="http://danilobarion1986.github.io/web-development/front-end/frameworks/2015/12/04/framework-w3css.html">&lt;p&gt;&lt;img src=&quot;https://devdanilo.files.wordpress.com/2015/12/responsive_design_screens.png&quot; alt=&quot;responsive_design_screens&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Com a crescente popularização do desenvolvimento &lt;em&gt;Mobile&lt;/em&gt;, muitas empresas tem desenvolvido tecnologias, linguagens e _ &lt;strong&gt;frameworks&lt;/strong&gt; _ para agilizar a criação de aplicativos e facilitar o uso destes em múltiplas plataformas (&lt;em&gt;Android&lt;/em&gt;, &lt;em&gt;iOS&lt;/em&gt; e &lt;em&gt;Windows&lt;/em&gt; &lt;em&gt;Phone&lt;/em&gt;), além do próprio acesso pelo navegador.&lt;/p&gt;
-
-&lt;p&gt;Dentro deste mundo de possibilidades, gostaria de abordar um framework &lt;em&gt;front-end&lt;/em&gt; bastante recente (junho/2015) lançado pela &lt;a href=&quot;http://www.w3schools.com/default.asp&quot;&gt;w3Schools&lt;/a&gt;, importante site de ensino e referência sobre linguagens de desenvolvimento &lt;em&gt;Web&lt;/em&gt; que, apesar do nome, não tem relação com o &lt;a href=&quot;https://pt.wikipedia.org/wiki/W3C&quot;&gt;W3C&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Semelhante ao &lt;em&gt;Bootstrap&lt;/em&gt; em seus objetivos, que é facilitar a criação de &lt;em&gt;layouts&lt;/em&gt; e o desenvolvimento &lt;em&gt;front-end&lt;/em&gt;, ele é todo baseado na customização de elementos &lt;em&gt;HTML&lt;/em&gt; por meio de classes &lt;em&gt;CSS&lt;/em&gt; que, na minha opinião, são muito mais &lt;strong&gt;intuitivas&lt;/strong&gt; e &lt;strong&gt;simples&lt;/strong&gt; de utilizar que as do &lt;em&gt;Bootstrap&lt;/em&gt; (&lt;em&gt;let the&lt;/em&gt; “treta” &lt;em&gt;begins&lt;/em&gt;!). As classes que eles disponibilizam seguem o estilo do _ &lt;strong&gt;Material Design&lt;/strong&gt; _ do &lt;em&gt;Google&lt;/em&gt; e já possuem responsividade nativa! Ou seja, rapidamente você pode criar um layout &lt;strong&gt;bonito&lt;/strong&gt; e &lt;strong&gt;responsivo&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Além disso, todas elas iniciam com “w3”, o que te permite diferenciar rapidamente das suas classes personalizadas e são MUITO legíveis e fáceis de lembrar. Mas vamos a alguns exemplos práticos! :)&lt;/p&gt;
-
-&lt;p&gt;Primeiramente, para usar estas classes &lt;em&gt;CSS&lt;/em&gt; em seu site, basta referenciar a biblioteca disponível neste &lt;em&gt;&lt;a href=&quot;http://www.w3schools.com/lib/w3.css&quot;&gt;link&lt;/a&gt;&lt;/em&gt; da seguinte forma, entre os elementos de seu &lt;em&gt;HTML&lt;/em&gt;, como qualquer outro arquivo de estilo, usando a tag , referenciado o endereço http://www.w3schools.com/lib/w3.css.&lt;/p&gt;
-
-&lt;p&gt;Se você não entendeu essa parte, recomendo fortemente que inicie sua leitura &lt;a href=&quot;http://www.w3schools.com/css/css_howto.asp&quot;&gt;por aqui&lt;/a&gt; e &lt;a href=&quot;http://www.w3schools.com/html/default.asp&quot;&gt;aqui&lt;/a&gt;, antes de continuar a explorar o W3.CSS!&lt;/p&gt;
-
-&lt;p&gt;Para estilizar um checkbox, que classe você usaria? w3-check. Para cores de fundo? w3-red. Para cores de texto? w3-text-blue. Para bordas arredondadas (de qualquer elemento possível)? w3-round. &lt;strong&gt;Simples assim!&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;E você o que achou do W3.CSS? Possui experiência com Bootstrap? Compartilhe nos comentários o que achou deste novo framework, se já utilizou e como o avalia em relação ao Bootstrap!&lt;/p&gt;
-
-&lt;p&gt;Ate o próximo post!&lt;/p&gt;</content><author><name></name></author><summary type="html"></summary></entry></feed>
+&lt;p&gt;Um abraço e bom final de ano! :)&lt;/p&gt;</content><author><name>daniloinfo86</name></author><summary type="html"></summary></entry></feed>
