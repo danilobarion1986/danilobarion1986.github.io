@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://danilobarion1986.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="http://danilobarion1986.github.io/" rel="alternate" type="text/html" /><updated>2020-03-18T16:53:53-03:00</updated><id>http://danilobarion1986.github.io/feed.xml</id><title type="html">{{ Developer Notes }}</title><subtitle>Devaneios de um desenvolvedor em construção.</subtitle><author><name>daniloinfo86</name></author><entry><title type="html">Ruby Pills: Enums Options</title><link href="http://danilobarion1986.github.io/ruby/backend/pills/tips/2019/05/31/ruby-pills-enums-options.html" rel="alternate" type="text/html" title="Ruby Pills: Enums Options" /><published>2019-05-31T19:07:12-03:00</published><updated>2019-05-31T19:07:12-03:00</updated><id>http://danilobarion1986.github.io/ruby/backend/pills/tips/2019/05/31/ruby-pills-enums-options</id><content type="html" xml:base="http://danilobarion1986.github.io/ruby/backend/pills/tips/2019/05/31/ruby-pills-enums-options.html">&lt;p&gt;&lt;img src=&quot;/assets/img/ruby_pills.png&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://danilobarion1986.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="http://danilobarion1986.github.io/" rel="alternate" type="text/html" /><updated>2020-05-01T14:51:20-03:00</updated><id>http://danilobarion1986.github.io/feed.xml</id><title type="html">{{ Developer Notes }}</title><subtitle>Devaneios de um desenvolvedor em construção.</subtitle><author><name>daniloinfo86</name></author><entry><title type="html">Ruby Pills: Enums Options</title><link href="http://danilobarion1986.github.io/ruby/backend/pills/tips/2019/05/31/ruby-pills-enums-options.html" rel="alternate" type="text/html" title="Ruby Pills: Enums Options" /><published>2019-05-31T19:07:12-03:00</published><updated>2019-05-31T19:07:12-03:00</updated><id>http://danilobarion1986.github.io/ruby/backend/pills/tips/2019/05/31/ruby-pills-enums-options</id><content type="html" xml:base="http://danilobarion1986.github.io/ruby/backend/pills/tips/2019/05/31/ruby-pills-enums-options.html">&lt;p&gt;&lt;img src=&quot;/assets/img/ruby_pills.png&quot; /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;ruby-enums&quot;&gt;Ruby Enums&lt;/h2&gt;
 
-&lt;p&gt;Ruby does not have native support for &lt;code class=&quot;highlighter-rouge&quot;&gt;enum&lt;/code&gt; (as a core module/class or keyword). Many coming from other programming languages may miss this feature (myself included, as I came from C#).&lt;/p&gt;
+&lt;p&gt;Ruby does not have native support for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;enum&lt;/code&gt; (as a core module/class or keyword). Many coming from other programming languages may miss this feature (myself included, as I came from C#).&lt;/p&gt;
 
 &lt;p&gt;Maybe: This does not mean that you cannot represent the enum type in Ruby. There are many ways (like we all like!).&lt;/p&gt;
 
@@ -42,10 +42,10 @@
 &lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Notification&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;SYMBOL_VALUE&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; :value2&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Even the constants defined inside the &lt;code class=&quot;highlighter-rouge&quot;&gt;ENUM_VALUES&lt;/code&gt; array can be used as class constants normally. And, this way you can access all values of the enum at the same time with &lt;code class=&quot;highlighter-rouge&quot;&gt;Notification::ENUM_VALUES&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Even the constants defined inside the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ENUM_VALUES&lt;/code&gt; array can be used as class constants normally. And, this way you can access all values of the enum at the same time with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Notification::ENUM_VALUES&lt;/code&gt;.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;If the main constant &lt;code class=&quot;highlighter-rouge&quot;&gt;ENUM_VALUES&lt;/code&gt; is inside the module that your class includes (like the first example), this works too!&lt;/p&gt;
+  &lt;p&gt;If the main constant &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ENUM_VALUES&lt;/code&gt; is inside the module that your class includes (like the first example), this works too!&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h2 id=&quot;3rd---with-some-metaprogramming&quot;&gt;3rd - With Some Metaprogramming&lt;/h2&gt;
@@ -102,7 +102,7 @@
 
 &lt;p&gt;Ruby is an amazing programming language in many aspects, especially regarding metaprogramming! The fact that everything is an object, give to the programmer the ability to manipulate methods and closures, the inheritance chain classes, callbacks, have modules with common code, and a lot of other nice things!&lt;/p&gt;
 
-&lt;p&gt;In this Ruby Pill, I’ll cover 3 module callbacks (&lt;code class=&quot;highlighter-rouge&quot;&gt;included&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;extended&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;method_added&lt;/code&gt;), to dynamically add methods to a class.&lt;/p&gt;
+&lt;p&gt;In this Ruby Pill, I’ll cover 3 module callbacks (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;included&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;extended&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;method_added&lt;/code&gt;), to dynamically add methods to a class.&lt;/p&gt;
 
 &lt;h2 id=&quot;some-module-callbacks&quot;&gt;Some Module Callbacks&lt;/h2&gt;
 
@@ -158,7 +158,7 @@
 &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;The magic is inside our &lt;code class=&quot;highlighter-rouge&quot;&gt;add_new_method&lt;/code&gt; private method. It’s called inside &lt;code class=&quot;highlighter-rouge&quot;&gt;included&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;extended&lt;/code&gt; callbacks, passing the &lt;code class=&quot;highlighter-rouge&quot;&gt;base&lt;/code&gt; variable, that is our class. Using &lt;code class=&quot;highlighter-rouge&quot;&gt;define_method&lt;/code&gt; method, we add a new method called &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;CLASS_NAME&amp;gt;_new_method&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The magic is inside our &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;add_new_method&lt;/code&gt; private method. It’s called inside &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;included&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;extended&lt;/code&gt; callbacks, passing the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;base&lt;/code&gt; variable, that is our class. Using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;define_method&lt;/code&gt; method, we add a new method called &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;CLASS_NAME&amp;gt;_new_method&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;To see them in action, we could use it like this:&lt;/p&gt;
 
@@ -177,7 +177,7 @@
 &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; Method added in Cool class =&amp;gt; Value passed: :cool&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;Cool! Besides add new instance/class methods to our classes, we can see the message of the &lt;code class=&quot;highlighter-rouge&quot;&gt;method_added&lt;/code&gt; callback after each one is added!&lt;/p&gt;
+&lt;p&gt;Cool! Besides add new instance/class methods to our classes, we can see the message of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;method_added&lt;/code&gt; callback after each one is added!&lt;/p&gt;
 
 &lt;h2 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;/h2&gt;
 
@@ -191,9 +191,9 @@
 
 &lt;h2 id=&quot;ruby-hash&quot;&gt;Ruby Hash&lt;/h2&gt;
 
-&lt;p&gt;The Hash class is widely used in Ruby code, due to its key/value structure. It has many interesting methods, aside from most basic ones, like &lt;code class=&quot;highlighter-rouge&quot;&gt;#default&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;#key?&lt;/code&gt;, used to return a default value if the desired key was not found and verify if some key exists, respectively. There are accessor methods like &lt;code class=&quot;highlighter-rouge&quot;&gt;#[]&lt;/code&gt;, that return &lt;code class=&quot;highlighter-rouge&quot;&gt;nil&lt;/code&gt; if the key doesn’t exist, and &lt;code class=&quot;highlighter-rouge&quot;&gt;#fetch&lt;/code&gt; that you raise an error instead.&lt;/p&gt;
+&lt;p&gt;The Hash class is widely used in Ruby code, due to its key/value structure. It has many interesting methods, aside from most basic ones, like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#default&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#key?&lt;/code&gt;, used to return a default value if the desired key was not found and verify if some key exists, respectively. There are accessor methods like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#[]&lt;/code&gt;, that return &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nil&lt;/code&gt; if the key doesn’t exist, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#fetch&lt;/code&gt; that you raise an error instead.&lt;/p&gt;
 
-&lt;p&gt;However, some methods like &lt;code class=&quot;highlighter-rouge&quot;&gt;#fetch&lt;/code&gt; have different arity:&lt;/p&gt;
+&lt;p&gt;However, some methods like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#fetch&lt;/code&gt; have different arity:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;with 1 argument and a block, being the code evaluated inside the block the default value.&lt;/li&gt;
   &lt;li&gt;with 2 arguments, being the first one the key that you want to find the value, and the second a default value when that key doesn’t exist.&lt;/li&gt;
@@ -207,9 +207,9 @@
 &lt;span class=&quot;nb&quot;&gt;hash&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;fetch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; 3&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;trickier-fetch-behaviour&quot;&gt;Trickier &lt;code class=&quot;highlighter-rouge&quot;&gt;#fetch&lt;/code&gt; Behaviour&lt;/h2&gt;
+&lt;h2 id=&quot;trickier-fetch-behaviour&quot;&gt;Trickier &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#fetch&lt;/code&gt; Behaviour&lt;/h2&gt;
 
-&lt;p&gt;As you saw both forms of calling &lt;code class=&quot;highlighter-rouge&quot;&gt;#fetch&lt;/code&gt; have the same result but is the difference only of style and preference of each developer? No! There’s a subtle difference, that most times won’t make any difference in your application performance. But, let’s see an example to understand the impact of a wrong choice:&lt;/p&gt;
+&lt;p&gt;As you saw both forms of calling &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#fetch&lt;/code&gt; have the same result but is the difference only of style and preference of each developer? No! There’s a subtle difference, that most times won’t make any difference in your application performance. But, let’s see an example to understand the impact of a wrong choice:&lt;/p&gt;
 
 &lt;p&gt;Imagine that you have an intensive operation to do if you don’t find a key in your Hash:&lt;/p&gt;
 
@@ -235,7 +235,7 @@
 
 &lt;h2 id=&quot;final-thoughts&quot;&gt;Final Thoughts&lt;/h2&gt;
 
-&lt;p&gt;Some methods in Ruby may receive a block as the last argument, and even return the same result when you pass a block to it. But some methods like &lt;code class=&quot;highlighter-rouge&quot;&gt;Hash#fetch&lt;/code&gt; can have trickier behaviour when used with or without passing a block, that could have an important impact on your application.&lt;/p&gt;
+&lt;p&gt;Some methods in Ruby may receive a block as the last argument, and even return the same result when you pass a block to it. But some methods like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Hash#fetch&lt;/code&gt; can have trickier behaviour when used with or without passing a block, that could have an important impact on your application.&lt;/p&gt;
 
 &lt;p&gt;Be aware of the different behavior of each form and write the code accordingly with your needs!&lt;/p&gt;
 
@@ -398,17 +398,17 @@ Comenta aí com aqueles que você colocaria ou tiraria desta lista!&lt;/p&gt;
 
 &lt;p&gt;Clique no botão &lt;em&gt;Install .NET Core 2.1 SDK&lt;/em&gt; (versão v2.1.300 no momento da escrita deste artigo). Selecione sua distribuição Linux e execute os comandos próprios que serão exibidos nesta mesma página. Eu utilizei a distribuição Ubuntu 18.04. sendo necessário baixar aproximadamente 377 MB em arquivos para o uso do SDK completo.&lt;/p&gt;
 
-&lt;p&gt;Após a instalação, você terá à disposição o comando &lt;code class=&quot;highlighter-rouge&quot;&gt;dotnet&lt;/code&gt;, que é o seu CLI para uso do .NET Core.  Se rodar o comando dotnet –help verá uma lista dos principais comandos e opções globais do SDK.&lt;/p&gt;
+&lt;p&gt;Após a instalação, você terá à disposição o comando &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dotnet&lt;/code&gt;, que é o seu CLI para uso do .NET Core.  Se rodar o comando dotnet –help verá uma lista dos principais comandos e opções globais do SDK.&lt;/p&gt;
 
 &lt;p&gt;A própria documentação da Microsoft ensina a criar seu 1º programa com a ferramenta, onde você terá uma amostra da estrutura básica de um projeto C#.&lt;/p&gt;
 
-&lt;p&gt;Com um simples &lt;code class=&quot;highlighter-rouge&quot;&gt;dotnet new console&lt;/code&gt; você terá um projeto do tipo &lt;em&gt;Console&lt;/em&gt; , que ao ser executado escreve &lt;em&gt;Hello World!&lt;/em&gt; no terminal e finaliza.&lt;/p&gt;
+&lt;p&gt;Com um simples &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dotnet new console&lt;/code&gt; você terá um projeto do tipo &lt;em&gt;Console&lt;/em&gt; , que ao ser executado escreve &lt;em&gt;Hello World!&lt;/em&gt; no terminal e finaliza.&lt;/p&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;Nas versões 1.x era necessário executar &lt;code class=&quot;highlighter-rouge&quot;&gt;dotnet restore&lt;/code&gt; para geração dos arquivos binários e demais objetos necessários do projeto. Porém, a partir da versão 2.x o restore é executado logo após a criação do projeto, como você poderá ver no em seu terminal.&lt;/p&gt;
+  &lt;p&gt;Nas versões 1.x era necessário executar &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dotnet restore&lt;/code&gt; para geração dos arquivos binários e demais objetos necessários do projeto. Porém, a partir da versão 2.x o restore é executado logo após a criação do projeto, como você poderá ver no em seu terminal.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;A partir deste ponto, é possível simplesmente seguir o fluxo normal que você já está acostumado, ir criando suas classes, namespaces, testes, e o que mais for necessário! Ao alterar o projeto, basta rodar ele novamente com &lt;code class=&quot;highlighter-rouge&quot;&gt;dotnet run&lt;/code&gt; que as alterações serão recompiladas e já executadas. Se precisar incluir algum pacote para trazer funcionalidades de outros projetos, será necessário rodar o comando &lt;code class=&quot;highlighter-rouge&quot;&gt;dotnet restore&lt;/code&gt; antes, para que os arquivos de dependências sejam atualizados corretamente.&lt;/p&gt;
+&lt;p&gt;A partir deste ponto, é possível simplesmente seguir o fluxo normal que você já está acostumado, ir criando suas classes, namespaces, testes, e o que mais for necessário! Ao alterar o projeto, basta rodar ele novamente com &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dotnet run&lt;/code&gt; que as alterações serão recompiladas e já executadas. Se precisar incluir algum pacote para trazer funcionalidades de outros projetos, será necessário rodar o comando &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dotnet restore&lt;/code&gt; antes, para que os arquivos de dependências sejam atualizados corretamente.&lt;/p&gt;
 
 &lt;p&gt;Esse foi só um pequeno “cheiro” para despertar sua curiosidade e ver como está bem mais simples desenvolver com C# no Linux, que nos abre um mundo de possibilidades, pensando não somente no uso profissional mas também no educativo!&lt;/p&gt;
 
@@ -418,7 +418,7 @@ Comenta aí com aqueles que você colocaria ou tiraria desta lista!&lt;/p&gt;
 
 &lt;p&gt;In this post, I’ll show you how to extract the code definition of a Lambda object, using just pure Ruby! But, first things first! What is a lambda in Ruby? A lambda is a special type of Proc, with some little differences in syntax, behavior and functionality, one of them that could be used as an anonymous function. There are many articles with all the details of what a lambda is and its main differences from a Proc and a block, one of them is &lt;a href=&quot;http://culttt.com/2015/05/13/what-are-lambdas-in-ruby.&quot;&gt;this&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;At one of my side-projects, I wanted to extract the definition of one property of my class, which is a lambda defined by the user and make a little markdown documentation page with this code on it. Then I thought: “Well, Ruby must have some special method call to do this… Or maybe the object itself (lambda) has a &lt;code class=&quot;highlighter-rouge&quot;&gt;to_s&lt;/code&gt;-like method that returns its own definition…”. But, well, for my surprise it was not so simple…&lt;/p&gt;
+&lt;p&gt;At one of my side-projects, I wanted to extract the definition of one property of my class, which is a lambda defined by the user and make a little markdown documentation page with this code on it. Then I thought: “Well, Ruby must have some special method call to do this… Or maybe the object itself (lambda) has a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;to_s&lt;/code&gt;-like method that returns its own definition…”. But, well, for my surprise it was not so simple…&lt;/p&gt;
 
 &lt;h2 id=&quot;trying-some-code&quot;&gt;Trying some code…&lt;/h2&gt;
 
