@@ -9,6 +9,7 @@ gem 'github-pages', group: :jekyll_plugins
 gem 'activesupport', '~> 4.1'
 gem 'kramdown', '~> 2.3.1'
 gem 'json', '~> 2.3.0'
+gem 'addressable', '~> 2.8.0'
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
